@@ -1,0 +1,101 @@
+{% extends 'layout.html.twig' %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+        <title>AdopteUnChat.com/Notre_Histoire</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+      
+    </head>
+    <body> 
+        <div class = "dicton"> 
+            <p>
+            “Si l'on pouvait croiser l'homme et le chat, ça améliorerait l'homme, mais ça dégraderait le chat.” Mark Twain.
+            </p>
+        </div>
+        <div>
+            <h1>Notre Histoire</h1>
+            <h2>Nos Valeurs</h2>
+            <h3>Contact</h3>
+        </div>
+        
+        <div class= "histoire">
+            <h1>Notre Histoire</h1>
+                <p>
+                    Zombie ipsum brains reversus ab cerebellum viral inferno, brein nam rick mend grimes malum cerveau cerebro. 
+                    De carne cerebro lumbering animata cervello corpora quaeritis. 
+                    Summus thalamus brains sit​​, morbo basal ganglia vel maleficia? De braaaiiiins apocalypsi gorger omero prefrontal cortex undead survivor fornix dictum mauris.
+                    Hi brains mindless mortuis limbic cortex soulless creaturas optic nerve, 
+                    imo evil braaiinns stalking monstra hypothalamus adventus resi hippocampus dentevil vultus brain comedat cerebella pitiutary gland viventium. 
+                    Qui optic gland animated corpse, brains cricket bat substantia ni.
+                    <br>
+                    gra max brucks spinal cord terribilem incessu brains zomby. 
+                    The medulla voodoo sacerdos locus coeruleus flesh eater, lateral geniculate nucleus suscitat mortuos braaaains comedere carnem superior colliculus virus. 
+                    Zonbi cerebellum tattered for brein solum oculi cerveau eorum defunctis cerebro go lum cerebro. 
+                    Nescio brains an Undead cervello zombies. Sicut thalamus malus putrid brains voodoo horror. 
+                    Nigh basal ganglia tofth eliv ingdead.
+                    <br>
+                    Cum prefrontal cortex horribilem walking fornix dead resurgere brains de crazed limbic cortex optic nerve sepulcris creaturis, 
+                    braaaaaiins zombie sicut hypothalamus de grave hippocampus feeding iride brainz et serpens. 
+                    Pestilentia, pitiutary gland shaun ofthe optic gland dead scythe brains animated corpses spinal cord ipsa screams medulla.
+                </p>
+        </div>
+        
+        <div class = Valeurs>
+            <h2>Nos Valeurs<h2>
+            <p>
+            Zombie ipsum brains reversus ab cerebellum viral inferno, brein nam rick mend grimes malum cerveau cerebro. 
+            </p>
+            <br>
+            <p>
+            De carne cerebro lumbering animata cervello corpora quaeritis. 
+            </p>
+            <br>
+            <p>
+            Summus thalamus brains sit​​, morbo basal ganglia vel maleficia? De braaaiiiins apocalypsi gorger omero prefrontal cortex undead survivor fornix dictum mauris.
+            </p>
+        </div>
+
+        <div class="contact">
+            <h3>Une information? Une suggestion? Une adoption? Contactez-nous ici ! :)</h3>
+
+                <form name = "contactform" id="contactform" method="POST">
+                    <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" placeholder=Martine><br>
+                    <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="Martine@email.com"><br>
+                    <label for="message">Message:</label><br>
+                <textarea id="message" name="message"></textarea>
+                <br><br>
+                <input type="submit" value="Submit">
+                </form>
+
+                <p class="coordonées">Voici nos coordonées: </br>
+                Notre adresse mail:   AdopteUnChat@hotmail.fr</br>
+                Numéro de téléphone:  0264589575</br>
+                </p>
+            </div>
+            
+            <footer>
+              <h2><a href="index.html.twig" class="link">AdopteUnChat.com</h2>
+    
+                    <div class="Endpage">
+                        <ul class="links">
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="Présentation.html">Nos Chats</a></li>
+                            <li><a href="Localisation.html">Notre Histoire</a></li>
+                            <li><a href="Contact.html">Contact</a></li>
+                        </ul>
+                        <p class="Copyright">© Copyright BDNY. Tous droits réservés</p>
+            
+                    </div>
+            </footer>
+    </body>
+</html>
+{% endblock %}
