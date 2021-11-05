@@ -13,4 +13,10 @@ return [
     'items/show' => ['ItemController', 'show', ['id']],
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
-];
+  
+    'histoire' => ['histoireController', 'histoire'],
+    'recherche' => ['RechercheController', 'recherche'],
+    'chats' => ['ChatsController', 'chats'],    
+
+    ];
+
