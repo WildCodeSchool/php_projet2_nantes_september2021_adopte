@@ -7,8 +7,7 @@ use App\Controller\AbstractController;
 
 class ConnexionController extends AbstractController
 
-//$itemManager = new ItemManager();
-        //$items = $itemManager->selectAll('title');
+//Creation de la session
 {
     public function connexion()
     {
@@ -26,7 +25,7 @@ class ConnexionController extends AbstractController
     
     
     public function login(){
-        
+
         return $this->twig->render ("Private/connexion.html.twig");
     }
 

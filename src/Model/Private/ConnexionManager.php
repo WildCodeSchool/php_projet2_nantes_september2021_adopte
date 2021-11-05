@@ -3,6 +3,7 @@
 namespace App\Model\Private;
 use App\Model\AbstractManager;
 
+// on compare le nom et le mdp rentrés par l'utilisateur avec ceux en BDD
 class ConnexionManager extends AbstractManager
 {
     public function compare()
