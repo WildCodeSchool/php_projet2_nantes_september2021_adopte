@@ -13,10 +13,11 @@ return [
     'items/show' => ['ItemController', 'show', ['id']],
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
-  
+
+    // partie admin 
+    'private/connexion' => ['Private\\ConnexionController', 'connexion'],
+    'private/login' => ['Private\\ConnexionController', 'login'],
     'histoire' => ['histoireController', 'histoire'],
     'recherche' => ['RechercheController', 'recherche'],
-    'chats' => ['ChatsController', 'chats'],    
-
-    ];
-
+    'chats' => ['ChatsController', 'chats'],
+];
