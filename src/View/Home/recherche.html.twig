@@ -12,13 +12,18 @@
 <section id="recherche">  
     <div class="container" id="recherche">
         <form id="rechercheForm">
-            <label for="nom">Nom</label>
+            <div class= "namechamp">
+                <label for="nom">Nom</label>
+                <label for="age">Age</label>
+                <label for="couleur">Robe</label>
+                <label for="sexe">Sexe</label>
+            </div>
+
+            <div class= "contentchamp">
             <input type="text" id="nom" name="nom" placeholder="Un nom de chat">
   
-            <label for="age">Age</label>
             <input type="range" value="" max="1" min="20" step="1">
   
-            <label for="couleur">Robe</label>
                 <select name="cat" id="cat-select">
                     <option value="">--Choississez une robe--</option>
                     <option value="bleu">Bleu</option>
@@ -30,14 +35,14 @@
                     <option value="crème">Crème</option>
                 </select>
 
-            <label for="sexe">Sexe</label>
                     <select name="cat" id="cat-select">
                         <option value="">--Choississez mâle ou femelle--</option>
                         <option value="mâle">Mâle</option>
                         <option value="femelle">Femelle</option>
                      </select>
   
-            <input type="submit" value="Envoyer" id="sentButton">
+            <input type="submit" value="Trouver" id="sentButton">
+            </div>
     </form>
 </div>
 </section>
