@@ -1,0 +1,76 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+<title>AdopteUnChat.com</title>
+<button><a href="">Déconnexion</a></button>
+
+<h1>Nos chats</h1>
+<h1>Nos familles d'accueil</h1>
+
+<form action="" method="post">
+    <div>
+        <label for="name">Nom :</label>
+        <textarea type="text" id="name" name="name" required>
+    </div>
+    <div>
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+    </div>
+    <div>
+        <label for="race">Race :</label>
+        <textarea type="text" id="race" name="race" required>
+    </div>
+        <div>
+        <label for="couleur">Couleur :</label>
+            <select name="cat" id="cat-select" required>
+                <option value="">--Choississez une robe--</option>
+                <option value="bleu">Bleu</option>
+                <option value="roux">Roux</option>
+                <option value="blanc">Blanc</option>
+                <option value="noir">Noir</option>
+                <option value="brun">Brun</option>
+                <option value="écaille de tortue">Ecaille de tortue</option>
+                <option value="crème">Crème</option>
+            </select>
+    </div>
+        <div>
+        <label for="sexe">Sexe du chat :</label>
+            <select name="sexe" id="sexe" required>
+                <option value="">--Choississez un sexe--</option>
+                <option value="bleu">Femelle</option>
+                <option value="roux">Mâle</option>
+    </div>
+        <div>
+        <label for="photo">Photo :</label>
+        <textarea type="file" id="photo" name="photo" required>
+    </div>
+        <div>
+        <label for="date">Date d'arrivée à l'association :</label>
+        <textarea type="date" id="date" name="date" required>
+    </div>
+        <div>
+        <label for="vaccin">Vaccin :</label>
+        <textarea type="text" id="vaccin" name="vaccin" required>
+    </div>
+        <div>
+        <label for="steri">Sterilisation :</label>
+        <textarea type="text" id="steri" name="steri" required>
+    </div>
+        <div>
+        <label for="compa">Compatibilité avec d'autres animaux :</label>
+        <textarea type="text" id="compa" name="compa" required>
+    </div>
+        <div>
+        <label for="presentation">Texte de présentation :</label>
+        <textarea type="text" id="presentation" name="presentation">
+    </div>
+        <div>
+        <label for="familleActuelle">Famille d'accueil actuelle :</label>
+        <textarea type="text" id="familleActuelle" name="familleActuelle">
+    </div>
+        <div>
+        <label for="adoptant">Adoptant :</label>
+        < type="text" id="adoptant" name="adoptant">
+</form>
+
+
