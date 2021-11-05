@@ -1,0 +1,76 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+
+{# {% include "/component/_header.html.twig" %} #}
+
+<img class="" src="." alt=""></img>
+<h4> CITATION </h4>
+
+<h1>Trouver votre chat</h1>
+
+<section id="recherche">  
+    <div class="container" id="recherche">
+        <form id="rechercheForm">
+            <div class= "namechamp">
+                <label for="nom">Nom</label>
+                <label for="age">Age</label>
+                <label for="couleur">Robe</label>
+                <label for="sexe">Sexe</label>
+            </div>
+
+            <div class= "contentchamp">
+              <input type="text" id="nom" name="nom" placeholder="Un nom de chat">
+  
+                <label for="age">Age</label>
+
+                <input type="range" value="10" max="20" min="1" step="1">
+
+                <select name="cat" id="cat-select">
+                    <option value="">--Choississez une robe--</option>
+                    <option value="bleu">Bleu</option>
+                    <option value="roux">Roux</option>s
+                    <option value="blanc">Blanc</option>
+                    <option value="noir">Noir</option>
+                    <option value="brun">Brun</option>
+                    <option value="écaille de tortue">Ecaille de tortue</option>
+                    <option value="crème">Crème</option>
+                </select>
+
+                    <select name="cat" id="cat-select">
+                        <option value="">--Choississez mâle ou femelle--</option>
+                        <option value="mâle">Mâle</option>
+                        <option value="femelle">Femelle</option>
+                     </select>
+  
+              <input type="submit" value="Trouver" id="sentButton">
+            </div>
+    </form>
+</div>
+</section>
+
+<h5>Les chats</h5>
+
+<div class="photoTitre">
+<img class="" src="." alt=""></img>
+<p> Son nom - Son âge </p>
+</div>
+
+<div class="catDesc">
+Description : ohieuizbhfaizujdoimgefzefazgrgzegzrgzfegzeegzegzegzegfzedcdsggzeedfzefgezgrgteartr
+</div>
+
+<div class="catDesc">
+Description : ohieuizbhfaizujdoimgefzefazgrgzegzrgzfegzeegzegzegzegfzedcdsggzeedfzefgezgrgteartr
+</div>
+
+<div class="catDesc">
+Description : ohieuizbhfaizujdoimgefzefazgrgzegzrgzfegzeegzegzegzegfzedcdsggzeedfzefgezgrgteartr
+</div>
+
+<div class="catDesc">
+Description : ohieuizbhfaizujdoimgefzefazgrgzegzrgzfegzeegzegzegzegfzedcdsggzeedfzefgezgrgteartr
+</div>
+
+
+{% endblock %}
