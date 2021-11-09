@@ -14,8 +14,8 @@ return [
     'items/add' => ['ItemController', 'add',],
     'items/delete' => ['ItemController', 'delete',],
 
-// partie admin 
 
+    // partie admin 
     'private/connexion' => ['Private\\ConnexionController', 'connexion'],
     'private/login' => ['Private\\ConnexionController', 'login'], 
     'histoire' => ['histoireController', 'histoire'],
