@@ -15,15 +15,19 @@ class ConnexionController extends AbstractController
         $resultat = $manager->compare();
         if($resultat){
             session_start();
-            $_SESSION ["connexion"] = 1;
-            header ('location: nom de la route');   
+            $_SESSION ["login"] = $_POST['nom'];
+            header ('location: /private/admin');   
         }else {
             $error = "identifians incorrects";
             return $this->twig->render ("Private/connexion.html.twig" ,['error'=>$error]);            
         }       
     }
     
-    
+    public function index(){
+        die('index');
+    }
+
+
     public function login(){
 
         return $this->twig->render ("Private/connexion.html.twig");
