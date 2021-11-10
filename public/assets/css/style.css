@@ -1,9 +1,10 @@
 :root {
     --main-color:#A15C38;
-    --secondary-color:#E7E7E7;
+    --secondary-color:#e7e7e7;
     --darky: #000000;
     --lighty: #EAE5E5;
  }
+ /* couleurs par défauts */
 
  * {
     box-sizing: border-box;
@@ -15,10 +16,15 @@ body{
     margin:0;
     font-size:16px;
 }
+    /* les paramétrages par défaut */
+
+/* _header /code à faire/ _footer  */
+
 .carroussel{
     display:flex;
     justify-content: center;
 }
+
 
 h1 {
     display: table;
@@ -31,6 +37,8 @@ h1 {
     width: 50%;
     background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=) repeat-x left center;
   }
+  /* -----titres----- */
+ /* l'affichage des traits autour des titres est gérée par before, after*/
 
 .leschats{
     display : grid;
@@ -39,7 +47,7 @@ h1 {
     grid-template-rows: repeat(2,200px);
     place-items: center;
 }
-
+ /* les colonnes et lignes des différentes images de chat */
 
 
 .chat{
@@ -48,7 +56,7 @@ h1 {
     width: 230px;
     height: 180px;
 }
-
+    /* images de chat */
 button{
     background-color: var(--main-color);
     color:var(--secondary-color);
@@ -98,18 +106,143 @@ DEBUT DE LA 2EME PAGE RECHERCHE */
 
 #rechercheForm{
     display: flex;
-    justify-content: space-around;
-    background-color: silver;
-}
-.namechamp{
-    background-color:blue ;
-    display:flex;
-    flex-direction: column;
-}
-.contentchamp{
+    justify-content: center;
+    align-items: center;
+    background-color: var(--lighty);
     background-color: red;
+}
+/* id rechercheForm */
+#sentButton{
+    background-color: var(--main-color);
+    color:var(--secondary-color);
+    border: 1px solid var(--darky);
+    border-radius:1rem;
+    font-size:15px;
+    padding:20px;
+    margin-left:600px;
+}
+
+input{
+    padding:5px;
+    transition: all 1s ease;
+}
+  /* premier input de la section rechercher chat 
+  => transition: c'est la vitesse à laquelle change la couleur de fond 
+  et ease la façon dont c'est fait ici c'est de façon doux  */
+
+input:focus{
+ background-color: var(--lighty);
+}
+  /* Input:focus pour que lorsque l'utilisateur clique sur le label le fond change de couleur  */
+  
+h5{
+    display: flex;
+    justify-content: center;
+    background-color: var(--main-color);
+    color:var(--secondary-color);
+    border: 1px solid var(--darky);
+    font-size:15px;
+    padding:15px;
+    margin-right:850px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+/* titre page recherche */
+
+.fichesChat{
     display:flex;
+	flex-direction: column;
+    gap:20px;
+}
+/* gap qui gère les espaces sur colonnes */
+.premieresFiches{
+    display:flex;
+    gap:50px;
+}
+/* gap qui gère les espaces sur lignes des deux 1eres fiches */
+.dernieresFiches{
+    display:flex;
+    gap:50px;
+}
+/* gap qui gère les espaces sur lignes des deux dernières fiches */
+.ficheChat{
+    display:flex;
+    padding:10px;
+    border:2px solid black;
+    border-radius: 40px;
+}
+.chatrond {
+    background-color: var(--main-color); 
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+}
+/* voir comment mettre l'image totalement ronde ou pas... */
+
+.photoTitre{
+    display:flex;
+    align-items: center;
     flex-direction: column;
 }
-/* id rechercheForm à améliorer */
+
+.catDesc{
+    display: flex;
+    justify-content: flex-end;
+    font-size: small;
+    padding:10px;
+}
+/* FIN DE CSS 2EME PAGE RECHERCHE
+--------------------------
+DEBUT DE LA 3EME PAGE CHAT */
+
+ /* CODE CSS PAGE CHAT */
+
+/* FIN DE CSS 3EME PAGE CHAT
+--------------------------
+DEBUT DE LA 4EME PAGE HISTOIRE */
+.divPrincipalePageHistoire{
+background-color:var(--secondary-color); 
+border-radius: 30px;
+border: 2px solid ;
+padding:40px;
+margin:40px;
+}
+
+.Dicton{
+    display:flex;
+    justify-content: center;
+    padding-top: 10px;
+}
+h2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.textValeurs{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+.contact{
+    display:flex;
+    justify-content: center;
+}
+.label{
+    display: inline;
+}
+#submit{
+    background-color: var(--main-color);
+    color:var(--secondary-color);
+    border: 1px solid var(--darky);
+    border-radius:1rem;
+    font-size:15px;
+    padding:20px;
+}
+.coordonées{
+    display: flex;
+    justify-content: center;
+    text-align: end;
+    flex-direction: column;
+}
 
