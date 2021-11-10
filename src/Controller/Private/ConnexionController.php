@@ -7,8 +7,7 @@ use App\Controller\AbstractController;
 
 class ConnexionController extends AbstractController
 
-//$itemManager = new ItemManager();
-        //$items = $itemManager->selectAll('title');
+//Creation de la session
 {
     public function connexion()
     {
@@ -16,17 +15,21 @@ class ConnexionController extends AbstractController
         $resultat = $manager->compare();
         if($resultat){
             session_start();
-            $_SESSION ["connexion"] = 1;
-            header ('location: nom de la route');   
+            $_SESSION ["login"] = $_POST['nom'];
+            header ('location: /private/admin');   
         }else {
             $error = "identifians incorrects";
             return $this->twig->render ("Private/connexion.html.twig" ,['error'=>$error]);            
         }       
     }
     
-    
+    public function index(){
+        die('index');
+    }
+
+
     public function login(){
-        
+
         return $this->twig->render ("Private/connexion.html.twig");
     }
 

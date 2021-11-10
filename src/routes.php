@@ -14,15 +14,14 @@ return [
     // 'items/add' => ['ItemController', 'add',],
     // 'items/delete' => ['ItemController', 'delete',],
 
-    // partie admin 
+
+// partie admin 
     'private/connexion' => ['Private\\ConnexionController', 'connexion'],
-    'private/login' => ['Private\\ConnexionController', 'login'],
-    'private/ajoutchat' => ['Private\\']
+    'private/login' => ['Private\\ConnexionController', 'login'], 
+    'private/admin' => ['Private\\ConnexionController', 'index'],
 
-
-    // partie public
+//partie public
     'histoire' => ['histoireController', 'histoire'],
     'recherche' => ['RechercheController', 'recherche'],
-    'chats' => ['ChatsController', 'chats'],
-
+    'chats' => ['ChatsController', 'chats'],   
 ];
