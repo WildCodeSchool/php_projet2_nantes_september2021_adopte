@@ -2,7 +2,7 @@
     --main-color:#A15C38;
     --secondary-color:#e7e7e7;
     --darky: #000000;
-    --lighty: #EAE5E5;
+    --lighty: #FAE5E9;
  }
  /* couleurs par défauts */
 
@@ -17,6 +17,27 @@ body{
     font-size:16px;
 }
     /* les paramétrages par défaut */
+
+.logo{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Parisienne';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    font-size:2rem;
+    padding:10px;
+    border-bottom: 1px solid var(--darky);
+    }
+
+.menu{
+    display:flex;
+    justify-content: center;
+    color:var(--darky);
+    list-style-type:none;
+    gap: 30px;
+}
 
 /* _header /code à faire/ _footer  */
 
