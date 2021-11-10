@@ -29,6 +29,7 @@ body{
     font-size:2rem;
     padding:10px;
     border-bottom: 1px solid var(--darky);
+    color:var(--darky);
     }
 
 .menu{
@@ -36,10 +37,28 @@ body{
     justify-content: center;
     color:var(--darky);
     list-style-type:none;
-    gap: 30px;
+    gap:80px;
 }
 
-/* _header /code à faire/ _footer  */
+a:link
+{ 
+ text-decoration:none; 
+} 
+    /* le header se termine ici */
+/* _footer /code à faire/ _footer  */
+
+.RetourHome{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Parisienne';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    font-size:2rem;
+    padding:10px;
+    border-bottom: 1px solid var(--darky);
+    }
 
 .carroussel{
     display:flex;
@@ -72,7 +91,7 @@ h1 {
 
 
 .chat{
-    background-color: var(--main-color); 
+    background-color: royalblue;
     border-radius: 2rem;
     width: 230px;
     height: 180px;
@@ -216,7 +235,37 @@ h5{
 --------------------------
 DEBUT DE LA 3EME PAGE CHAT */
 
- /* CODE CSS PAGE CHAT */
+.pageChat{
+    display:flex;
+    justify-content: space-between;
+    align-content: center;
+    border:1px solid var(--darky);
+    border-radius: 50px;
+    background-color: var(--secondary-color);
+    
+}
+.photoPresentation{
+    background-color: rebeccapurple;
+    justify-content: center;
+    align-content: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+}
+
+.basdepageChat{
+    background-color: red;
+    display:flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+h6{
+    text-align: center;
+    font-size: 1.2rem;
+    border-bottom: 1px solid var(--darky);
+}
+
 
 /* FIN DE CSS 3EME PAGE CHAT
 --------------------------
