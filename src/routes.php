@@ -17,7 +17,12 @@ return [
     // partie admin 
     'private/connexion' => ['Private\\ConnexionController', 'connexion'],
     'private/login' => ['Private\\ConnexionController', 'login'],
+    'private/ajoutchat' => ['Private\\']
+
+
+    // partie public
     'histoire' => ['histoireController', 'histoire'],
     'recherche' => ['RechercheController', 'recherche'],
     'chats' => ['ChatsController', 'chats'],
+
 ];
