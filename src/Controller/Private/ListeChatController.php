@@ -1,12 +1,19 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Private;
 
-use App\Model\ItemManager;
+use App\Model\Private\ChatManager;
+use App\Controller\AbstractController;
 
-class lesChats /*extends AbstractController*/
+class ListeChatController extends AbstractController
 {
-    /**
+    
+    public function ListeChats()
+    {
+        return $this->twig->render("Private/listeChat.html.twig");
+    }
+
+/**
      * List items
      */
     
@@ -88,5 +95,5 @@ class lesChats /*extends AbstractController*/
             $itemManager->delete((int)$id);
             header('Location:/items');
         }
-    }
+    }  
 }
