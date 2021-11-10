@@ -2,7 +2,7 @@
     --main-color:#A15C38;
     --secondary-color:#e7e7e7;
     --darky: #000000;
-    --lighty: #EAE5E5;
+    --lighty: #faf5e9;
  }
  /* couleurs par défauts */
 
@@ -17,6 +17,19 @@ body{
     font-size:16px;
 }
     /* les paramétrages par défaut */
+
+.logo{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+      font-family: 'Parisienne';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        font-size:2rem;
+        padding:10px;
+        border-bottom: 1px solid var(--darky);
+        }
 
 /* _header /code à faire/ _footer  */
 
@@ -244,5 +257,47 @@ h2{
     justify-content: center;
     text-align: end;
     flex-direction: column;
+}
+
+
+/* page connexion admin*/
+
+#container{
+    width:800px;
+    margin:0 auto;
+    margin-top:10%;
+}
+
+#form_admin {
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    padding: 30px;
+    border: 1px solid var(--darky);
+    border-radius:1rem;
+}
+
+#titleConnexion{
+    width: 38%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.inputadminNom, .inputadminMdp {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 20px 0;
+    border: 1px solid var(--darky);
+}
+
+.button {
+    background-color: var(--main-color);
+    border: 1px solid var(--darky);
+    border-radius:1rem;
+    font-size:15px;
+    width: 38%;
+    align-self: center;
 }
 
