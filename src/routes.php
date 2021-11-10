@@ -23,5 +23,8 @@ return [
 //partie public
     'histoire' => ['histoireController', 'histoire'],
     'recherche' => ['RechercheController', 'recherche'],
-    'chats' => ['ChatsController', 'chats'],   
+    'chats' => ['ChatsController', 'chats'], 
+    'chatadopt' => ['ChatadoptController', 'chatadopt'],  
+    'chatadoptOK' => ['ChatadoptOKController', 'chatadopt'],
+
 ];
