@@ -1,121 +1,104 @@
 {% extends 'layoutAdmin.html.twig' %}
 
 {% block content %}
+
 <div class="logo">AdopteUnChat.com</div>
+<div id="deconnexion">
 <button><a href="">Déconnexion</a></button>
+</div>
 
-<h1>Nos chats</h1>
-<h1>Nos familles d'accueil</h1>
+<div id="containerAjoutChat">
+    <form id="formAjout" action="" method="post" enctype="multipart/form-data">
+        <h2 id="titreNouveauChat">Nouveau chat</h2>
+        <div id="ligne1">
+            <div class="element">
+                <label class="un" for="name">Nom:</label>
+                <input class="un" type="text" id="name" name="name" required>
+            </div>
+            <div class="element">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="element">
+                <label for="race">Race:</label>
+                <select name="race" id="race" required>
+                        <option value="">--Choississez une race--</option>
+                        <option value="european shorthair">European shorthair</option>
+                        <option value="maine coon">Maine coon</option>
+                        <option value="siamois">Siamois</option>
+                        <option value="ragdoll">Ragdoll</option>
+                        <option value="sphynx">Sphynx</option>
+                        <option value="chat de gouttière">Chat de gouttière</option>
+                </select>
+            </div>
+        </div>
+        <div id="ligne2">
+            <div class="element">
+                <label for="couleur">Couleur:</label>
+                <select name="couleur" id="couleur" required>
+                        <option value="">--Choississez une robe--</option>
+                        <option value="bleu">Bleu</option>
+                        <option value="roux">Roux</option>
+                        <option value="blanc">Blanc</option>
+                        <option value="noir">Noir</option>
+                        <option value="brun">Brun</option>
+                        <option value="écaille de tortue">Ecaille de tortue</option>
+                        <option value="crème">Crème</option>
+                </select>
+            </div>
+            <div class="element">
+                <label for="sexe">Sexe:</label>
+                <select name="sexe" id="sexe">
+                    <option value="">--Choississez mâle ou femelle--</option>
+                    <option value="mâle">Mâle</option>
+                    <option value="femelle">Femelle</option>
+                </select>
+            </div>
+            <div class="element">
+                <label for="arrival">Date d'arrivée à l'association: </label>
+                <input type="date" id="arrival" name="arrival"
+                    value="2019-01-01"
+                    min="1995-01-01" max="2025-11-17">
+            </div>
+        </div>
+        <div id="ligne3">
+            <div class="element">
+                <label for="vaccin">Vaccin:</label>
+                    <input type="radio" id="oui" name="oui" value="oui" checked>
+                    <label for="oui">Oui</label>
+                    <input type="radio" id="non" name="non" value="non">
+                    <label for="non">Non</label>
+            </div>
+            <div class="element">
+                <label for="sterilisation">Stérilisation:</label>
+                    <input type="radio" id="oui" name="oui" value="oui" checked>
+                    <label for="oui">Oui</label>
+                    <input type="radio" id="non" name="non" value="non">
+                    <label for="non">Non</label>
+            </div>
+            <div class="element">
+                <label for="compatibilité">Compatibilité avec les autres animaux:</label>
+                    <input type="radio" id="oui" name="oui" value="oui" checked>
+                    <label for="oui">Oui</label>
+                    <input type="radio" id="non" name="non" value="non">
+                    <label for="non">Non</label>
+            </div>
+        </div>
+        <div id="ligne4">
+            <div class="element" id="elementPresentation">
+                <label for="presentation">Texte de présentation:</label>
+                <textarea type="text" id="presentation" name="presentation"></textarea>
+            </div>
+            <div class="element" id="elementPhoto">
+                <label for="photo">Ajouter une photo du chat:</label>    
+                <input type="file" name="photo" id="photo" />
+                <input type="submit" id='submit' value='Ajouter' >
+            </div> 
+        </div>
+        <input id="bouttonAjouter" class="button" type="submit" id='submit' value='VALIDER' >
+    </form>
+</div> 
 
-<form action="" method="post">
-    <div>
-        <label for="name">Nom :</label>
-        <textarea type="text" id="name" name="name" required>
-    </div>
-
-    <div>
-        <label for="age">Age:</label>
-        <input type="number" id="age" name="age" required>
-    </div>
-
-    <div>
-        <label for="race">Race :</label>
-        <select name="cat" id="cat-select" required>
-                <option value="">--Choississez une race--</option>
-                <option value="european shorthair">European shorthair</option>
-                <option value="maine coon">Maine coon</option>
-                <option value="siamois">Siamois</option>
-                <option value="ragdoll">Ragdoll</option>
-                <option value="sphynx">Sphynx</option>
-                <option value="chat de gouttière">Chat de gouttière</option>
-        </select>
-    </div>
-
-    <div>
-        <label for="couleur">Couleur :</label>
-        <select name="cat" id="cat-select" required>
-                <option value="">--Choississez une robe--</option>
-                <option value="bleu">Bleu</option>
-                <option value="roux">Roux</option>
-                <option value="blanc">Blanc</option>
-                <option value="noir">Noir</option>
-                <option value="brun">Brun</option>
-                <option value="écaille de tortue">Ecaille de tortue</option>
-                <option value="crème">Crème</option>
-        </select>
-    </div>
-
-    <div>
-        <label for="sexe">Sexe</label>
-        <select name="cat" id="cat-select">
-             <option value="">--Choississez mâle ou femelle--</option>
-             <option value="mâle">Mâle</option>
-             <option value="femelle">Femelle</option>
-        </select>
-    </div>
-
-    <div>
-        <form method="post" enctype="multipart/form-data">
-        <label for="imageUpload">Ajouter une photo du chat :</label>    
-        <input type="file" name="photo" id="/" />
-            <button name="send">Envoyer ?</button>
-        </form>
-    </div>
-
-    <div>
-        <label for="arrival">Date d'arrivée à l'association : </label>
-        <input type="date" id="arrival" name="arrival"
-               value="2019-01-01"
-               min="1995-01-01" max="2021-11-17">
-    </div>
-
-    <div>
-        <label for="vaccin">Vaccin :</label>
-        <textarea type="text" id="oui" name="oui" required>
-            <input type="radio" id="oui" name="oui" value="oui" checked>
-            <label for="oui">Oui</label>
-    </div>
-    <div>
-            <input type="radio" id="non" name="non" value="non">
-            <label for="non">Non</label>
-    </div>
-
-     <div>
-        <label for="vaccin">Stérilisation :</label>
-        <textarea type="text" id="oui" name="oui" required>
-            <input type="radio" id="oui" name="oui" value="oui" checked>
-            <label for="oui">Oui</label>
-    </div>
-    <div>
-            <input type="radio" id="non" name="non" value="non">
-            <label for="non">Non</label>
-    </div>
-
-    <div>
-        <label for="vaccin">Compatibilité avec les autres animaux :</label>
-        <textarea type="text" id="oui" name="oui" required>
-            <input type="radio" id="oui" name="oui" value="oui" checked>
-            <label for="oui">Oui</label>
-    </div>
-    <div>
-            <input type="radio" id="non" name="non" value="non">
-            <label for="non">Non</label>
-    </div>
-
-    <div>
-        <label for="presentation">Texte de présentation :</label>
-        <textarea type="text" id="presentation" name="presentation">
-    </div>
-
-    <div>
-        <label for="familleActuelle">Famille d'accueil actuelle :</label>
-        <textarea type="text" id="familleActuelle" name="familleActuelle">
-    </div>
-
-    <div>
-        <label for="adoptant">Adoptant :</label>
-        <type="text" id="adoptant" name="adoptant">
-    </div>
-</form>
+{% endblock %}
 
 

@@ -360,6 +360,7 @@ h2{
     display: flex;
     flex-direction: row;
     justify-content:space-around;
+    padding-left: 0px;
     width: 70%;
 }
 
@@ -371,4 +372,64 @@ h2{
 #bouttonSupprimer{
     margin-left: 0px;
     width: 125px;
+}
+
+
+/*page ajout chat partie admin*/
+
+#containerAjoutChat{
+    width:80%;
+    margin:0 auto;
+    margin-top:30px;
+}
+
+#formAjout{
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    height:auto;
+    padding: 30px;
+    border-radius:1rem;
+}
+
+#titreNouveauChat{
+    width: 38%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+#ligne1, #ligne2, #ligne3, #ligne4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 50px;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.element{
+    display: flex;
+    height: 100px;
+    width: 30%;
+    background-color: var(--lighty);
+    border-radius:1rem;
+    justify-content: center;
+    text-align: center;
+    align-items: center; 
+}
+
+#elementPresentation, #elementPhoto{
+    width: 46%;
+}
+
+label{
+    margin-right: 10px;
+}
+
+#bouttonAjouter{
+    margin-top: 50px;
+    height: 60px;
+    color: var(--secondary-color);
 }

@@ -5,7 +5,7 @@ namespace App\Controller\Private;
 use App\Model\Private\ChatManager;
 use App\Controller\AbstractController;
 
-class AjoutController extends AbstractController
+class AjoutChatController extends AbstractController
 {
     
     public function ajout()
