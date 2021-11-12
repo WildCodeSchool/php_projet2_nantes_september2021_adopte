@@ -1,11 +1,13 @@
 <?php
 
+
 namespace App\Model;
 use App\Model\AbstractManager;
 
 class ChatModele extends AbstractManager
 {
     public const TABLE = 'chats';
+
 
     /**
      * Insert new item in database

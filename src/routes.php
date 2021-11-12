@@ -8,7 +8,7 @@
 // e.g route '/item/edit?id=1' will execute $itemController->edit(1)
 return [
     '' => ['HomeController', 'index',],
-    // 'items' => ['ItemController', 'index',],
+    // 'items' => ['ItemController', 'index',],s
     // 'items/edit' => ['ItemController', 'edit', ['id']],
     // 'items/show' => ['ItemController', 'show', ['id']],
     // 'items/add' => ['ItemController', 'add',],
@@ -17,11 +17,15 @@ return [
 
 // partie admin 
     'private/connexion' => ['Private\\ConnexionController', 'connexion'],
-    'private/login' => ['Private\\ConnexionController', 'login'], 
-    'private/admin' => ['Private\\ConnexionController', 'index'],
+    'private/chats' => ['Private\\ListeChatController', 'listeChats'],
+    'private/ajout' => ['Private\\AjoutChatController', 'ajout'],
+    
 
 //partie public
     'histoire' => ['histoireController', 'histoire'],
     'recherche' => ['RechercheController', 'recherche'],
-    'chats' => ['ChatsController', 'chats'],   
+    'chats' => ['ChatsController', 'chats'], 
+    'chatadopt' => ['ChatadoptController', 'chatadopt'],  
+    'chatadoptOK' => ['ChatadoptOKController', 'chatadopt'],
+
 ];

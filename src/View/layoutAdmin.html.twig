@@ -8,6 +8,7 @@
     <title>{% block title %}{% endblock %}</title>
 
     <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="https://kit.fontawesome.com/ce1160e1b3.js" crossorigin="anonymous"></script>
     {% block stylesheet %}{% endblock %}
     <link rel="icon" href="/assets/images/favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,19 +18,7 @@
 </head>
 
 <body>
-<header>
-    <title>AdopteUnChat.com</title>
-        <button><a href="">Déconnexion</a></button>
 
-        <h1>Nos chats</h1>
-        <h1>Nos familles d'accueil</h1>
-
-    <div class="barrederecherche">
-        <form action="" class="formulaire">
-                    <input class="champ" type="text" value="Search...)"/>
-                    <input class="bouton" type="button" value=" " />
-    </div>
-</header>
     {% block content %}{% endblock %}
     {% block javascript %}{% endblock %}
     

@@ -1,12 +1,32 @@
 <?php
 
-namespace App\Controller;
+namespace App\Controller\Private;
 
-use App\Model\ItemManager;
+use App\Model\Private\ChatManager;
+use App\Controller\AbstractController;
 
-class lesChats /*extends AbstractController*/
+session_start();
+if(!isset($_SESSION['login'])){
+    header ('location: /private/connexion');
+}       
+
+class ListeChatController extends AbstractController
 {
-    /**
+
+    // public function __construct()
+    // {
+    //     session_start();
+    //     if(!isset($_SESSION['login'])){
+    //         header ('location: /private/connexion');
+    //     }       
+    // }
+    
+    public function ListeChats()
+    {
+        return $this->twig->render("Private/listeChat.html.twig");
+    }
+
+/**
      * List items
      */
     
@@ -88,5 +108,5 @@ class lesChats /*extends AbstractController*/
             $itemManager->delete((int)$id);
             header('Location:/items');
         }
-    }
+    }  
 }

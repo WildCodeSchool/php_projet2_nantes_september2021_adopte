@@ -16,7 +16,7 @@ class ConnexionController extends AbstractController
         if($resultat){
             session_start();
             $_SESSION ["login"] = $_POST['nom'];
-            header ('location: /private/admin');   
+            header ('location: /private/chats');
         }else {
             $error = "identifians incorrects";
             return $this->twig->render ("Private/connexion.html.twig" ,['error'=>$error]);            
@@ -26,13 +26,6 @@ class ConnexionController extends AbstractController
     public function index(){
         die('index');
     }
-
-
-    public function login(){
-
-        return $this->twig->render ("Private/connexion.html.twig");
-    }
-
 }
 
 
