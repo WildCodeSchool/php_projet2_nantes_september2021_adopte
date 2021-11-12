@@ -11,7 +11,7 @@ namespace App\Controller;
 use App\Model\ChatManager;
 use App\Controller\AbstractController;
 
-class ChatsController extends AbstractController
+class ChatController extends AbstractController
 {
     /**
      * Display home page
@@ -21,13 +21,14 @@ class ChatsController extends AbstractController
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
-    public function chats()
+    public function chat()
     {
         $chatManager = new ChatManager();
 
-        $chats = $chatManager->selectAll();
+        $chat = $chatManager->selectAll();
 
-        return $this->twig->render('Home/chats.html.twig', ['chats' => $chats
+        return $this->twig->render('Home/chat.html.twig', [
+            'chat' => $chat
         ]);
     }
 }
