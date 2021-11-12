@@ -20,6 +20,7 @@ return [
     'private/chats' => ['Private\\ListeChatController', 'listeChats'],
     'private/ajout' => ['Private\\AjoutChatController', 'ajout'],
     'private/logout' => ['Private\\LogoutController', 'logout'],
+    'private/delete' => ['Private\\DeleteController', 'delete'],
     
 
 //partie public
