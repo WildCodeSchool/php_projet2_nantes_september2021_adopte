@@ -1,8 +1,10 @@
 <?php
 
-namespace App\Model;
+namespace App\Model\Private;
+use App\Model\AbstractManager;
 
 class ItemManager extends AbstractManager
+
 {
     public const TABLE = 'item';
 
