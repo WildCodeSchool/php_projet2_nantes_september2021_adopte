@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Model;
+use App\Model\AbstractManager;
 
-class ItemManager extends AbstractManager
+class ChatModele extends AbstractManager
 {
-    public const TABLE = 'item';
+    public const TABLE = 'chats';
 
     /**
      * Insert new item in database
