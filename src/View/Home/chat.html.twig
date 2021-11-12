@@ -42,6 +42,30 @@
     <td>{{ chat.presentation}}</td>
 </tr>
 
+    <div class="contact">
+        <form name = "contactform" id="contactform" method="POST">
+            <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" placeholder="Votre nom" required><br>
+
+            <label for="surname">Prénom:</label><br>
+                <input type="text" id="surname" name="surname" placeholder="Votre prénom" required><br>
+
+            <label for="adresse">Votre adresse:</label><br>
+                <input type="text" id="adresse" name="adresse" placeholder="Votre adresse" required><br>
+
+            <label for="postal">Votre code postal:</label><br>
+                <input type="text" id="postal" name="postal" placeholder="Votre code postal" required><br>
+
+            <label for="ville">Votre ville:</label><br>
+                <input type="text" id="ville" name="ville" placeholder="Votre ville" required><br>
+                
+            <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="votreadresse@email.com" required><br>
+            <br><br>
+                <input type="submit" value="Adopter ce chat !" id="submit">
+        </form>
+    </div>
+
 {% endfor %}
 
 {% endblock %}
