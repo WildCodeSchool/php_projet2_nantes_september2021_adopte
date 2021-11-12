@@ -19,7 +19,7 @@ class ChatAdoptOKController extends AbstractController
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
-    public function chatadoptok()
+    public function chatadoptOK()
     {
         return $this->twig->render('Home/chatadoptOK.html.twig');
     }
