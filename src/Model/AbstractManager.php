@@ -25,6 +25,7 @@ abstract class AbstractManager
     public function __construct()
     {
         $connection = new Connection();
+
         $this->pdo = $connection->getPdoConnection();
     }
 

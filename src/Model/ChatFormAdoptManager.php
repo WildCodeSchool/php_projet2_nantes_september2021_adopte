@@ -3,13 +3,13 @@
 namespace App\Model;
 use App\Controller\AbstractController;
 
-class ChatAdoptManager extends AbstractManager
+class ChatFormAdopt extends AbstractManager
 {
     /**
      * Insert new item in database
      */
 
-    public function insertCat(array $item): int
+    public function insertAdoptant(array $item): int
     {
         $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (`title`) VALUES (:title)");
         $statement->bindValue('title', $item['title'], \PDO::PARAM_STR);
