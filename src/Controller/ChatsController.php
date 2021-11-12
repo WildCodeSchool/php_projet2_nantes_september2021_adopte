@@ -8,6 +8,8 @@
  */
 
 namespace App\Controller;
+use App\Model\ChatManager;
+use App\Controller\AbstractController;
 
 class ChatsController extends AbstractController
 {
@@ -21,6 +23,12 @@ class ChatsController extends AbstractController
      */
     public function chats()
     {
-        return $this->twig->render('Home/chats.html.twig');
+        $chatManager = new ChatManager();
+
+        $chats = $chatManager->selectAll();
+
+        return $this->twig->render('Home/chats.html.twig', [
+            'chats' => $chats
+        ]);
     }
 }

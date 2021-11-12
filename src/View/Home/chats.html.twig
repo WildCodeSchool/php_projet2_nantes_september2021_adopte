@@ -1,6 +1,7 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
+
     <div class = "pageChat">
         <div>
             <img class="grosChatRond" src="." alt=""></img>
@@ -23,5 +24,23 @@
             </section>
         </div>
     </div>
+    {% for chat in chats %}
+
+<tr>
+    <td>{{ chat.nom}}</td>
+    <td><img src ="{{ chat.photo}}"/></td>
+    <td>{{ chat.age}}</td>
+    <td>{{ chat.race}}</td>
+    <td>{{ chat.couleur}}</td>
+    <td>{{ chat.sexe}}</td>
+    <td>{{ chat.date_arrivee}}</td>
+    <td>{{ chat.vaccin}}</td>
+    <td>{{ chat.sterilise}}</td>
+    <td>{{ chat.compatibilite_autre_animaux}}</td>
+    <td>{{ chat.presentation}}</td>
+</tr>
+
+{% endfor %}
 
 {% endblock %}
+
