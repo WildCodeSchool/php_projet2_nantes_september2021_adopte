@@ -9,7 +9,7 @@
 
 namespace App\Controller;
 
-class ChatAdoptController extends AbstractController
+class ListeChatsController extends AbstractController
 {
     /**
      * Display home page
@@ -19,8 +19,8 @@ class ChatAdoptController extends AbstractController
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
-    public function chatadopt()
+    public function listechats()
     {
-        return $this->twig->render('Home/chatadopt.html.twig');
+        return $this->twig->render('Home/listechats.html.twig');
     }
 }

@@ -24,10 +24,12 @@
             </section>
         </div>
     </div>
+    
     {% for chat in chats %}
 
 <tr>
-    <td>{{ chat.nom}}</td>
+    
+    <td><a href="chats?id={{chat.id}}" >{{ chat.nom}}</a></td>
     <td><img src ="{{ chat.photo}}"/></td>
     <td>{{ chat.age}}</td>
     <td>{{ chat.race}}</td>

@@ -41,6 +41,7 @@ body{
 }
 
 a:link{ 
+    color: #000000;
     text-decoration:none; 
 } 
     /* le _header se termine ici */
@@ -125,9 +126,7 @@ button{
     padding:20px;
 }
 
-a{
-    color:var(--lighty);
-}
+
 .Homebasdepage{
     display:flex;
     align-items:space-between;

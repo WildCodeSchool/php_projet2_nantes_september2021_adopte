@@ -5,12 +5,9 @@ use App\Controller\AbstractController;
 
 class ChatManager extends AbstractManager
 {
-    public function selectAll(string $orderBy = '', string $direction = 'ASC'): array
-    {
-        $query = 'SELECT * FROM chats' . static::TABLE;
-        
+    const TABLE='chats';
 
-        return $this->pdo->query($query)->fetchAll();
-    }
+
+    
 
 }
