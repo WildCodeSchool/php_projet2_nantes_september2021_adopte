@@ -160,14 +160,13 @@ a{
 --------------------------
 DEBUT DE LA 2EME PAGE RECHERCHE */
 
-#rechercheForm{
+.contentchamp{
     display: flex;
     justify-content: center;
-    align-items: center;
+    flex-direction: column;
     background-color: var(--lighty);
-    background-color: red;
 }
-/* id rechercheForm */
+/* barre de recherche d'un chat */
 #sentButton{
     background-color: var(--main-color);
     color:var(--secondary-color);
@@ -228,12 +227,11 @@ h5{
     border-radius: 40px;
 }
 .chatrond{
-    background-color: var(--main-color); 
     width: 180px;
     height: 180px;
     border-radius: 100%;
 }
-/* voir comment mettre l'image totalement ronde ou pas... */
+/* l'image du chat est ronde alors chatrond */
 
 .photoTitre{
     display:flex;
@@ -260,8 +258,7 @@ DEBUT DE LA 3EME PAGE CHAT */
     background-color: var(--secondary-color);
     
 }
-.photoPresentation{
-    background-color: rebeccapurple;
+.grosChatRond{
     justify-content: center;
     align-content: center;
     width: 300px;
@@ -269,11 +266,22 @@ DEBUT DE LA 3EME PAGE CHAT */
     border-radius: 100%;
 }
 
-.basdepageChat{
-    background-color: red;
+.droitedelapageChat{
     display:flex;
     justify-content: flex-end;
     flex-direction: column;
+}
+
+.nom_age_button{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.textPresentation{
+    display:flex;
+    justify-content: center;
+    margin:20px;
 }
 
 h6{
