@@ -19,6 +19,7 @@ return [
     'private/connexion' => ['Private\\ConnexionController', 'connexion'],
     'private/chats' => ['Private\\ListeChatController', 'listeChats'],
     'private/ajout' => ['Private\\AjoutChatController', 'ajout'],
+    'private/logout' => ['Private\\LogoutController', 'logout'],
     
 
 //partie public
