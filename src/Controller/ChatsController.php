@@ -27,8 +27,7 @@ class ChatsController extends AbstractController
 
         $chats = $chatManager->selectAll();
 
-        return $this->twig->render('Home/chats.html.twig', [
-            'chats' => $chats
+        return $this->twig->render('Home/chats.html.twig', ['chats' => $chats
         ]);
     }
 }
