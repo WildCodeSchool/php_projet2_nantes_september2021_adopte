@@ -24,7 +24,6 @@ return [
     'private/chats/edit' => ['Private\\ChatsController', 'edit', ['id']],
     'private/fiche'  => ['Private\\AjoutChatController', 'fiche'],
 
-
 //partie public
     'histoire' => ['histoireController', 'histoire'],
     'listechats' => ['ListeChatsController', 'listechats'],

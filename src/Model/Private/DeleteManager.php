@@ -2,10 +2,12 @@
 
 
 namespace App\Model\Private;
+
 use App\Model\AbstractManager;
 
 class DeleteModele extends AbstractManager
 {
+
     public function delete(int $id)
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') 
