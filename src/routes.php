@@ -27,6 +27,6 @@ return [
     'listechats' => ['ListeChatsController', 'listechats'],
     'chat' => ['ChatController', 'chat'], 
     'chatadoptOK' => ['ChatAdoptOKController', 'chatadoptOK', ['id']],
-    'chatformadopt' => ['ChatFormAdoptController', 'chatformadopt', ['id']],
+    'chatformadopt' => ['AdoptantController', 'chatformadopt', ['id']],
 
 ];

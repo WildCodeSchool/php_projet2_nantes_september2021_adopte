@@ -6,10 +6,17 @@ use App\Model\AbstractManager;
 
 class ChatManager extends AbstractManager
 {
-    
-
     public const TABLE = 'chats';
 
+    function save($adoptant): void
+    {
+    $query = "INSERT INTO adoptant(prenom, nom) VALUES (:prenom, :nom)";
+    $newRecipe = $this->connection->prepare($query);
+    $newRecipe->bindValue(':prenom', $adoptant['prenom'], PDO::PARAM_STR);
+    $newRecipe->bindValue(':nom', $recipe['nom'], PDO::PARAM_STR);
+
+    $newRecipe->execute();
+    }
 
 
 
