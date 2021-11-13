@@ -17,11 +17,12 @@ return [
 
 // partie admin 
     'private/connexion' => ['Private\\ConnexionController', 'connexion'],
+    'private/logout' => ['Private\\ConnexionController', 'logout'],
     'private/chats' => ['Private\\ListeChatController', 'listeChats'],
     'private/ajout' => ['Private\\AjoutChatController', 'ajout'],
-    'private/logout' => ['Private\\LogoutController', 'logout'],
     'private/delete' => ['Private\\DeleteController', 'delete'],
-    'private/chats/edit' => ['Private\\ChatsController', 'edit', ['id']],  
+    'private/chats/edit' => ['Private\\ChatsController', 'edit', ['id']],
+    'private/fiche'  => ['Private\\AjoutChatController', 'fiche'],
 
 //partie public
     'histoire' => ['histoireController', 'histoire'],

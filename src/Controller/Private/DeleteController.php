@@ -7,7 +7,8 @@ use App\Controller\AbstractController;
 
 class DeleteController extends AbstractController
 {
-    public function delete()
+    public function delete(int $id)
+
     {
             $deleteManager = new DeleteManager;
 
