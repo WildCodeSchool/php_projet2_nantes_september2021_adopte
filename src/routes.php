@@ -21,13 +21,13 @@ return [
     'private/ajout' => ['Private\\AjoutChatController', 'ajout'],
     'private/logout' => ['Private\\LogoutController', 'logout'],
     'private/delete' => ['Private\\DeleteController', 'delete'],
-    
+    'private/chats/edit' => ['Private\\ChatsController', 'edit', ['id']],  
 
 //partie public
     'histoire' => ['histoireController', 'histoire'],
-    'recherche' => ['RechercheController', 'recherche'],
-    'chats' => ['ChatsController', 'chats'], 
-    'chatadopt' => ['ChatadoptController', 'chatadopt'],  
-    'chatadoptOK' => ['ChatadoptOKController', 'chatadopt'],
+    'listechats' => ['ListeChatsController', 'listechats'],
+    'chat' => ['ChatController', 'chat'], 
+    'chatadoptOK' => ['ChatAdoptOKController', 'chatadoptOK', ['id']],
+    'chatformadopt' => ['ChatFormAdoptController', 'chatformadopt', ['id']],
 
 ];

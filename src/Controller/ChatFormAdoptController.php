@@ -8,9 +8,10 @@
  */
 
 namespace App\Controller;
+use App\Model\ChatFormAdoptManager;
 
-class RechercheController extends AbstractController
-{
+class ChatFormAdoptController extends AbstractController
+{ 
     /**
      * Display home page
      *
@@ -19,8 +20,8 @@ class RechercheController extends AbstractController
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
-    public function recherche()
+    public function chatformadopt()
     {
-        return $this->twig->render('Home/recherche.html.twig');
+        return $this->twig->render('Home/chatFormAdopt.html.twig');
     }
 }
