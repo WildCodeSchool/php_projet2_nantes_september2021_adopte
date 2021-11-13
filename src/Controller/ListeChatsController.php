@@ -9,9 +9,11 @@
 
 namespace App\Controller;
 
-use App\Model\ChatAdoptManager;
+use App\Controller\AbstractController;
 
-class ChatAdoptController extends AbstractController
+use App\Model\ChatManager;
+
+class ListeChatsController extends AbstractController
 {
     /**
      * Display home page
@@ -30,7 +32,7 @@ class ChatAdoptController extends AbstractController
     {
         $chatAdoptManager = new ChatAdoptManager();
 
-        $chatAdoptManager = $chatAdoptManager->inster();
+        $chatAdoptManager = $chatAdoptManager->insert();
 
         return $this->twig->render('Home/chats.html.twig', ['chats' => $chats]);
     }

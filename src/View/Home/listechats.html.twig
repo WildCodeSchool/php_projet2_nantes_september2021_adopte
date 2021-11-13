@@ -49,6 +49,8 @@
                 </div>
             </div>
 
+            
+
             <div class = "ficheChat">
                 <div class="photoTitre">
                 <img class="chatrond" src="." alt=""></img>
@@ -62,5 +64,22 @@
             </div>
         </div>
     </div>
+{% for chat in chats %}
 
+        
+    
+                    <a href="chats?id={{chat.id}}" >{{ chat.nom}}</a>
+                        <img src ="{{ chat.photo}}"/>
+                        {{ chat.age}}
+                        {{ chat.race}}
+                        {{ chat.couleur}}
+                        {{ chat.sexe}}
+                        {{ chat.date_arrivee}}
+                        {{ chat.vaccin}}
+                        {{ chat.sterilise}}
+                        {{ chat.compatibilite_autre_animaux}}
+                        {{ chat.presentation}}
+            
+        
+    {% endfor %}
 {% endblock %}
