@@ -2,14 +2,11 @@
 
 {% block content %}
 
-    <div class="photoPrincipale">
-        <img class="chatHome" src="../../../assets/images/Cat/Pilou/Pilou.jpg" alt="Photo de Pilou"></img>
-    </div>
+<img class="chatHome" src="../../../assets/images/Cat/Pilou/Pilou.jpg" alt="Photo de Pilou"></img>
  
-    <h1>Et si c'était lui ?</h1>
+    <div class= "titre"><h1>Et si c'était lui ?</h1></div>
 
     <div class="leschats">
-      <img class="chat" src="../../../assets/images/Cat/Alphonse/Alphonse1.jpg" alt="Photo d'Alphonse "></img>
       <img class="chat" src="../../../assets/images/Cat/Chapelin/Chaplin4.jpg" alt="Photo de Chapelin"></img>
       <img class="chat" src="../../../assets/images/Cat/Channel/Channel.jpg" alt="Photo de Channel"></img>
       <img class="chat" src="../../../assets/images/Cat/Wale/Wale.jpg" alt="Photo de Wale"></img>
@@ -17,29 +14,33 @@
       <img class="chat" src="../../../assets/images/Cat/Monster/Monster.jpg" alt="Photo de Monster"></img>
     </div>
   
-  <button><a href="chats">Voir tous les chats en attente d'adoption</a></button>
+  <button><div  class ="allCats"><a href="">Voir tous les chats en attente d'adoption</a></div></button>
 
-
-<h1>Notre association ------- Notre sélection</h1>
     <div class="Homebasdepage">
+ 
         <div class="Homepageleft">
-            <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. 
-            De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium.
-            </p>
-            <button><a href="histoire">En savoir plus</a></button>
+           <div class= "titre"><h1>Notre association</h1></div>
+                <div class="texthistoire">
+                     <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. 
+                     De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium.
+                    Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. 
+                     De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium.
+                   </p>
+                         <div class="textbutton"><button><a href="histoire">En savoir plus</a></button></div>
+                </div>
         </div>
     <br>
         <div class="Homepageright">
-            <div class = "vueduchat">
-                <a href="vers la page du chat"><img class="chat" src="../../../assets/images/Cat/Rayu/Rayu.jpg" alt="Photo de Rayu"></img></a>
-                <h3> Son nom : Rayu </br> Son age : 5 ans </h3>
-            </div>
-            <div class = "descduchat">
+            <div class= "titre"><h1>Notre sélection</h1></div>
+                <div class = "presduchat">
+                    <a href="vers la page du chat"><img class="chat" src="../../../assets/images/Cat/Rayu/Rayu.jpg" alt="Photo de Rayu"></img></a>
+                        <h3> Son nom : Rayu </br> Son age : 5 ans </h3>
                 <p>Description : Rayu est un chat plutot calme qui aime les gratouilles mais il sait aussi etre indépendant et joueur quand il est stimulé.
                 OK chat,Chien et enfants il s’adaptera facilement a votre vie de famille.</p>
-            </div>
+                </div>
         </div>
-</div>
+
+    </div>
 
 {% endblock %}
 

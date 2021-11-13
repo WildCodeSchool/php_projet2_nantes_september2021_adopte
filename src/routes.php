@@ -17,16 +17,18 @@ return [
 
 // partie admin 
     'private/connexion' => ['Private\\ConnexionController', 'connexion'],
+    'private/logout' => ['Private\\ConnexionController', 'logout'],
     'private/chats' => ['Private\\ListeChatController', 'listeChats'],
     'private/ajout' => ['Private\\AjoutChatController', 'ajout'],
-    'private/logout' => ['Private\\LogoutController', 'logout'],
-    'private/chats/edit' => ['Private\\ChatsController', 'edit', ['id']],  
+    'private/delete' => ['Private\\DeleteController', 'delete'],
+    'private/chats/edit' => ['Private\\ChatsController', 'edit', ['id']],
+    'private/fiche'  => ['Private\\AjoutChatController', 'fiche'],
 
 //partie public
     'histoire' => ['histoireController', 'histoire'],
     'listechats' => ['ListeChatsController', 'listechats'],
     'chat' => ['ChatController', 'chat'], 
     'chatadoptOK' => ['ChatAdoptOKController', 'chatadoptOK', ['id']],
-    'chatformadopt' => ['ChatFormAdoptController', 'chatformadopt', ['id']],
+    'chatformadopt' => ['AdoptantController', 'chatformadopt', ['id']],
 
 ];

@@ -11,16 +11,7 @@ if(!isset($_SESSION['login'])){
 }       
 
 class ListeChatController extends AbstractController
-{
-
-    // public function __construct()
-    // {
-    //     session_start();
-    //     if(!isset($_SESSION['login'])){
-    //         header ('location: /private/connexion');
-    //     }       
-    // }
-    
+{ 
     public function ListeChats()
     {
         return $this->twig->render("Private/listeChat.html.twig");
@@ -95,18 +86,4 @@ class ListeChatController extends AbstractController
 
         return $this->twig->render('Item/add.html.twig');
     }
-
-
-    /**
-     * Delete a specific item
-     */
-    public function delete()
-    {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $id = trim($_POST['id']);
-            $itemManager = new ItemManager();
-            $itemManager->delete((int)$id);
-            header('Location:/items');
-        }
-    }  
 }

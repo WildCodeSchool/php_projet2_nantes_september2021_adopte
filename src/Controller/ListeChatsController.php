@@ -9,8 +9,6 @@
 
 namespace App\Controller;
 
-use App\Model\ChatAdoptManager;
-
 class ListeChatsController extends AbstractController
 {
     /**
@@ -26,13 +24,13 @@ class ListeChatsController extends AbstractController
         return $this->twig->render('Home/listechats.html.twig');
     }
 
-    public function chats()
-    {
-        $chatAdoptManager = new ChatAdoptManager();
+    // public function chats()
+    // {
+    //     $chatAdoptManager = new ChatAdoptManager();
 
-        $chatAdoptManager = $chatAdoptManager->inster();
+    //     $chatAdoptManager = $chatAdoptManager->inster();
 
-        return $this->twig->render('Home/chats.html.twig', ['chats' => $chats]);
-    }
+    //     return $this->twig->render('Home/chats.html.twig', ['chats' => $chats]);
+    // }
 
 }
