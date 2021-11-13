@@ -9,24 +9,32 @@ class ChatManager extends AbstractManager
     /**
      * Insert new item in database
      */
-    public function insert(array $item): int
-    {
-        $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (`title`) VALUES (:title)");
-        $statement->bindValue(':nom', $item['nom'], \PDO::PARAM_STR);
-        $statement->bindValue(':age', $item['age'], \PDO::PARAM_INT);
-        $statement->bindValue(':race', $item['race'], \PDO::PARAM_STR);
-        $statement->bindValue(':couleur', $item['couleur'], \PDO::PARAM_STR);
-        $statement->bindValue(':sexe', $item['sexe'], \PDO::PARAM_STR);
-        $statement->bindValue(':photo', $item['photo'], \PDO::PARAM_STR);
-        $statement->bindValue(':date_arrivee', $item['date_arrivee'], \PDO::PARAM_DATE);
-        $statement->bindValue(':vaccin', $item['vaccin'], \PDO::PARAM_BOOL);
-        $statement->bindValue(':sterilise', $item['sterilise'], \PDO::PARAM_BOOL);
-        $statement->bindValue(':compatibilite_autre_animaux', $item['compatibilite_autre_animaux'], \PDO::PARAM_BOOL);
-        $statement->bindValue(':presentation', $item['presentation'], \PDO::PARAM_STR);
+    public function insert()
+    {   
+        if ($_SERVER['REQUEST_METHOD'] === 'POST')
+        {
+            if(!empty($_POST['nom']));
+            {
+                $_POST['nom'] = trim($_POST['nom']);
+                // $_POST['mdp'] = trim($_POST['mdp']); 
 
-        $statement->execute();
-        return (int)$this->pdo->lastInsertId();
-    }
+                $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " ('nom','age','race','couleur','sexe','photo','date_arrivee','vaccin','sterilise','compatibilite_autre_animaux','presentation') VALUES (:nom, :age, :race, :couleur, :sexe, :photo, :date_arrivee, :vaccin, :sterilise, :compatibilite_autre_animaux, :presentation)");
+                $statement->bindValue(':nom', $_POST['nom'], \PDO::PARAM_STR);
+                $statement->bindValue(':age', $_POST['age'], \PDO::PARAM_INT);
+                $statement->bindValue(':race', $_POST['race'], \PDO::PARAM_STR);
+                $statement->bindValue(':couleur', $_POST['couleur'], \PDO::PARAM_STR);
+                $statement->bindValue(':sexe', $_POST['sexe'], \PDO::PARAM_STR);
+                $statement->bindValue(':photo', $_POST['photo'], \PDO::PARAM_STR);
+                $statement->bindValue(':date_arrivee', $_POST['date_arrivee'], \PDO::PARAM_DATE);
+                $statement->bindValue(':vaccin', $_POST['vaccin'], \PDO::PARAM_BOOL);
+                $statement->bindValue(':sterilise', $_POST['sterilise'], \PDO::PARAM_BOOL);
+                $statement->bindValue(':compatibilite_autre_animaux', $_POST['compatibilite_autre_animaux'], \PDO::PARAM_BOOL);
+                $statement->bindValue(':presentation', $_POST['presentation'], \PDO::PARAM_STR);
+                
+                $statement->execute();
+                return (int)$this->pdo->lastInsertId();
+    
+    }   }   }   }
 
 
     // /**
@@ -40,4 +48,3 @@ class ChatManager extends AbstractManager
 
     //     return $statement->execute();
     // }
-}
