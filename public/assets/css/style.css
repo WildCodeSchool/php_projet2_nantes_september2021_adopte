@@ -482,13 +482,25 @@ input[type="text"], input[type="email"], textarea[type="message"] {
     margin: 0px;
 }
 
-.listeDesChats{
-    display: flex;
+.listeDesChats {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.listeDesChats .item .itemInfo,
+.listeDesChats .itemHeader .itemInfo {
+    width: 24%;
+    display: inline-block;
+    text-align: center;
+    /* display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding-left: 25px;
     margin-top: 50px;
-    width: 100%;
+    width: 100%; */
+}
+.listeDesChats .itemHeader .itemInfo {
+    font-weight: bold;
 }
 
 #infoChat{
