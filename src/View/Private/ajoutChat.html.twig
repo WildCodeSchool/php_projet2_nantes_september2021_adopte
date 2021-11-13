@@ -9,20 +9,20 @@
 </div>
 
 <div id="containerAjoutChat">
-    <form id="formAjout" action="" method="post" enctype="multipart/form-data">
+    <form id="formAjout" action="chats/add" method="post" enctype="multipart/form-data">
         <h2 id="titreNouveauChat">Nouveau chat</h2>
         <div id="ligne1">
             <div class="element">
-                <label class="un" for="name">Nom:</label>
-                <input class="un" type="text" id="name" name="name" required>
+                <label class="un" for="nom">Nom:</label>
+                <input class="un" type="text" id="nom" name="nom" required>
             </div>
             <div class="element">
                 <label for="age">Age:</label>
-                <input type="number" id="age" name="age" required>
+                <input type="number" id="age" name="age">
             </div>
             <div class="element">
                 <label for="race">Race:</label>
-                <select name="race" id="race" required>
+                <select name="race" id="race">
                         <option value="">--Choississez une race--</option>
                         <option value="european shorthair">European shorthair</option>
                         <option value="maine coon">Maine coon</option>
@@ -36,7 +36,7 @@
         <div id="ligne2">
             <div class="element">
                 <label for="couleur">Couleur:</label>
-                <select name="couleur" id="couleur" required>
+                <select name="couleur" id="couleur">
                         <option value="">--Choississez une robe--</option>
                         <option value="bleu">Bleu</option>
                         <option value="roux">Roux</option>
