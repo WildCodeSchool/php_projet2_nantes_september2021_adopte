@@ -10,7 +10,7 @@ class ConnexionManager extends AbstractManager
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') 
         {
-            if(!empty($_POST['nom']) && !empty($_POST['mdp'])) ;
+            if(!empty($_POST['nom']) && !empty($_POST['mdp']));
             {
                 $_POST['nom'] = trim($_POST['nom']);
                 $_POST['mdp'] = trim($_POST['mdp']);
