@@ -10,12 +10,12 @@ class ConnexionManager extends AbstractManager
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') 
         {
-            if(!empty($_POST['nom']) && !empty($_POST['mdp'])) ;
+            if(!empty($_POST['nom']) && !empty($_POST['mdp']));
             {
                 $_POST['nom'] = trim($_POST['nom']);
                 $_POST['mdp'] = trim($_POST['mdp']);
 
-                $statement = $this->pdo->prepare('SELECT nom, mdp FROM connexion WHERE nom = :nom');
+                $statement = $this->pdo->prepare('SELECT nom, mdp FROM admin_connexion WHERE nom = :nom');
                 $statement->bindValue(':nom', $_POST['nom'], \PDO::PARAM_STR);
                 $statement->execute();
                 $resultat = $statement->fetch(); 
