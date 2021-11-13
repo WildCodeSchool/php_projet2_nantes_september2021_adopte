@@ -6,19 +6,10 @@ use App\Model\AbstractManager;
 class ChatManager extends AbstractManager
 {
     public const TABLE = 'chats';
-    /**
-     * Insert new item in database
-     */
+
     public function insert()
     {   
-        if ($_SERVER['REQUEST_METHOD'] === 'POST')
-        {
-            if(!empty($_POST['nom']));
-            {
-                $_POST['nom'] = trim($_POST['nom']);
-                // $_POST['mdp'] = trim($_POST['mdp']); 
-
-                $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " ('nom','age','race','couleur','sexe','photo','date_arrivee','vaccin','sterilise','compatibilite_autre_animaux','presentation') VALUES (:nom, :age, :race, :couleur, :sexe, :photo, :date_arrivee, :vaccin, :sterilise, :compatibilite_autre_animaux, :presentation)");
+                $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (nom, age, race, couleur, sexe, photo, date_arrivee, vaccin',sterilise, compatibilite_autre_animaux, presentation) VALUES (:nom, :age, :race, :couleur, :sexe, :photo, :date_arrivee, :vaccin, :sterilise, :compatibilite_autre_animaux, :presentation)");
                 $statement->bindValue(':nom', $_POST['nom'], \PDO::PARAM_STR);
                 $statement->bindValue(':age', $_POST['age'], \PDO::PARAM_INT);
                 $statement->bindValue(':race', $_POST['race'], \PDO::PARAM_STR);
@@ -32,9 +23,9 @@ class ChatManager extends AbstractManager
                 $statement->bindValue(':presentation', $_POST['presentation'], \PDO::PARAM_STR);
                 
                 $statement->execute();
-                return (int)$this->pdo->lastInsertId();
-    
-    }   }   }   }
+
+    }   
+}  
 
 
     // /**

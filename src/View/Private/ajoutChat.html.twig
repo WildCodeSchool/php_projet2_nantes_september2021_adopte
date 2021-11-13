@@ -55,6 +55,11 @@
                     <option value="femelle">Femelle</option>
                 </select>
             </div>
+            <div class="element" id="elementPhoto">
+                <label for="photo">Ajouter une photo du chat:</label>    
+                <input type="file" name="photo" id="photo" />
+                <input type="submit" id='submit' value='Ajouter' >
+            </div> 
             <div class="element">
                 <label for="arrival">Date d'arrivée à l'association: </label>
                 <input type="date" id="arrival" name="arrival"
@@ -90,11 +95,7 @@
                 <label for="presentation">Texte de présentation:</label>
                 <textarea type="text" id="presentation" name="presentation"></textarea>
             </div>
-            <div class="element" id="elementPhoto">
-                <label for="photo">Ajouter une photo du chat:</label>    
-                <input type="file" name="photo" id="photo" />
-                <input type="submit" id='submit' value='Ajouter' >
-            </div> 
+    
         </div>
         <input id="bouttonAjouter" class="button" type="submit" id='submit' value='VALIDER' >
     </form>

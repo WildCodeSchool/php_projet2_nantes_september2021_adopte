@@ -28,7 +28,7 @@ class AdoptantController extends AbstractController
         return $this->twig->render('Home/chatFormAdopt.html.twig');
     }
 
-    public function add(): void
+    public function addAdoptant(): void
         {
         
         if ($_SERVER["REQUEST_METHOD"] === 'POST') {
