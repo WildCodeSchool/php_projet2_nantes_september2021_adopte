@@ -21,14 +21,5 @@ class ChatController extends AbstractController
      * @throws \Twig\Error\RuntimeError
      * @throws \Twig\Error\SyntaxError
      */
-    public function chat()
-    {
-        $chatManager = new ChatManager();
 
-        $chat = $chatManager->selectAll();
-
-        return $this->twig->render('Home/chat.html.twig', [
-            'chat' => $chat
-        ]);
-    }
 }
