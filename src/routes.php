@@ -22,6 +22,7 @@ return [
     'private/ajout' => ['Private\\AjoutChatController', 'ajout'],
     'private/delete' => ['Private\\DeleteController', 'delete'],
     'private/chats/edit' => ['Private\\ChatsController', 'edit', ['id']],
+    'private/chats/add' => ['Private\\ChatsController', 'add',],
     'private/fiche'  => ['Private\\AjoutChatController', 'fiche'],
 
 //partie public

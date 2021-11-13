@@ -18,7 +18,7 @@ class ChatsController extends AbstractController{
             // if validation is ok, insert and redirection
             
             $chatManager = new ChatManager();
-            $id = $chatManager->insert($chat);
+            $id = $chatManager->insert($item);
             header('Location:/items/show?id=' . $id);
         }
     
