@@ -11,7 +11,7 @@ namespace App\Controller;
 
 use App\Model\ChatAdoptManager;
 
-class ChatAdoptController extends AbstractController
+class ListeChatsController extends AbstractController
 {
     /**
      * Display home page
