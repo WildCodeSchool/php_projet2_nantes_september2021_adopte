@@ -17,4 +17,9 @@ class AjoutChatController extends AbstractController
     {
         return $this->twig->render("Private/ajoutChat.html.twig");
     }
+
+    public function fiche()
+    {
+        return $this->twig->render("Private/ficheChat.html.twig");
+    }
 }

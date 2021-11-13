@@ -1,21 +1,21 @@
 <?php
 
 
-namespace App\Model;
+namespace App\Model\Private;
 use App\Model\AbstractManager;
 
 class DeleteModele extends AbstractManager
 {
-    public function delete()
+    public function delete(int $id)
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') 
         {
             if(!empty($_POST['id']))
             {
-                $_POST['id'] = trim($_POST['id']);
+                $id = trim($_POST['id']);
 
                 $statement = $this->pdo->prepare("DELETE FROM chats WHERE id=:id");
-                $statement->bindValue(':id', $_POST['id'], \PDO::PARAM_INT);
+                $statement->bindValue(':id', $id, \PDO::PARAM_INT);
                 $statement->execute();
             }
         }
