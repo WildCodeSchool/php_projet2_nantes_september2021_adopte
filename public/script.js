@@ -1,5 +1,5 @@
 const message=
-"Merci d’avoir soumis votre demande. En attendant, nous sommes mobilisés pour prendre soin de votre futur chat ! :-)"
+"Merci d’avoir soumis votre demande. Nous vous répondrons dans les plus brefs délais ! :-)"
 
 document
 .getElementById("formulaire")

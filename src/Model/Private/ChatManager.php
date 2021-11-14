@@ -2,12 +2,13 @@
 
 namespace App\Model\Private;
 use App\Model\AbstractManager;
+use App\Controller\Privat\ChatsController;
 
 class ChatManager extends AbstractManager
 {
     public const TABLE = 'chats';
 
-    public function insert()
+    public function insert(array $chat)
     {   
                 $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (nom, age, race, couleur, sexe, photo, date_arrivee, vaccin',sterilise, compatibilite_autre_animaux, presentation) VALUES (:nom, :age, :race, :couleur, :sexe, :photo, :date_arrivee, :vaccin, :sterilise, :compatibilite_autre_animaux, :presentation)");
                 $statement->bindValue(':nom', $_POST['nom'], \PDO::PARAM_STR);
@@ -15,7 +16,7 @@ class ChatManager extends AbstractManager
                 $statement->bindValue(':race', $_POST['race'], \PDO::PARAM_STR);
                 $statement->bindValue(':couleur', $_POST['couleur'], \PDO::PARAM_STR);
                 $statement->bindValue(':sexe', $_POST['sexe'], \PDO::PARAM_STR);
-                $statement->bindValue(':photo', $_POST['photo'], \PDO::PARAM_STR);
+                $statement->bindValue(':photo', "/assets/images/Cat/" . $uploadPhoto, \PDO::PARAM_STR);
                 $statement->bindValue(':date_arrivee', $_POST['date_arrivee'], \PDO::PARAM_DATE);
                 $statement->bindValue(':vaccin', $_POST['vaccin'], \PDO::PARAM_BOOL);
                 $statement->bindValue(':sterilise', $_POST['sterilise'], \PDO::PARAM_BOOL);

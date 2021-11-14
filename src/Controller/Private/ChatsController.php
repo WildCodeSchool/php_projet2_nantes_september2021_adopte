@@ -12,12 +12,13 @@ class ChatsController extends AbstractController{
     
     public function verification(){
         $this->chats = array_map('trim', $_POST);
+        
     }
 
     public function uploadPhoto(){
 
         //chemin vers le dossier sur le serveur qui reçois les photos
-        $uploadDir = "/assets/images/Cat";
+        $uploadDir = "public/assets/images/Cat";
 
         //Recupère ext du fichier
         $extension = pathinfo($_FILES['photo']['name'], PATHINFO_EXTENSION);

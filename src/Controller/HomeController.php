@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Model\ChatManager;
+use App\Model\HomeManager;
 use App\Controller\AbstractController;
 
 class HomeController extends AbstractController
@@ -30,45 +30,5 @@ class HomeController extends AbstractController
         return $this->twig->render('Home/chatadoptOK.html.twig');
     }
 
-//Formulaire ajout d'adoptant
-    public function addAdoptant(): void
-        {
-        
-        if ($_SERVER["REQUEST_METHOD"] === 'POST') {
-            $adoptant = array_map("trim", $_POST); //nettoyage
-            
-            if($adoptant['prenom'] == ""){
-                $errors['prenom'] = "Le nom de la recette ne peut pas être vide.";
-            }
 
-            if($adoptant['nom'] == ""){
-                $errors['nom'] = "La description ne peut pas être vide.";
-            }
-        
-            if($adoptant['adresse'] == ""){
-                $errors['adresse'] = "La description ne peut pas être vide.";
-            }
-
-            if($adoptant['telephone'] == ""){
-                $errors['telephone'] = "La description ne peut pas être vide.";
-            }
-
-            if($adoptant['Code_postal'] == ""){
-                $errors['Code_postal'] = "La description ne peut pas être vide.";
-            }
-
-            if($adoptant['ville'] == ""){
-                $errors['ville'] = "La description ne peut pas être vide.";
-            }
-
-            if($adoptant['email'] == ""){
-                $errors['email'] = "La description ne peut pas être vide.";
-            }
-        
-            if (empty($errors)) {
-                $this->model->saveRecipe($adoptant);
-            }
-        }
-            require __DIR__ . '/../views/charFormAdopt.html';
-        }
 }
