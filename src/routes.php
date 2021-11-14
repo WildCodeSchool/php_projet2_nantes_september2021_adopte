@@ -7,7 +7,7 @@
 //          3. (optional) array of query string keys to send as parameter to the method
 // e.g route '/item/edit?id=1' will execute $itemController->edit(1)
 return [
-    '' => ['HomeController', 'index',],
+
     // 'items' => ['ItemController', 'index',],s
     // 'items/edit' => ['ItemController', 'edit', ['id']],
     // 'items/show' => ['ItemController', 'show', ['id']],
@@ -26,10 +26,11 @@ return [
     'private/fiche'  => ['Private\\AjoutChatController', 'fiche'],
 
 //partie public
-    'histoire' => ['histoireController', 'histoire'],
-    'listechats' => ['ListeChatsController', 'listechats'],
-    'chat' => ['ChatController', 'chat'], 
-    'chatadoptOK' => ['ChatAdoptOKController', 'chatadoptOK', ['id']],
-    'chatformadopt' => ['AdoptantController', 'chatformadopt', ['id']],
+    '' => ['HomeController', 'index',],
+    'histoire' => ['HomeController', 'histoire'],
+    'listechats' => ['HomeController', 'listechats'],
+    'chat' => ['HomeController', 'chat'], 
+    'chatadoptOK' => ['HomeController', 'chatadoptOK', ['id']],
+    'chatformadopt' => ['HomeController', 'chatformadopt', ['id']],
 
 ];

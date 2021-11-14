@@ -1,33 +1,14 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: aurelwcs
- * Date: 08/04/19
- * Time: 18:40
- */
-
 namespace App\Controller;
+
 use App\Model\AdoptantManager;
+use App\Controller\AbstractController;
 
-class AdoptantController extends AbstractController
-{ 
-    /**
-     * Display home page
-     *
-     * @return string
-     * @throws \Twig\Error\LoaderError
-     * @throws \Twig\Error\RuntimeError
-     * @throws \Twig\Error\SyntaxError
-     */
-    public function chatformadopt()
-    {
-        $adoptantManager = new AdoptantManager();
-        $adoptant = $adoptantManager -> selectOneById($adoptant);   
+class AdoptanteController extends AbstractController
+{
 
-        return $this->twig->render('Home/chatFormAdopt.html.twig');
-    }
-
+//Formulaire ajout d'adoptant
     public function addAdoptant(): void
         {
         
@@ -35,37 +16,37 @@ class AdoptantController extends AbstractController
             $adoptant = array_map("trim", $_POST); //nettoyage
             
             if($adoptant['prenom'] == ""){
-                $errors['prenom'] = "Le nom de la recette ne peut pas être vide.";
+                $errors['prenom'] = "Merci d'indiquer un prénom.";
             }
 
             if($adoptant['nom'] == ""){
-                $errors['nom'] = "La description ne peut pas être vide.";
+                $errors['nom'] = "Merci d'indiquer un nom.";
             }
         
             if($adoptant['adresse'] == ""){
-                $errors['adresse'] = "La description ne peut pas être vide.";
+                $errors['adresse'] = "Merci d'indiquer une adresse.";
             }
 
             if($adoptant['telephone'] == ""){
-                $errors['telephone'] = "La description ne peut pas être vide.";
+                $errors['telephone'] = "Merci d'indiquer un numéro de téléphone.";
             }
 
             if($adoptant['Code_postal'] == ""){
-                $errors['Code_postal'] = "La description ne peut pas être vide.";
+                $errors['Code_postal'] = "Merci d'indiquer un code postal.";
             }
 
             if($adoptant['ville'] == ""){
-                $errors['ville'] = "La description ne peut pas être vide.";
+                $errors['ville'] = "Merci d'indiquer une ville.";
             }
 
             if($adoptant['email'] == ""){
-                $errors['email'] = "La description ne peut pas être vide.";
+                $errors['email'] = "Merci d'indiquer une adresse mail.";
             }
         
             if (empty($errors)) {
-                $this->model->saveRecipe($adoptant);
+                $this->model->addAdoptant($adoptant);
             }
         }
             require __DIR__ . '/../views/charFormAdopt.html';
         }
-    }
+}
