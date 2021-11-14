@@ -1,0 +1,45 @@
+{% extends 'layoutAdmin.html.twig' %}
+
+{% block content %}
+
+<div class="logo">AdopteUnChat.com</div>
+<div id="deconnexion">
+<button><a href="logout">Déconnexion</a></button>
+</div>
+
+<h2 id="titreNosChats">Nos chats</h2>
+
+<div class="barrederecherche">
+  <form id="formBarreDeRecherche" action="" class="formulaire">
+    <input id="inputRecherche" class="champ" type="text" placeholder="Taper votre rechercher"/>
+    <input id="rechercheBoutton" type="submit" id='submit' value='Rechercher' >
+  </form>
+    <button id="bouttonAjouterChat"><a href="ajout">Ajouter un nouveau chat</a></button>
+</div>
+
+
+<div class="listeDesChats">  
+  <div class ="itemHeader">
+    <div class ="itemNom itemInfo" >Nom</div>
+    <div class ="itemAge itemInfo" >Age</div>
+    <div class ="itemCouleur itemInfo" >Couleurs</div>
+    <div class ="itemActions itemInfo" >Actions</div>
+  </div>
+
+  {% for chat in chats %}
+    <div class ="item">
+      <div class ="itemNom itemInfo" > {{chat.nom}} </div>
+      <div class ="itemAge itemInfo" > {{chat.age}} </div>
+      <div class ="itemCouleur itemInfo" > {{chat.couleur}} </div>
+      <div class ="itemActions itemInfo" >
+        <a href="edit?id={{chat.id}}"><i class="far fa-edit"></i></a>
+        <form action="delete" method="POST" onsubmit="return confirm('Voulez-vous vraiment supprimer {{chat.nom}}');">
+          <input name="id"type="hidden" value="{{chat.id}}">
+          <button type="submit"><i class="fas fa-trash"></i></button>
+        </form>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+{% endblock %}

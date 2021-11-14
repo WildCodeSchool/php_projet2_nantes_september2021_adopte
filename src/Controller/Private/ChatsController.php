@@ -7,6 +7,7 @@ use App\Controller\AbstractController;
 
 class ChatsController extends AbstractController{ 
 
+<<<<<<< HEAD
     public $chat;
     public $errors = [];
     
@@ -78,3 +79,54 @@ class ChatsController extends AbstractController{
 
 //         return $this->twig->render("Private/Chats/edit.html.twig", ['chat' => $chat]);
 //     }
+=======
+    public function index()
+    {
+        $chatManager = new ChatManager();
+        $chats = $chatManager->selectAll();
+        return $this->twig->render("Private/chats.html.twig", ['chats' => $chats] );
+    }
+
+    public function add(): string
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            // clean $_POST data
+            $item = array_map('trim', $_POST);
+    
+            // TODO validations (length, format...)
+    
+            // if validation is ok, insert and redirection
+            
+            $chatManager = new ChatManager();
+            $id = $chatManager->insert($item);
+            header('Location:/items/show?id=' . $id);
+        }
+    
+        return $this->twig->render("Private/ajoutChat.html.twig");
+    }
+
+    public function edit(int $id)
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            // TODO: traiter les infos
+        }
+
+        $chatManager = new ChatManager();
+        $chat = $chatManager->selectOneById($id);
+
+        return $this->twig->render("Private/edit.html.twig", ['chat' => $chat]);
+    }
+
+     public function delete()
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $id = (int) trim($_POST['id']);
+
+            $chatManager = new ChatManager();
+            $chatManager->delete($id);
+
+            header('Location:chats');
+        }
+    }
+}
+>>>>>>> 3f56914d2f167846dddca6f7b4b36f5a4149d58b
