@@ -8,20 +8,25 @@
         </p>
     </div>
 
-<h5>Nos chats à adopter</h5>
-    <div class = "fichesChat">
-        <div class = "premieresFiches"> 
-            <div class = "ficheChat">
-                <div class="photoTitre">
-                    <img class="chatrond" src="." alt=""></img>
-                    <p> Son nom - Son âge </p>
-                </div>
+
+    <h5>Nos chats à adopter</h5>
+    {% for chat in chats %}
+        <div class = "fichesChat">
+            <div class = "premieresFiches"> 
+                <div class = "ficheChat">
+                    <div class="photoTitre">
+                        <img class="chatrond" src="{{ chat.photo}}" alt=""></img>
+                        <p> <a href="chats?id={{chat.id}}" >{{ chat.nom}}</a> - {{ chat.age}} </p>
+                    </div>
+
 
                 <div class="catDesc">
-                    <p>Description : Rayu est un chat plutot calme qui aime les gratouilles mais il sait aussi etre indépendant et joueur quand il est stimulé.
-                            OK chat,Chien et enfants il s’adaptera facilement a votre vie de famille.</p>
+                    <p>Description : {{ chat.presentation}}</p>
                 </div>
+            
             </div>
+
+    {% endfor %}
 
             <div class = "ficheChat">
                 <div class="photoTitre">
@@ -39,7 +44,7 @@
             <div class = "ficheChat">
                 <div class="photoTitre">
                     <img class="chatrond" src="." alt=""></img>
-                    <p> Son nom - Son âge </p>
+                    <p>  -  </p>
                 </div>
 
                 <div class="catDesc">
@@ -63,13 +68,13 @@
             </div>
         </div>
     </div>
-{% for chat in chats %}
+
 
         
     
-                    <a href="chats?id={{chat.id}}" >{{ chat.nom}}</a>
-                        <img src ="{{ chat.photo}}"/>
-                        {{ chat.age}}
+                    
+                       
+                        
                         {{ chat.race}}
                         {{ chat.couleur}}
                         {{ chat.sexe}}
@@ -77,8 +82,8 @@
                         {{ chat.vaccin}}
                         {{ chat.sterilise}}
                         {{ chat.compatibilite_autre_animaux}}
-                        {{ chat.presentation}}
+                        
             
         
-    {% endfor %}
+    
 {% endblock %}
