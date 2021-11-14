@@ -22,7 +22,7 @@ class ChatsController extends AbstractController{
 
     public function uploadPhoto(){
 
-        $uploadDir = "/assets/images/Cat/";
+        $uploadDir = "/assets/images/Cat/"; /// PROBLEME DE CHEMIN !!!
         $extension = pathinfo($_FILES['photo']['name'], PATHINFO_EXTENSION);
         $authorizedExtensions = ['jpg', 'jpeg', 'png'];
         $maxFileSize = 2000000;
@@ -58,11 +58,11 @@ class ChatsController extends AbstractController{
                 header('Location:/private/chats/add');
             }
 
-        return $this->twig->render("Private/ajoutChat.html.twig", ["errors" => $this->errors]);
+        return $this->twig->render("Private/add.html.twig", ["errors" => $this->errors]);
 
         }
 
-        return $this->twig->render("Private/ajoutChat.html.twig");
+        return $this->twig->render("Private/add.html.twig");
     }
 
     public function index()
