@@ -4,12 +4,12 @@
 
 <div class="logo">AdopteUnChat.com</div>
 <div id="boutonshaut">
-<button><a href="chats">Retour vers la liste des chats</a></button>
+<button><a href="/private/chats">Retour vers la liste des chats</a></button>
 <button><a href="logout">Déconnexion</a></button>
 </div>
 
 <div id="containerAjoutChat">
-    <form id="formAjout" action="chats/add" method="post" enctype="multipart/form-data">
+    <form id="formAjout" action="/private/chats/add" method="post" enctype="multipart/form-data">
         <h2 id="titreNouveauChat">Nouveau chat</h2>
         <div id="ligne1">
             <div class="element">
@@ -65,21 +65,21 @@
         <div id="ligne3">
             <div class="element">
                 <label for="vaccin">Vaccin:</label>
-                    <input type="radio" id="oui" name="oui" value="oui" checked>
+                    <input type="radio" id="oui" name="vaccin" value="oui" checked>
                     <label for="oui">Oui</label>
                     <input type="radio" id="non" name="non" value="non">
                     <label for="non">Non</label>
             </div>
             <div class="element">
                 <label for="sterilisation">Stérilisation:</label>
-                    <input type="radio" id="oui" name="oui" value="oui" checked>
+                    <input type="radio" id="oui" name="sterilisation" value="oui" checked>
                     <label for="oui">Oui</label>
                     <input type="radio" id="non" name="non" value="non">
                     <label for="non">Non</label>
             </div>
             <div class="element">
                 <label for="compatibilité">Compatibilité avec les autres animaux:</label>
-                    <input type="radio" id="oui" name="oui" value="oui" checked>
+                    <input type="radio" id="oui" name="compatibilite" value="oui" checked>
                     <label for="oui">Oui</label>
                     <input type="radio" id="non" name="non" value="non">
                     <label for="non">Non</label>
@@ -92,8 +92,7 @@
             </div>
             <div class="element" id="elementPhoto">
                 <label for="photo">Ajouter une photo du chat:</label>    
-                <input type="file" name="photo" id="photo" />
-                <input type="submit" id='submit' value='Ajouter' >
+                <input type="file" name="photo" id="photo"/>
             </div> 
         </div>
         <input id="bouttonAjouter" class="button" type="submit" id='submit' value='VALIDER' >

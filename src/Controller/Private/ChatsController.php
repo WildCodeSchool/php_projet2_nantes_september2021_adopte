@@ -5,19 +5,24 @@ namespace App\Controller\Private;
 use App\Model\Private\ChatManager;
 use App\Controller\AbstractController;   
 
+session_start();
+if(!isset($_SESSION['login'])){
+    header ('location: /private/connexion');
+}      
+
 class ChatsController extends AbstractController{ 
 
     public $chat;
     public $errors = [];
     
     public function verification(){
-        $this->chats = array_map('trim', $_POST);
-        
+        $this->chat = array_map('trim', $_POST);
+        //a faire
     }
 
     public function uploadPhoto(){
 
-        $uploadDir = "public/assets/images/Cat";
+        $uploadDir = "/assets/images/Cat/";
         $extension = pathinfo($_FILES['photo']['name'], PATHINFO_EXTENSION);
         $authorizedExtensions = ['jpg', 'jpeg', 'png'];
         $maxFileSize = 2000000;
@@ -33,6 +38,7 @@ class ChatsController extends AbstractController{
 
         $uploadPhoto = uniqid('photo', true) . '.' . $extension;
         move_uploaded_file($_FILES['photo']['tmp_name'], $uploadPhoto);
+        $this->chat['photo'] = $uploadPhoto;
         }
 
     }
@@ -42,31 +48,22 @@ class ChatsController extends AbstractController{
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $this->verification();
+            var_dump($this->chat);
 
             if (empty($this->errors)){
 
                 $this->uploadPhoto();
                 $chatManager = new ChatManager();
                 $chatManager->insert($this->chat);
-                header('Location:/private/ajout');
+                header('Location:/private/chats/add');
             }
 
-        return $this->twig->render("Private/ajoutChat.html.twig", ["errores" => $this->errors, 'action'=> "/private/add"]);
+        return $this->twig->render("Private/ajoutChat.html.twig", ["errors" => $this->errors]);
 
         }
 
         return $this->twig->render("Private/ajoutChat.html.twig");
     }
-
-}
-
-//     public function edit(int $id)
-//     {
-//         $chatManager = new ChatManager();
-//         $chat = $chatManager -> selectOneById($id);   
-
-//         return $this->twig->render("Private/Chats/edit.html.twig", ['chat' => $chat]);
-//     }
 
     public function index()
     {
