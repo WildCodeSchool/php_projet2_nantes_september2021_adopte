@@ -362,7 +362,7 @@ DEBUT DE LA 4EME PAGE HISTOIRE */
 input[type="text"], input[type="email"], textarea[type="message"] {
     display:table-cell;
     vertical-align:middle;
-    width: 200%;
+    width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -446,6 +446,8 @@ input[type="text"], input[type="email"], textarea[type="message"] {
 
 #titreNosChats{
     font-size: 40px;
+    display: flex;
+    justify-content: center;
 }
 
 .barrederecherche{
@@ -557,6 +559,8 @@ input[type="text"], input[type="email"], textarea[type="message"] {
     margin: 0 auto;
     padding-bottom: 10px;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 #ligne1, #ligne2, #ligne3, #ligne4 {

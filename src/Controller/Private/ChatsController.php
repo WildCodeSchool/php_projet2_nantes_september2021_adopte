@@ -34,12 +34,18 @@ class ChatsController extends AbstractController{
 
     public function edit(int $id)
     {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // TODO: traiter les infos
-        }
 
         $chatManager = new ChatManager();
         $chat = $chatManager->selectOneById($id);
+
+        if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+        
+            $item = array_map('trim', $_POST);
+
+            $chatManager->update($chat);
+            header('Location: /items/show?id=' . $id);
+        }
 
         return $this->twig->render("Private/edit.html.twig", ['chat' => $chat]);
     }

@@ -23,13 +23,13 @@
             <div class="element">
                 <label for="race">Race:</label>
                 <select name="race" id="race">
-                        <option value="">--Choississez une race--</option>
-                        <option value="european shorthair">European shorthair</option>
-                        <option value="maine coon">Maine coon</option>
-                        <option value="siamois">Siamois</option>
-                        <option value="ragdoll">Ragdoll</option>
-                        <option value="sphynx">Sphynx</option>
-                        <option value="chat de gouttière">Chat de gouttière</option>
+                    <option value="">--Choississez une race--</option>
+                    <option value="european shorthair">European shorthair</option>
+                    <option value="maine coon">Maine coon</option>
+                    <option value="siamois">Siamois</option>
+                    <option value="ragdoll">Ragdoll</option>
+                    <option value="sphynx">Sphynx</option>
+                    <option value="chat de gouttière">Chat de gouttière</option>
                 </select>
             </div>
         </div>
@@ -64,25 +64,37 @@
         </div>
         <div id="ligne3">
             <div class="element">
-                <label for="vaccin">Vaccin:</label>
-                    <input type="radio" id="oui" name="oui" value="oui" checked>
+                <p>Vaccin:</p>
+                <div>
+                    <input type="radio" id="oui" name="vaccin" value="oui">
                     <label for="oui">Oui</label>
-                    <input type="radio" id="non" name="non" value="non">
+                </div>
+                <div>
+                    <input type="radio" id="non" name="vaccin" value="non">
                     <label for="non">Non</label>
+                </div>
             </div>
             <div class="element">
-                <label for="sterilisation">Stérilisation:</label>
-                    <input type="radio" id="oui" name="oui" value="oui" checked>
+                <p>Stérilisation:</p>
+                <div>
+                    <input type="radio" id="oui" name="sterilisation" value="oui" checked>
                     <label for="oui">Oui</label>
-                    <input type="radio" id="non" name="non" value="non">
+                </div>
+                <div>
+                    <input type="radio" id="non" name="sterilisation" value="non">
                     <label for="non">Non</label>
+                </div>
             </div>
             <div class="element">
-                <label for="compatibilité">Compatibilité avec les autres animaux:</label>
-                    <input type="radio" id="oui" name="oui" value="oui" checked>
+                <p>Compatibilité avec les autres animaux:</p>
+                <div>
+                    <input type="radio" id="oui" name="compatibilite" value="oui" checked>
                     <label for="oui">Oui</label>
-                    <input type="radio" id="non" name="non" value="non">
+                </div>
+                <div>
+                    <input type="radio" id="non" name="compatibilite" value="non">
                     <label for="non">Non</label>
+                </div>
             </div>
         </div>
         <div id="ligne4">

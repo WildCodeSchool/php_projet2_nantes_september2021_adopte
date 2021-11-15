@@ -37,17 +37,27 @@ class ChatManager extends AbstractManager
             } 
          }  
     }  
+
+
+
+    /**
+     * Update item in database
+     */
+    public function update(array $_chat): bool
+    {
+        $statement = $this->pdo->prepare("UPDATE " . self::TABLE . " SET 'nom' = :nom WHERE id=:id");
+        $statement->bindValue(':nom', $_chat['nom'], \PDO::PARAM_STR);
+        $statement->bindValue(':age', $_chat['age'], \PDO::PARAM_INT);
+        $statement->bindValue(':race', $_chat['race'], \PDO::PARAM_STR);
+        $statement->bindValue(':couleur', $_chat['couleur'], \PDO::PARAM_STR);
+        $statement->bindValue(':sexe', $_chat['sexe'], \PDO::PARAM_STR);
+        $statement->bindValue(':photo', $_chat['photo'], \PDO::PARAM_STR);
+        $statement->bindValue(':date_arrivee', $_chat['date_arrivee'], \PDO::PARAM_DATE);
+        $statement->bindValue(':vaccin', $_chat['vaccin'], \PDO::PARAM_BOOL);
+        $statement->bindValue(':sterilise', $_chat['sterilise'], \PDO::PARAM_BOOL);
+        $statement->bindValue(':compatibilite_autre_animaux', $_chat['compatibilite_autre_animaux'], \PDO::PARAM_BOOL);
+        $statement->bindValue(':presentation', $_chat['presentation'], \PDO::PARAM_S);
+
+        return $statement->execute();
+    }
 }
-
-
-    // /**
-    //  * Update item in database
-    //  */
-    // public function update(array $item): bool
-    // {
-    //     $statement = $this->pdo->prepare("UPDATE " . self::TABLE . " SET `title` = :title WHERE id=:id");
-    //     $statement->bindValue('id', $item['id'], \PDO::PARAM_INT);
-    //     $statement->bindValue('title', $item['title'], \PDO::PARAM_STR);
-
-    //     return $statement->execute();
-    // }
