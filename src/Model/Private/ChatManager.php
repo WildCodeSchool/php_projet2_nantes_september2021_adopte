@@ -1,36 +1,33 @@
 <?php
 
-
 namespace App\Model\Private;
 use App\Model\AbstractManager;
+use App\Controller\Privat\ChatsController;
 
 class ChatManager extends AbstractManager
 {
     public const TABLE = 'chats';
 
-    function save($adoptant): void
-    {
-    $query = "INSERT INTO adoptant(prenom, nom) VALUES (:prenom, :nom)";
-    $newRecipe = $this->connection->prepare($query);
-    $newRecipe->bindValue(':prenom', $adoptant['prenom'], PDO::PARAM_STR);
-    $newRecipe->bindValue(':nom', $recipe['nom'], PDO::PARAM_STR);
+    public function insert(array $chat)
+    {   
+                $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (nom, age, race, couleur, sexe, photo, date_arrivee, vaccin, sterilise, compatibilite_autre_animaux, presentation) VALUES (:nom, :age, :race, :couleur, :sexe, :photo, :date_arrivee, :vaccin, :sterilise, :compatibilite_autre_animaux, :presentation)");
+                $statement->bindValue(':nom', $chat['nom'], \PDO::PARAM_STR);
+                $statement->bindValue(':age', $chat['age'], \PDO::PARAM_INT);
+                $statement->bindValue(':race', $chat['race'], \PDO::PARAM_STR);
+                $statement->bindValue(':couleur', $chat['couleur'], \PDO::PARAM_STR);
+                $statement->bindValue(':sexe', $chat['sexe'], \PDO::PARAM_STR);
+                $statement->bindValue(':photo', $chat['photo'], \PDO::PARAM_STR);
+                $statement->bindValue(':date_arrivee', $chat['arrival'], \PDO::PARAM_STR);
+                $statement->bindValue(':vaccin', $chat['vaccin'], \PDO::PARAM_BOOL);
+                $statement->bindValue(':sterilise', $chat['sterilisation'], \PDO::PARAM_BOOL);
+                $statement->bindValue(':compatibilite_autre_animaux', $chat['compatibilite'], \PDO::PARAM_BOOL);
+                $statement->bindValue(':presentation', $chat['presentation'], \PDO::PARAM_STR);
+                
+                $statement->execute();
 
-    $newRecipe->execute();
-    }
+    }   
+}  
 
-
-
-    // /**
-    //  * Insert new item in database
-    //  */
-    // public function insert(array $item): int
-    // {
-    //     $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (`title`) VALUES (:title)");
-    //     $statement->bindValue('title', $item['title'], \PDO::PARAM_STR);
-
-    //     $statement->execute();
-    //     return (int)$this->pdo->lastInsertId();
-    // }
 
     // /**
     //  * Update item in database
@@ -43,4 +40,3 @@ class ChatManager extends AbstractManager
 
     //     return $statement->execute();
     // }
-}

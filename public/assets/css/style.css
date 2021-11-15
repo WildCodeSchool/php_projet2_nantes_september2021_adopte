@@ -1,14 +1,15 @@
+ /* les paramétrages par défaut */
 :root {
     --main-color:#A15C38;
     --secondary-color:#e7e7e7;
     --darky: #000000;
     --lighty: #faf5e9;
  }
- /* couleurs par défauts */
 
- * {
+* {
     box-sizing: border-box;
 }
+
 body{
     font-family: 'Roboto', sans-serif;
     background-color: var(--lighty);
@@ -17,13 +18,17 @@ body{
     font-size:16px;
 }
 
-    /* les paramétrages par défaut */
-
+/* HEADER */   
 header {
     padding-bottom : 2%;
 }
 
-.logo{
+header a{ 
+    text-decoration:none; 
+    color:black;
+} 
+
+#logo{
     display:flex;
     align-items: center;
     justify-content: center;
@@ -37,7 +42,7 @@ header {
     color:var(--darky);
     }
 
-.menu{
+#menu{
     display:flex;
     justify-content: center;
     color:var(--darky);
@@ -46,21 +51,31 @@ header {
     font: size 80%;
 }
 
-a:link{ 
+footer a:link{ 
     text-decoration:none; 
+    color:var(--lighty);
 } 
 
-a:visited{
-    color: black; 
+footer a:visited{
+    color:var(--lighty); 
+    text-decoration:none; 
 }
-    /* le _header se termine ici */
 
-/* _footer /code à faire/ _footer  */
+.textbutton a:link{
+    color:var(--lighty); 
+    text-decoration:none; 
+}
 
+.textbutton a:visited{
+    color:var(--lighty); 
+    text-decoration:none; 
+}
+
+/* FOOTER */
 footer{
     background-color: var(--main-color);
-    color:var(--lighty);
 }
+
 .RetourHome{
     display:flex;
     align-items: center;
@@ -80,16 +95,17 @@ footer{
     gap:30px;
     padding:15px;
     list-style-type: none;
-    color:var(--lighty);
+    color:white;
 }
 
 .Copyright{
     text-align:center;
     color:var(--lighty);
     padding:8px;
+    font-size: 12px;
 }
-  /* fin du footer */
 
+/* INDEX*/
 .chatHome{
     display:flex;
     align-items: center;
@@ -103,18 +119,21 @@ h1 {
     display: table;
     white-space: nowrap;
     text-align: center;
-    font-size:16px;
+    font-size:18px;
     font-weight: 400 ;
+    font-style: italic;
 }
+
+/* -----titres----- */
+/* l'affichage des traits autour des titres est gérée par before, after*/
 h1:before, h1:after {
     content: "";
     display: table-cell;
     width: 50%;
     background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=) repeat-x left center;
 }
-  /* -----titres----- */
- /* l'affichage des traits autour des titres est gérée par before, after*/
 
+ /* les colonnes et lignes des différentes images de chat */
 .leschats{
     display : grid;
     justify-content: center;
@@ -122,20 +141,24 @@ h1:before, h1:after {
     grid-template-rows: repeat(2,200px);
     place-items: center;
 }
- /* les colonnes et lignes des différentes images de chat */
-
 
 .chat{
     border-radius: 1rem;
     width: 230px;
     height: 180px;
+}
+
+img.chat{
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    display: block;
 
 }
-    /* images de chat */
+
 button {
     display:flex;
-    justify-content: center;
-    align-content:center;
+    align-items: center;
     background-color: var(--main-color);
     color:var(--lighty);
     border-radius:1rem;
@@ -145,10 +168,10 @@ button {
 }
 
 .Homebasdepage{
-    display:flex;
-    align-items:space-around;
-    padding: 5%;
-
+    align-items: flex-start;
+    border-color:1px solid;
+    font-size:10px;
+    border-radius:1rem;
 }
 
 .titre {
@@ -157,66 +180,28 @@ button {
     font-style: italic;
 }
 
-.Homepageleft{
-    border-color:1px solid;
-    font-size:10px;
-    border-radius:1rem;
-}
-
 .texthistoire{
-    background-color: blue;
+    background-color: var(--secondary-color);
     text-align: center;
     border-radius:1rem;
+    font-size: 16px;
+    padding-left: 5%;
+    padding-right: 5%;
+
 }
 
-.allCats{
-    display: flex;
-    justify-content: center;
+.texthistoire p{
+    margin-bottom: 5%;
 }
 
 .textbutton{
-    background-color: var(--secondary-color);
     display: flex;
     justify-content: center;
-    color: var(--lighty);
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-weight: lighter;
 }
 
-.Homepageright{
-    border-color:1px solid;
-    font-size:10px;
-
-}
-.presduchat{
-    background-color: blue;
-    border-radius:1rem;
-    /* display:flex;
-    align-items: center;
-    flex-direction: column; */
-}
-.vueduchat a{
-    text-align: center;
-}
-.descduchat{
-    display:flex;
-    justify-content:flex-end;
-}
-
-/* FIN DE CSS 1ERE PAGE HOME
---------------------------
-DEBUT DE LA 2EME PAGE LISTECHATS */
-
-.contentchamp{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    background-color: var(--lighty);
-}
-
-input:focus{
- background-color: var(--lighty);
-}
-  /* Input:focus pour que lorsque l'utilisateur clique sur le label le fond change de couleur  */
-  
 h5{
     display: flex;
     justify-content: left;
@@ -230,25 +215,28 @@ h5{
     border-bottom-right-radius: 25px;
     font-weight: lighter;
 }
-/* titre page ListeChat */
+
+/* LISTE DES CHATS */
 
 .fichesChat{
     display:flex;
 	flex-direction: column;
     gap:20px;
     border: none;
-
 }
+
 /* gap qui gère les espaces sur colonnes */
 .premieresFiches{
     display:flex;
     gap:50px;
 }
+
 /* gap qui gère les espaces sur lignes des deux 1eres fiches */
 .dernieresFiches{
     display:flex;
     gap:50px;
 }
+
 /* gap qui gère les espaces sur lignes des deux dernières fiches */
 .ficheChat{
     display:flex;
@@ -256,12 +244,12 @@ h5{
     border-radius: 1rem;
     background-color: var(--secondary-color);
 }
+
 .chatrond{
     width: 180px;
     height: 180px;
     border-radius: 100%;
 }
-/* l'image du chat est ronde alors chatrond */
 
 .photoTitre{
     display:flex;
@@ -275,9 +263,8 @@ h5{
     font-size: small;
     padding:10px;
 }
-/* FIN DE CSS 2EME PAGE RECHERCHE
---------------------------
-DEBUT DE LA 3EME PAGE CHAT */
+
+/* FICHE CHAT */
 
 .pageChat{
     display:flex;
@@ -320,10 +307,7 @@ h6{
     border-bottom: 1px solid var(--darky);
 }
 
-
-/* FIN DE CSS 3EME PAGE CHAT
---------------------------
-DEBUT DE LA 4EME PAGE HISTOIRE */
+/* HISTOIRE */
 
 .divPrincipalePageHistoire{
     background-color:var(--secondary-color); 
@@ -335,34 +319,31 @@ DEBUT DE LA 4EME PAGE HISTOIRE */
     text-align: center;
 }
 
+.histoire p{
+    font-size: 15px;
+}
 .Dicton{
     display:flex;
     justify-content: center;
     padding-top: 10px;
     font-style: italic;
-
 }
 
 .histoire h1 {
     font-size: 22px;
 }
 
-.histoire p {
-    font-size: 13px;
-}
-
 .contact{
     display:flex;
     justify-content: center;
+    margin: 3%;
 }
+
 .label{
     display: inline;
 }
 
 input[type="text"], input[type="email"], textarea[type="message"] {
-    display:table-cell;
-    vertical-align:middle;
-    width: 200%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -371,7 +352,6 @@ input[type="text"], input[type="email"], textarea[type="message"] {
     margin-bottom: 16px;
     margin-right: 0px;
     margin-left: 0px;
-
     }
     
 #submit{
@@ -391,7 +371,7 @@ input[type="text"], input[type="email"], textarea[type="message"] {
 }
 
 
-/* page connexion admin*/
+/* ADMIN PAGE CONNEXION*/
 
 #container{
     width:800px;
@@ -416,13 +396,6 @@ input[type="text"], input[type="email"], textarea[type="message"] {
     margin-bottom: 20px;
 }
 
-.inputadminNom, .inputadminMdp {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 20px 0;
-    border: 1px solid var(--darky);
-}
-
 .button {
     display:flex;
     align-items: center;
@@ -434,8 +407,7 @@ input[type="text"], input[type="email"], textarea[type="message"] {
     color: var(--lighty);
 }
 
-
-/* page liste des chats partie admin*/
+/* ADMIN PAGE LISTE DES CHATS */
 
 #deconnexion{
     display:flex;
@@ -482,13 +454,25 @@ input[type="text"], input[type="email"], textarea[type="message"] {
     margin: 0px;
 }
 
-.listeDesChats{
-    display: flex;
+.listeDesChats {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.listeDesChats .item .itemInfo,
+.listeDesChats .itemHeader .itemInfo {
+    width: 24%;
+    display: inline-block;
+    text-align: center;
+    /* display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding-left: 25px;
     margin-top: 50px;
-    width: 100%;
+    width: 100%; */
+}
+.listeDesChats .itemHeader .itemInfo {
+    font-weight: bold;
 }
 
 #infoChat{
@@ -512,8 +496,7 @@ input[type="text"], input[type="email"], textarea[type="message"] {
     
 }
 
-
-/*page ajout chat partie admin*/
+/*ADMIN AJOUT DE CHAT*/
 
 #boutonshaut{
     display:flex;
