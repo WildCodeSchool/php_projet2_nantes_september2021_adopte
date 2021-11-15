@@ -30,7 +30,6 @@ class HomeController extends AbstractController
         return $this->twig->render('Home/histoire.html.twig');
     }
 
-
     public function chatadoptOK()
     {
         return $this->twig->render('Home/chatadoptOK.html.twig');

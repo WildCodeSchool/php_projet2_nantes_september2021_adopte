@@ -146,6 +146,7 @@ h1:before, h1:after {
     border-radius: 1rem;
     width: 230px;
     height: 180px;
+    object-fit: cover;
 }
 
 img.chat{
