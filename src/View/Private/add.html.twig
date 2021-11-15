@@ -2,14 +2,13 @@
 
 {% block content %}
 
-<div class="logo">AdopteUnChat.com</div>
 <div id="boutonshaut">
-<button><a href="chats">Retour vers la liste des chats</a></button>
+<button><a href="/private/chats">Retour vers la liste des chats</a></button>
 <button><a href="logout">Déconnexion</a></button>
 </div>
 
 <div id="containerAjoutChat">
-    <form id="formAjout" action="chats/add" method="post" enctype="multipart/form-data">
+    <form id="formAjout" action="/private/chats/add" method="post" enctype="multipart/form-data">
         <h2 id="titreNouveauChat">Nouveau chat</h2>
         <div id="ligne1">
             <div class="element">
@@ -75,6 +74,7 @@
                 </div>
             </div>
             <div class="element">
+
                 <p>Stérilisation:</p>
                 <div>
                     <input type="radio" id="oui" name="sterilisation" value="oui" checked>
@@ -104,8 +104,7 @@
             </div>
             <div class="element" id="elementPhoto">
                 <label for="photo">Ajouter une photo du chat:</label>    
-                <input type="file" name="photo" id="photo" />
-                <input type="submit" id='submit' value='Ajouter' >
+                <input type="file" name="photo" id="photo"/>
             </div> 
         </div>
         <input id="bouttonAjouter" class="button" type="submit" id='submit' value='VALIDER' >
