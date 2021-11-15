@@ -28,13 +28,13 @@
 
   {% for chat in chats %}
     <div class ="item">
-      <div class ="itemNom itemInfo" > {{chat.nom}} </div>
+      <div class ="itemNom itemInfo" ><a href="type="hidden" value="{{chat.id}}"> {{chat.nom}} </a></div>
       <div class ="itemAge itemInfo" > {{chat.age}} </div>
       <div class ="itemCouleur itemInfo" > {{chat.couleur}} </div>
       <div class ="itemActions itemInfo" >
         <a href="edit?id={{chat.id}}"><i class="far fa-edit"></i></a>
         <form action="delete" method="POST" onsubmit="return confirm('Voulez-vous vraiment supprimer {{chat.nom}}');">
-          <input name="id"type="hidden" value="{{chat.id}}">
+          <input name="id" type="hidden" value="{{chat.id}}">
           <button type="submit"><i class="fas fa-trash"></i></button>
         </form>
       </div>
