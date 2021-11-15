@@ -15,7 +15,7 @@ class HomeController extends AbstractController
 
     public function ficheChat()
     {
-        return $this->twig->render('/Home/chat.html.twig');
+        return $this->twig->render('/Home/chat.html.twig',);
     }
 
     public function listechats()
