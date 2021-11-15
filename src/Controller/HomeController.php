@@ -20,7 +20,9 @@ class HomeController extends AbstractController
 
     public function listechats()
     {
-        return $this->twig->render('Home/listechats.html.twig');
+        $chatManager = new HomeManager();
+        $chats = $chatManager->selectAll();
+        return $this->twig->render('Home/listechats.html.twig', ['chats' => $chats]);
     }
 
     public function histoire()
