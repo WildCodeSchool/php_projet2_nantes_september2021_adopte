@@ -13,7 +13,7 @@ return [
 //partie public
     '' => ['HomeController', 'index',],
     'histoire' => ['HomeController', 'histoire'],
-    'listechats' => ['HomeController', 'listechats'],
+    'listechats' => ['HomeController', 'listeChats'],
     'ficheChat' => ['HomeController', 'ficheChat', ['id']], 
     'chatadoptOK' => ['HomeController', 'chatadoptOK', ['id']],
     'chatformadopt' => ['HomeController', 'chatformadopt', ['id']],
