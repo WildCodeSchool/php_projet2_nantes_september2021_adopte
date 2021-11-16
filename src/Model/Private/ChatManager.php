@@ -1,8 +1,9 @@
 <?php
 
 namespace App\Model\Private;
+
 use App\Model\AbstractManager;
-use App\Controller\Privat\ChatsController;
+use App\Controller\Private\ChatsController;
 
 class ChatManager extends AbstractManager
 {
