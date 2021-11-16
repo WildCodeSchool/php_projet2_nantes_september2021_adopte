@@ -13,12 +13,14 @@ class HomeController extends AbstractController
         return $this->twig->render('Home/index.html.twig');
     }
 
-    public function ficheChat()
+    public function ficheChat(int $id)
     {
-        return $this->twig->render('/Home/chat.html.twig',);
+        $chatManager = new HomeManager();
+        $chats = $chatManager->selectOneById($id);
+        return $this->twig->render('Home/chat.html.twig',['chat' => $chats]);
     }
 
-    public function listechats()
+    public function listeChats()
     {
         $chatManager = new HomeManager();
         $chats = $chatManager->selectAll();
