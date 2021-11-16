@@ -15,7 +15,7 @@ class HomeController extends AbstractController
 
     public function ficheChat()
     {
-        return $this->twig->render('/Home/chat.html.twig');
+        return $this->twig->render('/Home/chat.html.twig',);
     }
 
     public function listechats()
@@ -37,8 +37,7 @@ class HomeController extends AbstractController
 
     public function chatformadopt()
     {
-        return $this->twig->render('Home/chatFormAdopt.html.twig');
+        return $this->twig->render('Home/chatformadopt.html.twig');
     }
-
 
 }
