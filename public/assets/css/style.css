@@ -322,6 +322,15 @@ h6{
     margin: 1%;
 }
 
+.formadoption{
+    display:flex;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    margin: 70px;
+    padding:10px;
+    border-radius: 50px;
+    top:0;
+}
 /* HISTOIRE */
 
 .divPrincipalePageHistoire{
