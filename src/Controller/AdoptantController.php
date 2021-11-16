@@ -5,15 +5,15 @@ namespace App\Controller;
 use App\Model\AdoptantManager;
 use App\Controller\AbstractController;
 
-class AdoptanteController extends AbstractController
+class AdoptantController extends AbstractController
 {
 
 //Formulaire ajout d'adoptant
     public function addAdoptant(): void
         {
-        
-        if ($_SERVER["REQUEST_METHOD"] === 'POST') {
-            $adoptant = array_map("trim", $_POST); //nettoyage
+
+            if ($_SERVER["REQUEST_METHOD"] === 'POST') {
+                $adoptant = array_map("trim", $_POST); //nettoyage espaces vide
             
             if($adoptant['prenom'] == ""){
                 $errors['prenom'] = "Merci d'indiquer un prénom.";
