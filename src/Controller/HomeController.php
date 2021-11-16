@@ -13,17 +13,22 @@ class HomeController extends AbstractController
         return $this->twig->render('Home/index.html.twig');
     }
 
-    public function listechats()
+    public function ficheChat()
     {
-        return $this->twig->render('Home/listechats.html.twig');
+        return $this->twig->render('/Home/chat.html.twig',);
     }
 
+    public function listechats()
+    {
+        $chatManager = new HomeManager();
+        $chats = $chatManager->selectAll();
+        return $this->twig->render('Home/listechats.html.twig', ['chats' => $chats]);
+    }
 
     public function histoire()
     {
         return $this->twig->render('Home/histoire.html.twig');
     }
-
 
     public function chatadoptOK()
     {

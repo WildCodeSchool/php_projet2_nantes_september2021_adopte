@@ -11,7 +11,7 @@
 }
 
 body{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;  
     background-color: var(--lighty);
     padding:0;
     margin:0;
@@ -119,7 +119,7 @@ h1 {
     display: table;
     white-space: nowrap;
     text-align: center;
-    font-size:18px;
+    font-size:20px;
     font-weight: 400 ;
     font-style: italic;
 }
@@ -146,6 +146,7 @@ h1:before, h1:after {
     border-radius: 1rem;
     width: 230px;
     height: 180px;
+    object-fit: cover;
 }
 
 img.chat{
@@ -187,19 +188,21 @@ button {
     font-size: 16px;
     padding-left: 5%;
     padding-right: 5%;
-
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
+
 .texthistoire p{
-    margin-bottom: 5%;
+    padding: 5%;
 }
 
 .textbutton{
     display: flex;
     justify-content: center;
     margin-top: 2%;
-    margin-bottom: 2%;
     font-weight: lighter;
+    padding-bottom: 3%;
 }
 
 h5{
@@ -270,9 +273,10 @@ h5{
     display:flex;
     justify-content: space-between;
     align-content: center;
-    border:1px solid var(--darky);
     border-radius: 50px;
     background-color: var(--secondary-color);
+    padding: 5%;
+    margin: 5%
     
 }
 .grosChatRond{
@@ -292,6 +296,8 @@ h5{
 .nom_age_button{
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
 
 }
 
@@ -301,10 +307,19 @@ h5{
     margin:20px;
 }
 
+.textPresentation p{
+    margin: 2%;
+}
+
+.chatadopt{
+    display: flex;
+    align-items: center;
+}
+
 h6{
     text-align: center;
     font-size: 1.2rem;
-    border-bottom: 1px solid var(--darky);
+    margin: 1%;
 }
 
 /* HISTOIRE */

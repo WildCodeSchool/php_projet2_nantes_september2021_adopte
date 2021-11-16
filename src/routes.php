@@ -10,13 +10,11 @@ return [
     'private/edit' => ['Private\\ChatsController', 'edit', ['id']],
     'private/delete' => ['Private\\ChatsController', 'delete', ['id']],
 
-
-
 //partie public
     '' => ['HomeController', 'index',],
     'histoire' => ['HomeController', 'histoire'],
     'listechats' => ['HomeController', 'listechats'],
-    'chat' => ['HomeController', 'chat'], 
+    'ficheChat' => ['HomeController', 'ficheChat', ['id']], 
     'chatadoptOK' => ['HomeController', 'chatadoptOK', ['id']],
     'chatformadopt' => ['HomeController', 'chatformadopt', ['id']],
 
