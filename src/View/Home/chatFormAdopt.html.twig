@@ -4,43 +4,31 @@
 
     <div class = "pageChat">
         <div>
-            <img class="grosChatRond" src="." alt=""></img>
+            <img class="grosChatRond" src="{{ chat.photo}}" alt="Photo de {{ chat.nom }}"></img>
         </div>
 
         <div class="droitedelapageChat">
-            <h6>Nom du chat</h6>
+            <h6> {{ chat.nom }} </h6>
                 <div class="nom_age_button"></br>
-                <p>“Ce chat est génial !” 8 mois<p>
-                    <button><a href="chatadopt">Je l'adopte !</a></button>
+                <p>{{chat.age}} ans<p>
+                    <div class="textbutton"><button><a href="chatformadopt">Je l'adopte !</a></button></div>
         </div>
 
             <section id="textPresentation">
-                <h6>Plus d'informations</h6>
-                    <p>Vaccination : Oui, à jour
-                    Stérilisation : Oui
-                    Son histoire : Retrouvé dans la rue, non pucé mais stérélisé. Chat surement perdu.
-                    Son caractère : Doux, gentil et très calin. Aime les autres animaux/chats et les enfants
+                <h6>{{chat.presentation}}</h6>
+                    <p>Vaccination : {{chat.vaccin}}
+                    Stérilisation : {{chat.sterilise}}
+                    Compatible autres animaux : {{ chat.compatibilite_autre_animaux}}
+                    Sexe : {{ chat.sexe}}
+                    Race : {{chat.race}}
+                    Couleur : {{chat.couleur}}
+
                     </p>
             </section>
         </div>
     </div>
     
-    {% for chat in chats %}
-
-<tr>
     
-    <td><a href="chats?id={{chat.id}}" >{{ chat.nom}}</a></td>
-    <td><img src ="{{ chat.photo}}"/></td>
-    <td>{{ chat.age}}</td>
-    <td>{{ chat.race}}</td>
-    <td>{{ chat.couleur}}</td>
-    <td>{{ chat.sexe}}</td>
-    <td>{{ chat.date_arrivee}}</td>
-    <td>{{ chat.vaccin}}</td>
-    <td>{{ chat.sterilise}}</td>
-    <td>{{ chat.compatibilite_autre_animaux}}</td>
-    <td>{{ chat.presentation}}</td>
-</tr>
 
     <div class="contact">
         <form name = "contactform" id="contactform" method="POST">
@@ -70,6 +58,6 @@
         </form>
     </div>
 
-{% endfor %}
+
 
 {% endblock %}
