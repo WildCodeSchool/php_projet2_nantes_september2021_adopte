@@ -7,7 +7,7 @@
 <button><a href="logout">Déconnexion</a></button>
 </div>
 
-<div id="containerAjoutChat">
+<div id="containerEditChat">
     <form id="formAjout" action="" method="post" enctype="multipart/form-data">
         <h2 id="titreNouveauChat">{{chat.nom}}</h2>
         <div id="ligne1">
@@ -63,7 +63,7 @@
             <div class="element">
                 <p>Vaccin:</p>
                 <div>
-                    <input type="radio" id="oui" name="vaccin" value="oui">
+                    <input type="radio" id="oui" name="vaccin" value="oui" <?php if({{chat.vaccin}}=='oui') { echo ' checked="checked"'; } ?>>
                     <label for="oui">Oui</label>
                 </div>
                 <div>
@@ -105,13 +105,9 @@
                 <input type="file" name="photo" id="photo" value ="{{chat.photo}}">
             </div> 
         </div>
-
-        <input id="bouttonAjouter" class="button" type="submit" id='submit' value='Mettre à jour' >
-    </form>   
+        <input id="bouttonAjouter" class="button" type="submit" id='submit' value='Mettre à jour la fiche de ce chat' >
+    </form> 
 </div> 
-            {# <form action="edit" method="POST" onsubmit="return confirm('Voulez-vous vraiment editer {{chat.nom}}');">
-                <input name="id" type="hidden" value="METTRE A JOUR">
-                <button type="submit" id="bouttonAjouter" class="button"></button>
-                </form> #}
 
 {% endblock %}
+
