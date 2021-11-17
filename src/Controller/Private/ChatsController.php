@@ -133,6 +133,14 @@ class ChatsController extends AbstractController{
         return $this->twig->render("Private/chats.html.twig", ['chats' => $chats] );
     }
 
+    public function show(int $id)
+    {
+        $chatManager = new ChatManager();
+        $chat = $chatManager->selectOneById($id);
+
+        return $this->twig->render("Private/ficheChat.html.twig", ['chat' => $chat] );
+    }
+
     public function edit(int $id)
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {

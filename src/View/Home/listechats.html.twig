@@ -2,30 +2,24 @@
 
 {% block content %}
 
-<img class="" src="." alt=""></img>
     <div class = "Dicton"> 
         <p>
             “Dieu a inventé le chat pour que l'homme ait un tigre à caresser chez lui.” Victor Hugo
         </p>
     </div>
 
-
     <h5>Nos chats à adopter</h5>
+
     {% for chat in chats %}
         <div class = "fichesChat">
-            <div class = "premieresFiches"> 
-                <div class = "ficheChat">
                     <div class="photoTitre">
                         <a href="ficheChat?id={{chat.id}}" ><img class="chatrond" src="{{ chat.photo}}" alt=""></img></a>
                         <p> Son nom: {{ chat.nom}} - Son age :{{ chat.age}} ans </p>
                     </div>
-
-
                 <div class="catDesc">
                     <p>{{ chat.sexe}}</p>
                 </div>
-            
-            </div>
+        </div>
 
     {% endfor %}
 

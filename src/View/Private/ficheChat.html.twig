@@ -1,0 +1,28 @@
+{% extends 'layoutAdmin.html.twig' %}
+
+{% block content %}
+
+    <div class = "pageChat">
+        <div>
+            <img class="grosChatRond" src="{{ chat.photo}}" alt="Photo de {{ chat.nom }}"></img>
+        </div>
+
+        <div class="droitedelapageChat">
+            <h6> {{ chat.nom }} </h6>
+                <div class="nom_age_button"></br>
+                <p>{{chat.age}} ans<p>
+                    <div class="textbutton"><button><a href="chatformadopt">Je l'adopte !</a></button></div>
+        </div>
+
+            <section id="textPresentation">
+                <h6>{{chat.presentation}}</h6>
+                    <p> Vaccination : {{chat.vaccin}}
+                    Stérilisation : {{chat.sterilise}}
+                    Compatible autres animaux : {{ chat.compatibilite_autre_animaux}}
+                    Sexe : {{ chat.sexe}}
+                    Race : {{chat.race}}
+                    Couleur : {{chat.couleur}}
+                    </p>
+            </section>
+        </div>
+    </div>

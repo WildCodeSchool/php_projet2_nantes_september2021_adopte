@@ -9,6 +9,7 @@ return [
     'private/chats/add' => ['Private\\ChatsController', 'add'],
     'private/edit' => ['Private\\ChatsController', 'edit', ['id']],
     'private/delete' => ['Private\\ChatsController', 'delete', ['id']],
+    'private/chat/fiche' => ['Private\\ChatsController', 'show', ['id']],
 
 //partie public
     '' => ['HomeController', 'index',],
