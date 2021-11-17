@@ -154,7 +154,6 @@ img.chat{
     max-height: 100%;
     margin: auto;
     display: block;
-
 }
 
 button {
@@ -213,7 +212,7 @@ h5{
     border: none;
     font-size: 25px;
     padding:15px;
-    margin-right:850px;
+    margin-right:50%;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
     font-weight: lighter;
@@ -399,7 +398,7 @@ h6{
     display: inline;
 }
 
-input[type="text"], input[type="email"], textarea[type="message"] {
+input[type="text"], input[type="email"], textarea[type="message"], input[type="password"] {
 
     display:table-cell;
     vertical-align:middle;
@@ -422,14 +421,6 @@ input[type="text"], input[type="email"], textarea[type="message"] {
     padding:20px;
     border: none;
 }
-.coordonées{
-    display: flex;
-    justify-content: center;
-    text-align: end;
-    flex-direction: column;
-    font-style: italic;
-}
-
 
 /* ADMIN PAGE CONNEXION*/
 
@@ -445,15 +436,20 @@ input[type="text"], input[type="email"], textarea[type="message"] {
     flex-direction: column;
     width:100%;
     padding: 30px;
-    border: 1px solid var(--darky);
     border-radius:1rem;
 }
 
 #titleConnexion{
+    display: flex;
+    justify-content: center;
     width: 38%;
     margin: 0 auto;
     padding-bottom: 10px;
     margin-bottom: 20px;
+}
+
+.inputadminNom, .inputadminMdp {
+    width: 50%;
 }
 
 .button {
@@ -482,10 +478,10 @@ input[type="text"], input[type="email"], textarea[type="message"] {
     justify-content: center;
 }
 
-.barrederecherche{
+/* .barrederecherche{
     width: 100%;
     display: flex;
-    flex-direction: row;
+    justify-content: flex-end;
     height: 60px;
     margin-top: 50px;
 }
@@ -509,7 +505,7 @@ input[type="text"], input[type="email"], textarea[type="message"] {
     border: 1px solid var(--darky);
     border-radius:1rem;
     font-size:15px;
-}
+} */
 
 #bouttonAjouterChat{
     display: flex; 
@@ -521,7 +517,44 @@ input[type="text"], input[type="email"], textarea[type="message"] {
     text-align: center;
 }
 
-.listeDesChats .item .itemInfo,
+.itemHeader, .item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    margin-bottom: 30px;
+}
+
+
+.itemHeader{
+    margin-top: 40px;
+    margin-bottom: 30px;
+    width: 100%;
+    font-size: 30px;
+    
+}
+
+.itemInfo{
+    display: flex;
+    justify-content: center;
+    width: 18%;
+    background-color: var(--secondary-color);
+}
+
+.itemActions{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 10%;
+}
+
+#boutonDelete{
+    background-color: var(--secondary-color);
+    color: var(--darky);
+}
+
+/* .listeDesChats .item .itemInfo,
 .listeDesChats .itemHeader .itemInfo {
     width: 18%;
     display: inline-block;
@@ -531,10 +564,17 @@ input[type="text"], input[type="email"], textarea[type="message"] {
     justify-content: space-between;
     padding-left: 25px;
     margin-top: 50px;
-    width: 100%; */
-}
+    width: 100%;
+} */
 .listeDesChats .itemHeader .itemInfo {
     font-weight: bold;
+}
+
+.itemPhoto img {
+    border-radius: 1rem;
+    width: 230px;
+    height: 180px;
+    object-fit: cover;
 }
 
 #infoChat{
@@ -544,19 +584,6 @@ input[type="text"], input[type="email"], textarea[type="message"] {
     padding-left: 0px;
     width: 70%;
 }
-
-.itemActions{
-    display: flex;
-    flex-direction: row;
-    width: 10%;
-    background-color: violet;
-}
-
-#boutonDelete{
-    background-color: var(--lighty);
-    color: var(--darky);
-}
-
 
 .icone{
     width: 15%;
