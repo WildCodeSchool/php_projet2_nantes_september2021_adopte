@@ -222,23 +222,27 @@ h5{
 /* LISTE DES CHATS */
 
 .fichesChat{
-    display:flex;
-	flex-direction: column;
+    
+	
     gap:20px;
     border: none;
 }
 
 /* gap qui gère les espaces sur colonnes */
 .premieresFiches{
-    display:flex;
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: 2fr 2fr;
+    
     gap:50px;
+    
 }
 
 /* gap qui gère les espaces sur lignes des deux 1eres fiches */
-.dernieresFiches{
+/* .dernieresFiches{
     display:flex;
     gap:50px;
-}
+} */
 
 /* gap qui gère les espaces sur lignes des deux dernières fiches */
 .ficheChat{
@@ -254,18 +258,18 @@ h5{
     border-radius: 100%;
 }
 
-.photoTitre{
+/* .photoTitre{
     display:flex;
     align-items: center;
     flex-direction: column;
-}
+} */
 
-.catDesc{
+/* .catDesc{
     display: flex;
     justify-content: flex-end;
     font-size: small;
     padding:10px;
-}
+} */
 
 /* FICHE CHAT */
 
