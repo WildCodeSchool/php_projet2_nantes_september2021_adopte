@@ -85,7 +85,7 @@ class ChatsController extends AbstractController{
 
     public function uploadPhoto(){
 
-        $uploadDir = 'assets/images/Cat/'; /// PROBLEME DE CHEMIN !!!
+        $uploadDir = 'assets/images/Cat/';
         $extension = strtolower(pathinfo($_FILES['photo']['name'], PATHINFO_EXTENSION));
         $authorizedExtensions = ['jpg', 'jpeg', 'png'];
         $maxFileSize = 2000000;
