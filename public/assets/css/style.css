@@ -71,6 +71,12 @@ footer a:visited{
     text-decoration:none; 
 }
 
+
+.messagealert{
+    display:flex;
+    justify-content: center;
+}
+
 /* /////////////////////////////////////////FOOTER */
 footer{
     background-color: var(--main-color);
@@ -213,7 +219,7 @@ h5{
     border: none;
     font-size: 25px;
     padding:15px;
-    margin-right:50%;
+    margin-right:850px;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
     font-weight: lighter;
@@ -415,6 +421,7 @@ input[type="text"], input[type="password"]{
     flex-direction: column;
     width:100%;
     padding: 30px;
+    border: 1px solid var(--darky);
     border-radius:1rem;
 }
 
@@ -469,10 +476,10 @@ input[type="text"], input[type="password"]{
     justify-content: center;
 }
 
-/* .barrederecherche{
+.barrederecherche{
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: row;
     height: 60px;
     margin-top: 50px;
 }
@@ -496,7 +503,7 @@ input[type="text"], input[type="password"]{
     border: 1px solid var(--darky);
     border-radius:1rem;
     font-size:15px;
-} */
+}
 
 .listeDesChats {
     margin-top: 20px;
@@ -518,6 +525,13 @@ input[type="text"], input[type="password"]{
     width: 100%;
     font-size: 30px;
     padding: 2%;
+}
+
+.itemPhoto img {
+    border-radius: 1rem;
+    width: 230px;
+    height: 180px;
+    object-fit: cover;
 }
 
 .itemInfo{
@@ -654,9 +668,23 @@ label{
 
 /* /////////////////////////////////////////PAGE EDITER FICHE CHAT*/
 
-/* #formBouttonAjouter{
+#containerEditChat{
+    background-color: var(--secondary-color);
+    width:80%;
+    margin:0 auto;
+    margin-top:10%;
+}
+
+#formboutonEditer{
+    display: flex;
+    justify-content: center;
+}
+
+#boutonEditer{
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center;
-} */
+    margin-top: 50px;
+    height: 60px;
+    color: var(--lighty);
+}
