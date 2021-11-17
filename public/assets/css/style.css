@@ -71,6 +71,12 @@ footer a:visited{
     text-decoration:none; 
 }
 
+
+.messagealert{
+    display:flex;
+    justify-content: center;
+}
+
 /* /////////////////////////////////////////FOOTER */
 footer{
     background-color: var(--main-color);

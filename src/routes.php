@@ -16,4 +16,7 @@ return [
     'histoire' => ['HomeController', 'histoire'],
     'listechats' => ['HomeController', 'listeChats'],
     'ficheChat' => ['HomeController', 'ficheChat', ['id']], 
+    'chatadoptOK' => ['HomeController', 'chatadoptOK', ['id']],
+    'chatformadopt' => ['HomeController', 'chatformadopt', ['id']],
+    'addadoptant' => ['AdoptantController','addadoptant'],
 ];
