@@ -5,7 +5,7 @@ namespace App\Controller;
 use App\Model\AdoptantManager;
 use App\Controller\AbstractController;
 
-class AdoptantController extends AbstractController
+class AdoptantController extends AbstractController 
 {
 
 //Formulaire ajout d'adoptant

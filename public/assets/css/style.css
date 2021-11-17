@@ -394,14 +394,6 @@ input[type="text"], input[type="email"], textarea[type="message"] {
     padding:20px;
     border: none;
 }
-.coordonées{
-    display: flex;
-    justify-content: center;
-    text-align: end;
-    flex-direction: column;
-    font-style: italic;
-}
-
 
 /* ADMIN PAGE CONNEXION*/
 
