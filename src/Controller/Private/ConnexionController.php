@@ -10,10 +10,6 @@ class ConnexionController extends AbstractController
 //Creation de la session
 {
 
-     public function verification()
-    {
-    }
-    
     public function connexion()
     {              
         // if ($_SERVER['REQUEST_METHOD'] === 'POST') 
@@ -34,7 +30,7 @@ class ConnexionController extends AbstractController
                 $_SESSION ["login"] = $_POST['nom'];
                 header ('location: /private/chats');
             }else {
-                $error = "identifians incorrects";
+                $error = "Identifiants incorrects";
                 return $this->twig->render ("Private/connexion.html.twig" ,['error'=>$error]);            
             } 
     }

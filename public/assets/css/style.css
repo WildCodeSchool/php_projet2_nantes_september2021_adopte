@@ -154,7 +154,6 @@ img.chat{
     max-height: 100%;
     margin: auto;
     display: block;
-
 }
 
 button {
@@ -409,7 +408,6 @@ input[type="text"], input[type="email"], textarea[type="message"], input[type="p
     flex-direction: column;
     width:100%;
     padding: 30px;
-    border: 1px solid var(--darky);
     border-radius:1rem;
 }
 
@@ -450,7 +448,7 @@ input[type="text"], input[type="email"], textarea[type="message"], input[type="p
     justify-content: center;
 }
 
-.barrederecherche{
+/* .barrederecherche{
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -477,7 +475,7 @@ input[type="text"], input[type="email"], textarea[type="message"], input[type="p
     border: 1px solid var(--darky);
     border-radius:1rem;
     font-size:15px;
-}
+} */
 
 #bouttonAjouterChat{
     display: flex; 
@@ -503,6 +501,13 @@ input[type="text"], input[type="email"], textarea[type="message"], input[type="p
 }
 .listeDesChats .itemHeader .itemInfo {
     font-weight: bold;
+}
+
+.itemPhoto img {
+    border-radius: 1rem;
+    width: 230px;
+    height: 180px;
+    object-fit: cover;
 }
 
 #infoChat{
