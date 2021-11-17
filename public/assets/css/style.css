@@ -504,7 +504,7 @@ input[type="text"], input[type="email"], textarea[type="message"], input[type="p
     margin-bottom: 30px;
     width: 100%;
     font-size: 30px;
-    
+    padding: 2%;
 }
 
 .itemInfo{
@@ -526,18 +526,6 @@ input[type="text"], input[type="email"], textarea[type="message"], input[type="p
     color: var(--darky);
 }
 
-/* .listeDesChats .item .itemInfo,
-.listeDesChats .itemHeader .itemInfo {
-    width: 18%;
-    display: inline-block;
-    text-align: center;
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-left: 25px;
-    margin-top: 50px;
-    width: 100%;
-} */
 .listeDesChats .itemHeader .itemInfo {
     font-weight: bold;
 }
