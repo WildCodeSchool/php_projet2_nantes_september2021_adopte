@@ -10,18 +10,51 @@
 
     <h5>Nos chats à adopter</h5>
 
-    {% for chat in chats %}
         <div class = "fichesChat">
-                    <div class="photoTitre">
-                        <a href="ficheChat?id={{chat.id}}" ><img class="chatrond" src="{{ chat.photo}}" alt=""></img></a>
-                        <p> Son nom: {{ chat.nom}} - Son age :{{ chat.age}} ans </p>
-                    </div>
-                <div class="catDesc">
-                    <p>{{ chat.sexe}}</p>
-                </div>
+            {% for chat in chats %}
+                
+                    
+                        <div class = "ficheChat">
+                            <div class="photoTitre">
+                                <a href="ficheChat?id={{chat.id}}" ><img class="chatrond" src="{{ chat.photo}}" alt=""></img></a>
+                            </div>
+                            <div class ='desc'>
+                                <table>
+                                    <div class= "Name">
+                                            <tr>
+                                                <th>Son Nom: </th>
+                                                <td> {{ chat.nom}} </td>
+                                            </tr>
+                                        </div>
+                                        
+                                        <div class= "Age">
+                                            <tr>
+                                                <th>Son Age: </th>
+                                                <td> {{ chat.age}} ans </td>
+                                            </tr>
+                                        </div>
+
+                                        <div class= "Sexe">
+                                            <tr>
+                                                <th>Sexe : </th>
+                                                <td> {{ chat.sexe}} </td>
+                                            </tr>
+                                        </div>
+                                    </table>
+                                
+
+                                
+                            </div>
+                            
+                        </div>
+                    
+                    
+            {% endfor %}
         </div>
 
-        {% endfor %}
+
+
+
 
     
 {% endblock %}
