@@ -165,6 +165,7 @@ button{
     font-size:15px;
     padding:20px;
     border: none;
+    text-align: center;
 }
 
 .Homebasdepage{
@@ -231,17 +232,20 @@ h5{
 th{
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: left;
     font-size: x-large;
     height: 30px;
 }
 
 td{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
     font-size: x-large;
     height: 30px;
+}
+
+.desc{
+
 }
 
 /* gap qui gère les espaces sur colonnes */
@@ -279,7 +283,7 @@ td{
 
 .pageChat{
     display:flex;
-    justify-content: space-between;
+    justify-content: center;
     align-content: center;
     border-radius: 50px;
     background-color: var(--secondary-color);
@@ -300,11 +304,8 @@ td{
     display:flex;
     justify-content: flex-end;
     flex-direction: column;
-}
-
-.droitedelapageChat{
-    padding-left: 5%;
-    padding-right: 5%
+    padding-left: 25%;
+    padding-right: 5%;
 }
 
 .chatadopt{
@@ -451,7 +452,7 @@ input[type="text"], input[type="password"]{
     justify-content: flex-end;
 }
 
-#bouttonAjouterChat{
+#boutonAjouterChat{
     display: flex; 
     margin: 0px;
 }
@@ -647,10 +648,11 @@ label{
     margin-right: 10px;
 }
 
-#bouttonAjouter{
+.boutonAjouter{
     margin-top: 50px;
     height: 60px;
     color: var(--secondary-color);
+    text-align: center;
 }
 
 /* /////////////////////////////////////////PAGE EDITER FICHE CHAT*/
