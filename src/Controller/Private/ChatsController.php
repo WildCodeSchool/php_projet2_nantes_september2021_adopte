@@ -22,7 +22,7 @@ class ChatsController extends AbstractController{
 
     public function uploadPhoto(){
 
-        $uploadDir = 'assets/images/Cat/'; /// PROBLEME DE CHEMIN !!!
+        $uploadDir = 'assets/images/Cat/';
         $extension = strtolower(pathinfo($_FILES['photo']['name'], PATHINFO_EXTENSION));
         $authorizedExtensions = ['jpg', 'jpeg', 'png'];
         $maxFileSize = 2000000;
@@ -101,19 +101,6 @@ class ChatsController extends AbstractController{
         ]);
     }
     
-    // public function update()
-    // {
-    //     if ($_SERVER['REQUEST_METHOD'] === 'POST'){
-    //         $chat = (array) trim($_POST['chats']);
-
-    //         $chatManager = new ChatManager();
-    //         $chatManager->update($chat);
-
-    //         header('Location:chats');
-    //     }
-    // }
-
-    // edit?id=' . $id
      public function delete()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
