@@ -19,7 +19,6 @@
 </head>
 
 <body>
-    <div>{{session.flashmessage}}</div>
 <header>
     <nav>
         <div id="logo"><a href="/">AdopteUnChat.com</a></div>
@@ -31,6 +30,7 @@
         </ul>
     </nav>
 </header>
+    <div class = "messagealert">{{session.flashmessage}}</div>
     {% block content %} {% endblock %}
 
         {% block footer %} {% include '/Home/component/_footer.html.twig' %}{% endblock %}

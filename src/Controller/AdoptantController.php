@@ -32,7 +32,7 @@ class AdoptantController extends AbstractController
                 $adoptantManager = new AdoptantManager();
                 $adoptantManager->addAdoptant($this->adoptant);
                 session_start();
-                $_SESSION['flashmessage']='merci pour l\'adoption.';
+                $_SESSION['flashmessage']="Merci pour l'adoption.";
                 header('Location:/');
             }
 
