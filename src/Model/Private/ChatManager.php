@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Model\Private;
+
 use App\Model\AbstractManager;
 use App\Controller\Private\ChatsController;
 
@@ -27,8 +28,6 @@ class ChatManager extends AbstractManager
 
                 return (int)$this->pdo->lastInsertId();
     }   
- 
-
     /**
      * Update item in database
      */

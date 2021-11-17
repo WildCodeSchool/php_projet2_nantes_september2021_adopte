@@ -1,0 +1,37 @@
+{% extends 'layoutAdmin.html.twig' %}
+
+{% block content %}
+
+<div id="boutonshaut">
+<button><a href="/private/chats">Retour vers la liste des chats</a></button>
+<button><a href="/private/logout">Déconnexion</a></button>
+</div>
+
+    <div class = "pageChat">
+        <div>
+            <img class="grosChatRond" src="{{ chat.photo }}" alt="Photo de {{ chat.nom }}"></img>
+        </div>
+
+        <div class="droitedelapageChat">
+            <h6> {{ chat.nom }} </h6>
+                <div class="nom_age_button"></br>
+                <p>{{ chat.age }} ans<p>
+        </div>
+
+            <section id="textPresentation">
+                <h6>{{chat.presentation}}</h6>
+                    <p> Vaccination : {{ chat.vaccin }}
+                    Stérilisation : {{ chat.sterilise }}
+                    Compatible autres animaux : {{ chat.compatibilite_autre_animaux }}
+                    Sexe : {{ chat.sexe }}
+                    Race : {{ chat.race }}
+                    Couleur : {{ chat.couleur }}
+                    </p>
+            </section>
+
+            <div class ="itemActions itemInfo" >
+                <a href="/private/edit?id={{chat.id}}"><i class="far fa-edit"></i></a>
+            </div>
+        </div>
+    </div>
+    {% endblock %}
