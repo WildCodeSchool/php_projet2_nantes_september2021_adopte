@@ -222,15 +222,11 @@ h5{
 
 .fichesChat{
     display: grid;
-    
     grid-template-columns:  2fr 2fr ;
     grid-template-rows: auto;
     padding:20px;
     gap:50px;
-    
 }
-
-
 
 th{
     display: flex;
@@ -238,8 +234,6 @@ th{
     justify-content: center;
     font-size: x-large;
     height: 30px;
-    
-
 }
 
 td{
@@ -247,20 +241,12 @@ td{
     align-items: center;
     justify-content: center;
     font-size: x-large;
-    
-   
     height: 30px;
-
 }
 
-
 /* gap qui gère les espaces sur colonnes */
-.premieresFiches{
-    
-    
-    
+.premieresFiches{ 
     gap:50px;
-    
 }
 
 /* gap qui gère les espaces sur lignes des deux 1eres fiches */
@@ -279,7 +265,6 @@ td{
     background-color: var(--secondary-color);
     font-size: large;
     margin: 20px;
-    
 }
 
 .chatrond{
@@ -290,14 +275,6 @@ td{
     object-fit: cover;
 }
 
-/* .photoTitre{
-    display:flex;
-    align-items: center;
-    flex-direction: column;
-} */
-
-
-
 /* FICHE CHAT */
 
 .pageChat{
@@ -307,15 +284,16 @@ td{
     border-radius: 50px;
     background-color: var(--secondary-color);
     padding: 5%;
-    margin: 5%
-    
+    margin: 5%;
 }
+
 .grosChatRond{
     justify-content: center;
     align-content: center;
     width: 300px;
     height: 300px;
     border-radius: 100%;
+    object-fit: cover;
 }
 
 .droitedelapageChat{
@@ -324,22 +302,9 @@ td{
     flex-direction: column;
 }
 
-.nom_age_button{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-
-}
-
-.textPresentation{
-    display:flex;
-    justify-content: center;
-    margin:20px;
-}
-
-.textPresentation p{
-    margin: 2%;
+.droitedelapageChat{
+    padding-left: 5%;
+    padding-right: 5%
 }
 
 .chatadopt{
@@ -349,7 +314,7 @@ td{
 
 h6{
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     margin: 1%;
 }
 
@@ -362,6 +327,7 @@ h6{
     border-radius: 50px;
     top:0;
 }
+
 /* HISTOIRE */
 
 .divPrincipalePageHistoire{
@@ -377,6 +343,7 @@ h6{
 .histoire p{
     font-size: 15px;
 }
+
 .Dicton{
     display:flex;
     justify-content: center;
