@@ -19,15 +19,16 @@
 </head>
 
 <body>
+    <div>{{session.flashmessage}}</div>
 <header>
     <nav>
         <div id="logo"><a href="/">AdopteUnChat.com</a></div>
-            <ul id = "menu">
-                <li><a href="/">Accueil</a></li>
-                <li><a href="listechats">Nos chats</a></li>
-                <li><a href="histoire">Notre histoire</a></li>
-                <li><a href="histoire#contact">Contact</a></li>
-            </ul>
+        <ul id = "menu">
+            <li><a href="/">Accueil</a></li>
+            <li><a href="listechats">Nos chats</a></li>
+            <li><a href="histoire">Notre histoire</a></li>
+            <li><a href="histoire#contact">Contact</a></li>
+        </ul>
     </nav>
 </header>
     {% block content %} {% endblock %}
