@@ -3,18 +3,18 @@
 {% block content %}
 
 <div id="deconnexion" class="textbutton">
+  <button id="bouttonAjouterChat"><a href="/private/chats/add">Ajouter un nouveau chat</a></button>
    <button><a href="/private/logout">Déconnexion</a></button>
 </div>
 
 <h2 id="titreNosChats">Nos chats</h2>
 
-<div class="barrederecherche">
-{# <form id="formBarreDeRecherche" action="" class="formulaire">
+{# <div class="barrederecherche">
+<form id="formBarreDeRecherche" action="" class="formulaire">
 <input id="inputRecherche" class="champ" type="text" placeholder="Taper votre rechercher"/>
 <input id="rechercheBoutton" type="submit" id='submit' value='Rechercher' >
-</form> #}
-  <button id="bouttonAjouterChat"><a href="/private/chats/add">Ajouter un nouveau chat</a></button>
-</div>
+</form>
+</div> #}
 
 <div class="listeDesChats">  
    <div class ="itemHeader">
@@ -32,7 +32,7 @@
          </div>
 
          <div class="itemNom itemInfo">
-            <a href="/private/chat/fiche?id={{chat.id}}" type="hidden" value="{{chat.id}}"> {{ chat.nom }} </a> 
+            <a href="edit?id={{chat.id}}" type="hidden" value="{{chat.id}}"> {{ chat.nom }} </a> 
          </div>
 
          <div class="itemAge itemInfo"> {{chat.age}} </div>
@@ -47,10 +47,6 @@
                <button id ="boutonDelete" class ="boutonActions" type="submit"><i class="fas fa-trash"></i></button>
             </form>
          </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> 3fab567b8f41ca2773a24aa426f06a03d7fd3793
       </div>
    {% endfor %}
 </div>

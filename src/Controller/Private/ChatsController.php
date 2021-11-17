@@ -148,11 +148,14 @@ class ChatsController extends AbstractController
     {
         $chatManager = new ChatManager();
         $chat = $chatManager->selectOneById($id);
-
-
+        
+        // if( $chats['vaccin'] == oui  )
+        
+        // var_dump( $chat); die;
+        
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $this->verification();
-            $this->uploadPhoto();
+             $this->verification();
+             $this->uploadPhoto();
             // clean $_POST data
             $chat = array_merge($chat, $this->chat);
 
