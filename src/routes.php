@@ -8,7 +8,7 @@ return [
     'private/chats' => ['Private\\ChatsController', 'index'],
     'private/chats/add' => ['Private\\ChatsController', 'add'],
     'private/edit' => ['Private\\ChatsController', 'edit', ['id']],
-    'private/chats/delete' => ['Private\\ChatsController', 'delete', ['id']],
+    'private/delete' => ['Private\\ChatsController', 'delete', ['id']],
     'private/chats/fiche' => ['Private\\ChatsController', 'show', ['id']],
 
 //partie public
