@@ -9,8 +9,21 @@ class AdoptantController extends AbstractController
 {
 
 //Formulaire ajout d'adoptant
-    public function addAdoptant(): void
-        {
+    public function addAdoptant()
+        {   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+            if (empty($this->errors)){
+
+                $adoptantManager = new AdoptantManager();
+                $adoptantManager->addAdoptant($this->adoptant);
+                header('Location:/');
+            }
+
+            return $this->twig->render("ficheChat.html.twig", ["errors" => $this->errors]);
+
+           }
+
+            return $this->twig->render("");
 
             if ($_SERVER["REQUEST_METHOD"] === 'POST') {
                 $adoptant = array_map("trim", $_POST); //nettoyage espaces vide
