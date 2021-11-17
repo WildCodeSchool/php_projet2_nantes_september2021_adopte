@@ -414,6 +414,8 @@ input[type="text"], input[type="email"], textarea[type="message"], input[type="p
 }
 
 #titleConnexion{
+    display: flex;
+    justify-content: center;
     width: 38%;
     margin: 0 auto;
     padding-bottom: 10px;
@@ -489,7 +491,44 @@ input[type="text"], input[type="email"], textarea[type="message"], input[type="p
     text-align: center;
 }
 
-.listeDesChats .item .itemInfo,
+.itemHeader, .item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    margin-bottom: 30px;
+}
+
+
+.itemHeader{
+    margin-top: 40px;
+    margin-bottom: 30px;
+    width: 100%;
+    font-size: 30px;
+    
+}
+
+.itemInfo{
+    display: flex;
+    justify-content: center;
+    width: 18%;
+    background-color: var(--secondary-color);
+}
+
+.itemActions{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 10%;
+}
+
+#boutonDelete{
+    background-color: var(--secondary-color);
+    color: var(--darky);
+}
+
+/* .listeDesChats .item .itemInfo,
 .listeDesChats .itemHeader .itemInfo {
     width: 18%;
     display: inline-block;
@@ -499,8 +538,8 @@ input[type="text"], input[type="email"], textarea[type="message"], input[type="p
     justify-content: space-between;
     padding-left: 25px;
     margin-top: 50px;
-    width: 100%; */
-}
+    width: 100%;
+} */
 .listeDesChats .itemHeader .itemInfo {
     font-weight: bold;
 }
@@ -512,19 +551,6 @@ input[type="text"], input[type="email"], textarea[type="message"], input[type="p
     padding-left: 0px;
     width: 70%;
 }
-
-.itemActions{
-    display: flex;
-    flex-direction: row;
-    width: 10%;
-    background-color: violet;
-}
-
-#boutonDelete{
-    background-color: var(--lighty);
-    color: var(--darky);
-}
-
 
 .icone{
     width: 15%;

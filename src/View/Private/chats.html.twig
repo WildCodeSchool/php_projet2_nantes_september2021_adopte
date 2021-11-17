@@ -20,7 +20,7 @@
 
 <div class="listeDesChats">  
   <div class ="itemHeader">
-  <div class ="itemPhoto itemInfo" >Photo</div>
+    <div class ="itemPhoto itemInfo" >Photo</div>
     <div class ="itemNom itemInfo" >Nom</div>
     <div class ="itemAge itemInfo" >Age</div>
     <div class ="itemCouleur itemInfo" >Couleurs</div>
@@ -37,7 +37,7 @@
         <a href="edit?id={{chat.id}}"><i class="far fa-edit"></i></a>
         <form action="delete" method="POST" onsubmit="return confirm('Voulez-vous vraiment supprimer {{chat.nom}}');">
           <input name="id" type="hidden" value="{{chat.id}}">
-          <button class ="boutonActions" type="submit"><i class="fas fa-trash"></i></button>
+          <button id ="boutonDelete" class ="boutonActions" type="submit"><i class="fas fa-trash"></i></button>
         </form>
       </div>
     </div>
