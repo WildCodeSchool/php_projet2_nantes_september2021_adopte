@@ -26,18 +26,30 @@ class ChatManager extends AbstractManager
                 
                 $statement->execute();
 
+                return (int)$this->pdo->lastInsertId();
     }   
-}  
+ 
 
+    /**
+     * Update item in database
+     */
+    public function update(array $chat)
+    {
+        $statement = $this->pdo->prepare("UPDATE " . self::TABLE . " SET nom = :nom, age = :age, race = :race, couleur = :couleur, sexe = :sexe, photo = :photo, date_arrivee = :date_arrivee, vaccin = :vaccin, sterilise = :sterilise, compatibilite_autre_animaux = :compatibilite_autre_animaux, presentation = :presentation  WHERE id = :id");
+       
+        $statement->bindValue(':nom', $chat['nom'], \PDO::PARAM_STR);
+        $statement->bindValue(':age', $chat['age'], \PDO::PARAM_INT);
+        $statement->bindValue(':race', $chat['race'], \PDO::PARAM_STR);
+        $statement->bindValue(':couleur', $chat['couleur'], \PDO::PARAM_STR);
+        $statement->bindValue(':sexe', $chat['sexe'], \PDO::PARAM_STR);
+        $statement->bindValue(':photo', $chat['photo'], \PDO::PARAM_STR);
+        $statement->bindValue(':date_arrivee', $chat['date_arrivee'], \PDO::PARAM_STR);
+        $statement->bindValue(':vaccin', $chat['vaccin'], \PDO::PARAM_BOOL);
+        $statement->bindValue(':sterilise', $chat['sterilise'], \PDO::PARAM_BOOL);
+        $statement->bindValue(':compatibilite_autre_animaux', $chat['compatibilite_autre_animaux'], \PDO::PARAM_BOOL);
+        $statement->bindValue(':presentation', $chat['presentation'], \PDO::PARAM_STR);
+        $statement->bindValue(':id', $chat['id'], \PDO::PARAM_INT);
 
-    // /**
-    //  * Update item in database
-    //  */
-    // public function update(array $item): bool
-    // {
-    //     $statement = $this->pdo->prepare("UPDATE " . self::TABLE . " SET `title` = :title WHERE id=:id");
-    //     $statement->bindValue('id', $item['id'], \PDO::PARAM_INT);
-    //     $statement->bindValue('title', $item['title'], \PDO::PARAM_STR);
-
-    //     return $statement->execute();
-    // }
+        return $statement->execute();
+    }
+}

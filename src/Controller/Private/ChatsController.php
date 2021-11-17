@@ -84,25 +84,23 @@ class ChatsController extends AbstractController{
 
     public function uploadPhoto(){
 
-        $uploadDir = "/assets/images/Cat/"; /// PROBLEME DE CHEMIN !!!
-        $extension = pathinfo($_FILES['photo']['name'], PATHINFO_EXTENSION);
+        $uploadDir = 'assets/images/Cat/'; /// PROBLEME DE CHEMIN !!!
+        $extension = strtolower(pathinfo($_FILES['photo']['name'], PATHINFO_EXTENSION));
         $authorizedExtensions = ['jpg', 'jpeg', 'png'];
         $maxFileSize = 2000000;
 
-        if( (!in_array($extension, $authorizedExtensions))){
+        if (!in_array($extension, $authorizedExtensions)){
             $this->errors[] = 'Veuillez sélectionner un fichier au bon format (jpeg, jpg ou png)';
-
-        $uploadPhoto = $uploadDir . basename($_FILES['photo']['name']);
-
-        if (isset ($_FILES['photo']['tmp_name']) && filesize($_FILES['photo']['tmp_name']) > $maxFileSize)
-            $this->errors["photo"] = "L'image ne doit pas dépasser 2M";
-        } else {
-
-        $uploadPhoto = uniqid('photo', true) . '.' . $extension;
-        move_uploaded_file($_FILES['photo']['tmp_name'], $uploadPhoto);
-        $this->chat['photo'] = $uploadPhoto;
+            return;
         }
 
+        if (isset ($_FILES['photo']['tmp_name']) && filesize($_FILES['photo']['tmp_name']) > $maxFileSize){
+            $this->errors["photo"] = "L'image ne doit pas dépasser 2M";
+            return;
+        }
+        $uploadPhoto = $uploadDir . uniqid('photo', true) . '.' . $extension;
+        move_uploaded_file($_FILES['photo']['tmp_name'], dirname(__DIR__) . '/../../public/' . $uploadPhoto);
+        $this->chat['photo'] = $uploadPhoto;       
     }
 
     public function add()
@@ -141,18 +139,30 @@ class ChatsController extends AbstractController{
         return $this->twig->render("Private/ficheChat.html.twig", ['chat' => $chat] );
     }
 
-    public function edit(int $id)
+    public function edit(int $id): string
     {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            // TODO: traiter les infos
-        }
-
         $chatManager = new ChatManager();
         $chat = $chatManager->selectOneById($id);
 
-        return $this->twig->render("Private/edit.html.twig", ['chat' => $chat]);
-    }
 
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $this->verification();
+            $this->uploadPhoto();
+            // clean $_POST data
+            $chat = array_merge($chat, $this->chat);
+
+            // TODO validations (length, format...)
+
+            // if validation is ok, update and redirection
+            $chatManager->update($chat);
+            header('Location:chats');
+        }
+
+        return $this->twig->render('Private/edit.html.twig', [
+            'chat' => $chat,
+        ]);
+    }
+    
      public function delete()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
