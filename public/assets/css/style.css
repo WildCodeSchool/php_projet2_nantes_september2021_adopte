@@ -156,7 +156,7 @@ img.chat{
     display: block;
 }
 
-button {
+button{
     display:flex;
     align-items: center;
     background-color: var(--main-color);
@@ -191,8 +191,8 @@ button {
     margin-right: 5%;
 }
 
-
 .texthistoire p{
+    font-size:18px;
     padding: 5%;
 }
 
@@ -365,8 +365,7 @@ h6{
     display: inline;
 }
 
-input[type="text"], input[type="email"], textarea[type="message"], input[type="password"] {
-
+.contact #name, #email, #message{
     display:table-cell;
     vertical-align:middle;
     width: 100%;
@@ -390,6 +389,21 @@ input[type="text"], input[type="email"], textarea[type="message"], input[type="p
 }
 
 /* /////////////////////////////////////////ADMIN PAGE CONNEXION*/
+
+input[type="text"], input[type="password"]{
+    display:table-cell;
+    vertical-align:middle;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
 
 #container{
     width:800px;
@@ -435,7 +449,19 @@ input[type="text"], input[type="email"], textarea[type="message"], input[type="p
 #deconnexion{
     display:flex;
     justify-content: flex-end;
+}
+
+#bouttonAjouterChat{
+    display: flex; 
+    margin: 0px;
+}
+
+.alignbouton{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
     margin-right: 25px;
+    margin-left: 25px;
     margin-top: 10px;
 }
 
@@ -473,11 +499,6 @@ input[type="text"], input[type="email"], textarea[type="message"], input[type="p
     border-radius:1rem;
     font-size:15px;
 } */
-
-#bouttonAjouterChat{
-    display: flex; 
-    margin: 0px;
-}
 
 .listeDesChats {
     margin-top: 20px;
@@ -529,6 +550,16 @@ input[type="text"], input[type="email"], textarea[type="message"], input[type="p
     width: 230px;
     height: 180px;
     object-fit: cover;
+}
+
+.itemNom a:link{
+    text-decoration:none; 
+    color:var(--darky);
+}
+
+.itemNom a:visited{
+    text-decoration:none; 
+    color:var(--darky);
 }
 
 #infoChat{
@@ -621,7 +652,6 @@ label{
     height: 60px;
     color: var(--secondary-color);
 }
-
 
 /* /////////////////////////////////////////PAGE EDITER FICHE CHAT*/
 

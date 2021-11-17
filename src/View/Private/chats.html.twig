@@ -2,16 +2,18 @@
 
 {% block content %}
 
-<div id="deconnexion" class="textbutton">
-   <button><a href="/private/logout">Déconnexion</a></button>
-</div>
+<div class="alignbouton">
+   <div id="deconnexion" class="textbutton">
+      <button><a href="/private/logout">Déconnexion</a></button>
+   </div>
 
-<div class="barrederecherche">
-{# <form id="formBarreDeRecherche" action="" class="formulaire">
-<input id="inputRecherche" class="champ" type="text" placeholder="Taper votre rechercher"/>
-<input id="rechercheBoutton" type="submit" id='submit' value='Rechercher' >
-</form> #}
-  <button id="bouttonAjouterChat"><a href="/private/chats/add">Ajouter un nouveau chat</a></button>
+   <div class="textbutton">
+         {# <form id="formBarreDeRecherche" action="" class="formulaire">
+         <input id="inputRecherche" class="champ" type="text" placeholder="Taper votre rechercher"/>
+         <input id="rechercheBoutton" type="submit" id='submit' value='Rechercher' >
+         </form> #}
+      <button id="bouttonAjouterChat"><a href="/private/chats/add">Ajouter un nouveau chat</a></button>
+   </div>
 </div>
 
 <h2 id="titreNosChats">Nos chats</h2>
@@ -29,11 +31,11 @@
    {% for chat in chats %}
       <div class="item">
          <div class="itemPhoto itemInfo">
-            <img src="{{ chat.photo }}" alt="Photo de {{ chat.nom }}">
+            <a href="edit?id={{chat.id}}" type="hidden" value="{{chat.id}}"><img src="{{ chat.photo }}" alt="Photo de {{ chat.nom }}"></a>
          </div>
 
          <div class="itemNom itemInfo">
-            <a href="/private/chat/fiche?id={{chat.id}}" type="hidden" value="{{chat.id}}"> {{ chat.nom }} </a> 
+            <a href="edit?id={{chat.id}}" type="hidden" value="{{chat.id}}"> {{ chat.nom }} </a> 
          </div>
 
          <div class="itemAge itemInfo"> {{chat.age}} </div>
