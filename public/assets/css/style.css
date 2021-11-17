@@ -18,7 +18,7 @@ body{
     font-size:16px;
 }
 
-/* HEADER */   
+/* /////////////////////////////////////////HEADER */   
 header {
     padding-bottom : 2%;
 }
@@ -71,7 +71,7 @@ footer a:visited{
     text-decoration:none; 
 }
 
-/* FOOTER */
+/* /////////////////////////////////////////FOOTER */
 footer{
     background-color: var(--main-color);
 }
@@ -105,7 +105,7 @@ footer{
     font-size: 12px;
 }
 
-/* INDEX*/
+/* /////////////////////////////////////////HOME*/
 .chatHome{
     display:flex;
     align-items: center;
@@ -218,7 +218,7 @@ h5{
     font-weight: lighter;
 }
 
-/* LISTE DES CHATS */
+/* /////////////////////////////////////////LISTE DES CHATS */
 
 .fichesChat{
     display: grid;
@@ -275,7 +275,7 @@ td{
     object-fit: cover;
 }
 
-/* FICHE CHAT */
+/* /////////////////////////////////////////FICHE CHAT */
 
 .pageChat{
     display:flex;
@@ -328,7 +328,7 @@ h6{
     top:0;
 }
 
-/* HISTOIRE */
+/* /////////////////////////////////////////HISTOIRE */
 
 .divPrincipalePageHistoire{
     background-color:var(--secondary-color); 
@@ -389,7 +389,7 @@ input[type="text"], input[type="email"], textarea[type="message"], input[type="p
     border: none;
 }
 
-/* ADMIN PAGE CONNEXION*/
+/* /////////////////////////////////////////ADMIN PAGE CONNEXION*/
 
 #container{
     width:800px;
@@ -430,7 +430,7 @@ input[type="text"], input[type="email"], textarea[type="message"], input[type="p
     color: var(--lighty);
 }
 
-/* ADMIN PAGE LISTE DES CHATS */
+/* /////////////////////////////////////////ADMIN PAGE LISTE DES CHATS */
 
 #deconnexion{
     display:flex;
@@ -493,7 +493,6 @@ input[type="text"], input[type="email"], textarea[type="message"], input[type="p
     margin-bottom: 30px;
 }
 
-
 .itemHeader{
     margin-top: 40px;
     margin-bottom: 30px;
@@ -553,7 +552,7 @@ input[type="text"], input[type="email"], textarea[type="message"], input[type="p
     
 }
 
-/*ADMIN AJOUT DE CHAT*/
+/* /////////////////////////////////////////ADMIN AJOUT DE CHAT*/
 
 #boutonshaut{
     display:flex;
@@ -624,7 +623,7 @@ label{
 }
 
 
-/*PAGE EDITER FICHE CHAT*/
+/* /////////////////////////////////////////PAGE EDITER FICHE CHAT*/
 
 #formBouttonAjouter{
     display: flex;
