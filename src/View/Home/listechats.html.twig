@@ -1,10 +1,11 @@
 {% extends 'layout.html.twig' %}
+
 {% block content %}
 
 <img class="" src="." alt=""></img>
     <div class = "Dicton"> 
         <p>
-            “Si l'on pouvait croiser l'homme et le chat, ça améliorerait l'homme, mais ça dégraderait le chat.” Mark Twain.
+            “Dieu a inventé le chat pour que l'homme ait un tigre à caresser chez lui.” Victor Hugo
         </p>
     </div>
 
@@ -15,75 +16,18 @@
             <div class = "premieresFiches"> 
                 <div class = "ficheChat">
                     <div class="photoTitre">
-                        <img class="chatrond" src="{{ chat.photo}}" alt=""></img>
-                        <p> <a href="chats?id={{chat.id}}" >{{ chat.nom}}</a> - {{ chat.age}} </p>
+                        <a href="ficheChat?id={{chat.id}}" ><img class="chatrond" src="{{ chat.photo}}" alt=""></img></a>
+                        <p> Son nom: {{ chat.nom}} - Son age :{{ chat.age}} ans </p>
                     </div>
 
 
                 <div class="catDesc">
-                    <p>Description : {{ chat.presentation}}</p>
+                    <p>{{ chat.sexe}}</p>
                 </div>
             
             </div>
 
     {% endfor %}
 
-            <div class = "ficheChat">
-                <div class="photoTitre">
-                    <img class="chatrond" src="." alt=""></img>
-                    <p> Son nom - Son âge </p>
-                </div>
-                <div class="catDesc">
-                    <p>Description : Rayu est un chat plutot calme qui aime les gratouilles mais il sait aussi etre indépendant et joueur quand il est stimulé.
-                            OK chat,Chien et enfants il s’adaptera facilement a votre vie de famille.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="dernieresFiches">
-            <div class = "ficheChat">
-                <div class="photoTitre">
-                    <img class="chatrond" src="." alt=""></img>
-                    <p>  -  </p>
-                </div>
-
-                <div class="catDesc">
-                    <p>Description : Rayu est un chat plutot calme qui aime les gratouilles mais il sait aussi etre indépendant et joueur quand il est stimulé.
-                            OK chat,Chien et enfants il s’adaptera facilement a votre vie de famille.</p>
-                </div>
-            </div>
-
-            
-
-            <div class = "ficheChat">
-                <div class="photoTitre">
-                <img class="chatrond" src="." alt=""></img>
-                <p> Son nom - Son âge </p>
-                </div>
-
-                <div class="catDesc">
-                    <p>Description : Rayu est un chat plutot calme qui aime les gratouilles mais il sait aussi etre indépendant et joueur quand il est stimulé.
-                            OK chat,Chien et enfants il s’adaptera facilement a votre vie de famille.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-        
-    
-                    
-                       
-                        
-                        {{ chat.race}}
-                        {{ chat.couleur}}
-                        {{ chat.sexe}}
-                        {{ chat.date_arrivee}}
-                        {{ chat.vaccin}}
-                        {{ chat.sterilise}}
-                        {{ chat.compatibilite_autre_animaux}}
-                        
-            
-        
     
 {% endblock %}
