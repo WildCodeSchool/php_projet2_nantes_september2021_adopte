@@ -359,12 +359,10 @@ h6{
 }
 
 input[type="text"], input[type="email"], textarea[type="message"] {
-<<<<<<< HEAD
+
     display:table-cell;
     vertical-align:middle;
     width: 100%;
-=======
->>>>>>> f8cf428d438b3d608bbe012b39d157ae12939d65
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -373,7 +371,7 @@ input[type="text"], input[type="email"], textarea[type="message"] {
     margin-bottom: 16px;
     margin-right: 0px;
     margin-left: 0px;
-    }
+}
     
 #submit{
     background-color: var(--main-color);
@@ -484,7 +482,7 @@ input[type="text"], input[type="email"], textarea[type="message"] {
 
 .listeDesChats .item .itemInfo,
 .listeDesChats .itemHeader .itemInfo {
-    width: 24%;
+    width: 18%;
     display: inline-block;
     text-align: center;
     /* display: flex;
@@ -505,6 +503,19 @@ input[type="text"], input[type="email"], textarea[type="message"] {
     padding-left: 0px;
     width: 70%;
 }
+
+.itemActions{
+    display: flex;
+    flex-direction: row;
+    width: 10%;
+    background-color: violet;
+}
+
+#boutonDelete{
+    background-color: var(--lighty);
+    color: var(--darky);
+}
+
 
 .icone{
     width: 15%;
@@ -587,4 +598,13 @@ label{
     margin-top: 50px;
     height: 60px;
     color: var(--secondary-color);
+}
+
+
+/*PAGE EDITER FICHE CHAT*/
+
+#formBouttonAjouter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

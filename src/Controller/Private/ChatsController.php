@@ -22,25 +22,23 @@ class ChatsController extends AbstractController{
 
     public function uploadPhoto(){
 
-        $uploadDir = "/assets/images/Cat/"; /// PROBLEME DE CHEMIN !!!
-        $extension = pathinfo($_FILES['photo']['name'], PATHINFO_EXTENSION);
+        $uploadDir = 'assets/images/Cat/'; /// PROBLEME DE CHEMIN !!!
+        $extension = strtolower(pathinfo($_FILES['photo']['name'], PATHINFO_EXTENSION));
         $authorizedExtensions = ['jpg', 'jpeg', 'png'];
         $maxFileSize = 2000000;
 
-        if( (!in_array($extension, $authorizedExtensions))){
+        if (!in_array($extension, $authorizedExtensions)){
             $this->errors[] = 'Veuillez sélectionner un fichier au bon format (jpeg, jpg ou png)';
-
-        $uploadPhoto = $uploadDir . basename($_FILES['photo']['name']);
-
-        if (isset ($_FILES['photo']['tmp_name']) && filesize($_FILES['photo']['tmp_name']) > $maxFileSize)
-            $this->errors["photo"] = "L'image ne doit pas dépasser 2M";
-        } else {
-
-        $uploadPhoto = uniqid('photo', true) . '.' . $extension;
-        move_uploaded_file($_FILES['photo']['tmp_name'], $uploadPhoto);
-        $this->chat['photo'] = $uploadPhoto;
+            return;
         }
 
+        if (isset ($_FILES['photo']['tmp_name']) && filesize($_FILES['photo']['tmp_name']) > $maxFileSize){
+            $this->errors["photo"] = "L'image ne doit pas dépasser 2M";
+            return;
+        }
+        $uploadPhoto = $uploadDir . uniqid('photo', true) . '.' . $extension;
+        move_uploaded_file($_FILES['photo']['tmp_name'], dirname(__DIR__) . '/../../public/' . $uploadPhoto);
+        $this->chat['photo'] = $uploadPhoto;       
     }
 
     public function add()
@@ -48,7 +46,6 @@ class ChatsController extends AbstractController{
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             $this->verification();
-            var_dump($this->chat);
 
             if (empty($this->errors)){
 
@@ -72,24 +69,51 @@ class ChatsController extends AbstractController{
         return $this->twig->render("Private/chats.html.twig", ['chats' => $chats] );
     }
 
-    public function edit(int $id)
-    {
-            // TODO: traiter les infos
+    // public function edit(int $id)
+    // {
+    //     $chatManager = new ChatManager();
+    //     $chat = $chatManager->selectOneById($id);
+           
+    //     return $this->twig->render("Private/edit.html.twig", ['chat' => $chat]);
+    // }
 
+    public function edit(int $id): string
+    {
         $chatManager = new ChatManager();
         $chat = $chatManager->selectOneById($id);
 
-        if ($_SERVER['REQUEST_METHOD'] === 'POST'){
-        
-            $item = array_map('trim', $_POST);
 
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $this->verification();
+            $this->uploadPhoto();
+            // clean $_POST data
+            $chat = array_merge($chat, $this->chat);
+
+            // TODO validations (length, format...)
+
+            // if validation is ok, update and redirection
             $chatManager->update($chat);
-            header('Location: /items/show?id=' . $id);
+            header('Location:chats');
         }
 
-        return $this->twig->render("Private/edit.html.twig", ['chat' => $chat]);
+        return $this->twig->render('Private/edit.html.twig', [
+            'chat' => $chat,
+        ]);
     }
+    
+    // public function update()
+    // {
+    //     if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+    //         $chat = (array) trim($_POST['chats']);
 
+    //         $chatManager = new ChatManager();
+    //         $chatManager->update($chat);
+
+    //         header('Location:chats');
+    //     }
+    // }
+
+    // edit?id=' . $id
      public function delete()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
