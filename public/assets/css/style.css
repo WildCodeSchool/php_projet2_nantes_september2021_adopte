@@ -222,17 +222,43 @@ h5{
 /* LISTE DES CHATS */
 
 .fichesChat{
+    display: grid;
     
-	
-    gap:20px;
-    border: none;
+    grid-template-columns:  2fr 2fr ;
+    grid-template-rows: auto;
+    padding:20px;
+    gap:50px;
+    
 }
+
+
+
+th{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: x-large;
+    height: 30px;
+    
+
+}
+
+td{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+    
+   
+    height: 30px;
+
+}
+
 
 /* gap qui gère les espaces sur colonnes */
 .premieresFiches{
-    display:grid;
-    grid-template-columns: auto;
-    grid-template-rows: 2fr 2fr;
+    
+    
     
     gap:50px;
     
@@ -247,15 +273,22 @@ h5{
 /* gap qui gère les espaces sur lignes des deux dernières fiches */
 .ficheChat{
     display:flex;
+    justify-content: space-around;
+    align-items: center;
     padding:10px;
     border-radius: 1rem;
     background-color: var(--secondary-color);
+    font-size: large;
+    margin: 20px;
+    
 }
 
 .chatrond{
+
     width: 180px;
     height: 180px;
     border-radius: 100%;
+    object-fit: cover;
 }
 
 /* .photoTitre{
@@ -264,12 +297,7 @@ h5{
     flex-direction: column;
 } */
 
-/* .catDesc{
-    display: flex;
-    justify-content: flex-end;
-    font-size: small;
-    padding:10px;
-} */
+
 
 /* FICHE CHAT */
 
