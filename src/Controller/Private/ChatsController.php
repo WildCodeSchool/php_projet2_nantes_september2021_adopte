@@ -3,19 +3,23 @@
 namespace App\Controller\Private;
 
 use App\Model\Private\ChatManager;
-use App\Controller\AbstractController;   
+use App\Controller\AbstractController;        
 
-session_start();
-if(!isset($_SESSION['login'])){
-    header ('location: /private/connexion');
-}      
-
-class ChatsController extends AbstractController{ 
-
-    
+class ChatsController extends AbstractController
+{
     public $chat;
     public $errors = [];
-    
+
+    public function __construct()
+    {
+        parent::__construct();
+        
+        session_start();
+        if(!isset($_SESSION['login'])){
+            header ('location: /private/connexion');
+        }
+    } 
+
     public function verification(){
         $this->chat = array_map('trim', $_POST);
     }
