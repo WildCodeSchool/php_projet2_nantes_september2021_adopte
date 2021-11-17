@@ -250,10 +250,6 @@ td{
     height: 30px;
 }
 
-.desc{
-
-}
-
 /* gap qui gère les espaces sur colonnes */
 .premieresFiches{ 
     gap:50px;
@@ -398,9 +394,21 @@ h6{
 
 /* /////////////////////////////////////////ADMIN PAGE CONNEXION*/
 
-input[type="text"], input[type="password"]{
+input[type="password"]{
     display:table-cell;
     vertical-align:middle;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.inputadminNom{
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -438,10 +446,6 @@ input[type="text"], input[type="password"]{
     margin-bottom: 20px;
 }
 
-.inputadminNom, .inputadminMdp {
-    width: 50%;
-}
-
 .button {
     display:flex;
     align-items: center;
@@ -451,6 +455,14 @@ input[type="text"], input[type="password"]{
     width: 38%;
     align-self: center;
     color: var(--lighty);
+}
+
+#boutonConnexion{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 60px;
+    font-size:15px;
+    width: 38%;
 }
 
 /* /////////////////////////////////////////ADMIN PAGE LISTE DES CHATS */
@@ -630,7 +642,6 @@ input[type="text"], input[type="password"]{
     width: 38%;
     margin: 0 auto;
     padding-bottom: 10px;
-    margin-bottom: 20px;
     display: flex;
     justify-content: center;
 }
@@ -655,6 +666,11 @@ input[type="text"], input[type="password"]{
     align-items: center; 
 }
 
+.un {
+    height:20px;
+    margin-right: 10px;
+}
+
 #elementPresentation, #elementPhoto{
     width: 46%;
 }
@@ -663,12 +679,15 @@ label{
     margin-right: 10px;
 }
 
-.boutonAjouter{
+#boutonAjouter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 50px;
     height: 60px;
-    color: var(--secondary-color);
-    text-align: center;
+    color: var(--lighty);
 }
+
 
 /* /////////////////////////////////////////PAGE EDITER FICHE CHAT*/
 
@@ -676,7 +695,7 @@ label{
     background-color: var(--secondary-color);
     width:80%;
     margin:0 auto;
-    margin-top:10%;
+    margin-top:30px;
 }
 
 #formboutonEditer{
