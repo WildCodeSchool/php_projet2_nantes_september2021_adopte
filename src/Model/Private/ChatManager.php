@@ -28,8 +28,6 @@ class ChatManager extends AbstractManager
 
                 return (int)$this->pdo->lastInsertId();
     }   
- 
-
     /**
      * Update item in database
      */

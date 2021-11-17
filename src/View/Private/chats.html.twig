@@ -2,13 +2,8 @@
 
 {% block content %}
 
-<<<<<<< HEAD
 <div id="deconnexion" class="textbutton">
-=======
-
-<div id="deconnexion">
->>>>>>> 892284ab6acb8cf50a8541817f76a516affacd3c
-<button><a href="logout">Déconnexion</a></button>
+<button><a href="/private/logout">Déconnexion</a></button>
 </div>
 
 <h2 id="titreNosChats">Nos chats</h2>
@@ -32,22 +27,13 @@
 </div>
 
   {% for chat in chats %}
-<<<<<<< HEAD
   <div class ="item">
-    <div class ="itemNom itemInfo" ><a href="chat/fiche" type="hidden" value="{{chat.id}}"> {{chat.nom}} </a> </div>
+    <div class ="itemPhoto itemInfo" > <img src="{{ chat.photo }}"> </div>
+    <div class ="itemNom itemInfo" ><a href="/private/chat/fiche?id={{chat.id}}" type="hidden" value="{{chat.id}}"> {{chat.nom}} </a> </div>
     <div class ="itemAge itemInfo" > {{chat.age}} </div>
     <div class ="itemCouleur itemInfo" > {{chat.couleur}} </div>
       <div class ="itemActions itemInfo" >
           <a href="edit?id={{chat.id}}"><i class="far fa-edit"></i></a>
-=======
-    <div class ="item">
-      <div class ="itemPhoto itemInfo" > <img src="{{ chat.photo }}"> </div>
-      <div class ="itemNom itemInfo" ><a href="type="hidden" value="{{chat.id}}"> {{chat.nom}} </a></div>
-      <div class ="itemAge itemInfo" > {{chat.age}} </div>
-      <div class ="itemCouleur itemInfo" > {{chat.couleur}} </div>
-      <div class ="itemActions" >
-        <a href="edit?id={{chat.id}}"><i class="far fa-edit"></i></a>
->>>>>>> 892284ab6acb8cf50a8541817f76a516affacd3c
         <form action="delete" method="POST" onsubmit="return confirm('Voulez-vous vraiment supprimer {{chat.nom}}');">
           <input name="id" type="hidden" value="{{chat.id}}">
           <button class ="boutonActions" type="submit"><i class="fas fa-trash"></i></button>

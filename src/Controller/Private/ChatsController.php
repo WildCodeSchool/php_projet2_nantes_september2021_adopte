@@ -12,6 +12,7 @@ if(!isset($_SESSION['login'])){
 
 class ChatsController extends AbstractController{ 
 
+    
     public $chat;
     public $errors = [];
     
@@ -135,7 +136,7 @@ class ChatsController extends AbstractController{
     {
         $chatManager = new ChatManager();
         $chat = $chatManager->selectOneById($id);
-
+        
         return $this->twig->render("Private/ficheChat.html.twig", ['chat' => $chat] );
     }
 
