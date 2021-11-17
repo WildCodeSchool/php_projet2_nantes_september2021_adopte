@@ -18,7 +18,7 @@ body{
     font-size:16px;
 }
 
-/* HEADER */   
+/* /////////////////////////////////////////HEADER */   
 header {
     padding-bottom : 2%;
 }
@@ -71,7 +71,7 @@ footer a:visited{
     text-decoration:none; 
 }
 
-/* FOOTER */
+/* /////////////////////////////////////////FOOTER */
 footer{
     background-color: var(--main-color);
 }
@@ -105,7 +105,7 @@ footer{
     font-size: 12px;
 }
 
-/* INDEX*/
+/* /////////////////////////////////////////HOME*/
 .chatHome{
     display:flex;
     align-items: center;
@@ -156,7 +156,7 @@ img.chat{
     display: block;
 }
 
-button {
+button{
     display:flex;
     align-items: center;
     background-color: var(--main-color);
@@ -191,8 +191,8 @@ button {
     margin-right: 5%;
 }
 
-
 .texthistoire p{
+    font-size:18px;
     padding: 5%;
 }
 
@@ -218,23 +218,35 @@ h5{
     font-weight: lighter;
 }
 
-/* LISTE DES CHATS */
+/* /////////////////////////////////////////LISTE DES CHATS */
 
 .fichesChat{
-    
-	
-    gap:20px;
-    border: none;
+    display: grid;
+    grid-template-columns:  2fr 2fr ;
+    grid-template-rows: auto;
+    padding:20px;
+    gap:50px;
+}
+
+th{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: x-large;
+    height: 30px;
+}
+
+td{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+    height: 30px;
 }
 
 /* gap qui gère les espaces sur colonnes */
-.premieresFiches{
-    display:grid;
-    grid-template-columns: auto;
-    grid-template-rows: 2fr 2fr;
-    
+.premieresFiches{ 
     gap:50px;
-    
 }
 
 /* gap qui gère les espaces sur lignes des deux 1eres fiches */
@@ -246,31 +258,24 @@ h5{
 /* gap qui gère les espaces sur lignes des deux dernières fiches */
 .ficheChat{
     display:flex;
+    justify-content: space-around;
+    align-items: center;
     padding:10px;
     border-radius: 1rem;
     background-color: var(--secondary-color);
+    font-size: large;
+    margin: 20px;
 }
 
 .chatrond{
+
     width: 180px;
     height: 180px;
     border-radius: 100%;
+    object-fit: cover;
 }
 
-/* .photoTitre{
-    display:flex;
-    align-items: center;
-    flex-direction: column;
-} */
-
-/* .catDesc{
-    display: flex;
-    justify-content: flex-end;
-    font-size: small;
-    padding:10px;
-} */
-
-/* FICHE CHAT */
+/* /////////////////////////////////////////FICHE CHAT */
 
 .pageChat{
     display:flex;
@@ -279,15 +284,16 @@ h5{
     border-radius: 50px;
     background-color: var(--secondary-color);
     padding: 5%;
-    margin: 5%
-    
+    margin: 5%;
 }
+
 .grosChatRond{
     justify-content: center;
     align-content: center;
     width: 300px;
     height: 300px;
     border-radius: 100%;
+    object-fit: cover;
 }
 
 .droitedelapageChat{
@@ -296,22 +302,9 @@ h5{
     flex-direction: column;
 }
 
-.nom_age_button{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-
-}
-
-.textPresentation{
-    display:flex;
-    justify-content: center;
-    margin:20px;
-}
-
-.textPresentation p{
-    margin: 2%;
+.droitedelapageChat{
+    padding-left: 5%;
+    padding-right: 5%
 }
 
 .chatadopt{
@@ -321,7 +314,7 @@ h5{
 
 h6{
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     margin: 1%;
 }
 
@@ -334,7 +327,8 @@ h6{
     border-radius: 50px;
     top:0;
 }
-/* HISTOIRE */
+
+/* /////////////////////////////////////////HISTOIRE */
 
 .divPrincipalePageHistoire{
     background-color:var(--secondary-color); 
@@ -349,6 +343,7 @@ h6{
 .histoire p{
     font-size: 15px;
 }
+
 .Dicton{
     display:flex;
     justify-content: center;
@@ -370,8 +365,7 @@ h6{
     display: inline;
 }
 
-input[type="text"], input[type="email"], textarea[type="message"], input[type="password"] {
-
+.contact #name, #email, #message{
     display:table-cell;
     vertical-align:middle;
     width: 100%;
@@ -394,7 +388,22 @@ input[type="text"], input[type="email"], textarea[type="message"], input[type="p
     border: none;
 }
 
-/* ADMIN PAGE CONNEXION*/
+/* /////////////////////////////////////////ADMIN PAGE CONNEXION*/
+
+input[type="text"], input[type="password"]{
+    display:table-cell;
+    vertical-align:middle;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
 
 #container{
     width:800px;
@@ -436,13 +445,24 @@ input[type="text"], input[type="email"], textarea[type="message"], input[type="p
     color: var(--lighty);
 }
 
-/* ADMIN PAGE LISTE DES CHATS */
+/* /////////////////////////////////////////ADMIN PAGE LISTE DES CHATS */
 
 #deconnexion{
     display:flex;
+    justify-content: flex-end;
+}
+
+#bouttonAjouterChat{
+    display: flex; 
+    margin: 0px;
+}
+
+.alignbouton{
+    display: flex;
     justify-content: space-between;
-    margin-left: 25px;
+    flex-direction: row-reverse;
     margin-right: 25px;
+    margin-left: 25px;
     margin-top: 10px;
 }
 
@@ -481,11 +501,6 @@ input[type="text"], input[type="email"], textarea[type="message"], input[type="p
     font-size:15px;
 }
 
-#bouttonAjouterChat{
-    display: flex; 
-    margin: 0px;
-}
-
 .listeDesChats {
     margin-top: 20px;
     text-align: center;
@@ -500,13 +515,12 @@ input[type="text"], input[type="email"], textarea[type="message"], input[type="p
     margin-bottom: 30px;
 }
 
-
 .itemHeader{
     margin-top: 40px;
     margin-bottom: 30px;
     width: 100%;
     font-size: 30px;
-    
+    padding: 2%;
 }
 
 .itemPhoto img {
@@ -539,6 +553,23 @@ input[type="text"], input[type="email"], textarea[type="message"], input[type="p
     font-weight: bold;
 }
 
+.itemPhoto img {
+    border-radius: 1rem;
+    width: 230px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.itemNom a:link{
+    text-decoration:none; 
+    color:var(--darky);
+}
+
+.itemNom a:visited{
+    text-decoration:none; 
+    color:var(--darky);
+}
+
 #infoChat{
     display: flex;
     flex-direction: row;
@@ -560,7 +591,7 @@ input[type="text"], input[type="email"], textarea[type="message"], input[type="p
     
 }
 
-/*ADMIN AJOUT DE CHAT*/
+/* /////////////////////////////////////////ADMIN AJOUT DE CHAT*/
 
 #boutonshaut{
     display:flex;
@@ -630,8 +661,7 @@ label{
     color: var(--secondary-color);
 }
 
-
-/*PAGE EDITER FICHE CHAT*/
+/* /////////////////////////////////////////PAGE EDITER FICHE CHAT*/
 
 #containerEditChat{
     background-color: var(--secondary-color);
@@ -652,5 +682,4 @@ label{
     margin-top: 50px;
     height: 60px;
     color: var(--lighty);
-    
 }
