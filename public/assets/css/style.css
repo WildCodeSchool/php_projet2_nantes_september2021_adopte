@@ -244,10 +244,6 @@ td{
     height: 30px;
 }
 
-.desc{
-
-}
-
 /* gap qui gère les espaces sur colonnes */
 .premieresFiches{ 
     gap:50px;
@@ -658,8 +654,9 @@ label{
 
 /* /////////////////////////////////////////PAGE EDITER FICHE CHAT*/
 
-#formBouttonAjouter{
+/* #formBouttonAjouter{
     display: flex;
     justify-content: center;
     align-items: center;
-}
+    text-align: center;
+} */
