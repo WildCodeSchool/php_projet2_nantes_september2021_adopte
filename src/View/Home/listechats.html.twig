@@ -21,21 +21,18 @@
                         <table>
                             <div class= "Name">
                                     <tr>
-                                        <th>Son Nom: </th>
                                         <td> {{ chat.nom}} </td>
                                     </tr>
                                 </div>
                                 
                                 <div class= "Age">
                                     <tr>
-                                        <th>Son Age: </th>
-                                        <td> {{ chat.age}} an(s) </td>
+                                        <td> {{ chat.age}} an{% if chat.age != 1 %}s{% endif %} </td>
                                     </tr>
                                 </div>
 
                                 <div class= "Sexe">
                                     <tr>
-                                        <th>Sexe : </th>
                                         <td> {{ chat.sexe}} </td>
                                     </tr>
                                 </div>
