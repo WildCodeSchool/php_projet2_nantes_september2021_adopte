@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div id="boutonshaut">
+<div id="boutonshaut" class="textbutton">
 <button><a href="/private/chats">Retour vers la liste des chats</a></button>
 <button><a href="/private/logout">Déconnexion</a></button>
 </div>
@@ -65,11 +65,11 @@
             <div class="element">
                 <p>Vaccin:</p>
                 <div>
-                    <input type="radio" id="oui" name="vaccin" value="oui">
+                    <input type="radio" id="oui" name="vaccin" value="oui" <?php if({{chat.vaccin}}=='oui') { echo ' checked="checked"'; } ?>/>
                     <label for="oui">Oui</label>
                 </div>
                 <div>
-                    <input type="radio" id="non" name="vaccin" value="non">
+                    <input type="radio" id="non" name="vaccin" value="non" <?php if({{chat.vaccin}}=='non') { echo ' checked="checked"'; } ?>/>
                     <label for="non">Non</label>
                 </div>
             </div>
@@ -107,7 +107,7 @@
                 <input type="file" name="photo" id="photo"/>
             </div> 
         </div>
-        <input id="bouttonAjouter" class="button" type="submit" id='submit' value='Valider' >
+            <input id="boutonAjouter" class="button" type="submit" id='submit' value='Valider' >
     </form>
 </div> 
 

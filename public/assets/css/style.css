@@ -18,7 +18,7 @@ body{
     font-size:16px;
 }
 
-/* HEADER */   
+/* /////////////////////////////////////////HEADER */   
 header {
     padding-bottom : 2%;
 }
@@ -71,11 +71,13 @@ footer a:visited{
     text-decoration:none; 
 }
 
+
 .messagealert{
     display:flex;
     justify-content: center;
 }
-/* FOOTER */
+
+/* /////////////////////////////////////////FOOTER */
 footer{
     background-color: var(--main-color);
 }
@@ -109,7 +111,7 @@ footer{
     font-size: 12px;
 }
 
-/* INDEX*/
+/* /////////////////////////////////////////HOME*/
 .chatHome{
     display:flex;
     align-items: center;
@@ -160,7 +162,7 @@ img.chat{
     display: block;
 }
 
-button {
+button{
     display:flex;
     align-items: center;
     background-color: var(--main-color);
@@ -169,6 +171,7 @@ button {
     font-size:15px;
     padding:20px;
     border: none;
+    text-align: center;
 }
 
 .Homebasdepage{
@@ -195,8 +198,8 @@ button {
     margin-right: 5%;
 }
 
-
 .texthistoire p{
+    font-size:18px;
     padding: 5%;
 }
 
@@ -216,55 +219,44 @@ h5{
     border: none;
     font-size: 25px;
     padding:15px;
-    margin-right:50%;
+    margin-right:850px;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
     font-weight: lighter;
 }
 
-/* LISTE DES CHATS */
+/* /////////////////////////////////////////LISTE DES CHATS */
 
 .fichesChat{
     display: grid;
-    
     grid-template-columns:  2fr 2fr ;
     grid-template-rows: auto;
     padding:20px;
     gap:50px;
-    
 }
-
-
 
 th{
     display: flex;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: left;
     font-size: x-large;
     height: 30px;
-    
-
 }
 
 td{
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: left;
     font-size: x-large;
-    
-   
     height: 30px;
+}
+
+.desc{
 
 }
 
-
 /* gap qui gère les espaces sur colonnes */
-.premieresFiches{
-    
-    
-    
+.premieresFiches{ 
     gap:50px;
-    
 }
 
 /* gap qui gère les espaces sur lignes des deux 1eres fiches */
@@ -283,7 +275,6 @@ td{
     background-color: var(--secondary-color);
     font-size: large;
     margin: 20px;
-    
 }
 
 .chatrond{
@@ -294,56 +285,33 @@ td{
     object-fit: cover;
 }
 
-/* .photoTitre{
-    display:flex;
-    align-items: center;
-    flex-direction: column;
-} */
-
-
-
-/* FICHE CHAT */
+/* /////////////////////////////////////////FICHE CHAT */
 
 .pageChat{
     display:flex;
-    justify-content: space-between;
+    justify-content: center;
     align-content: center;
     border-radius: 50px;
     background-color: var(--secondary-color);
     padding: 5%;
-    margin: 5%
-    
+    margin: 5%;
 }
+
 .grosChatRond{
     justify-content: center;
     align-content: center;
     width: 300px;
     height: 300px;
     border-radius: 100%;
+    object-fit: cover;
 }
 
 .droitedelapageChat{
     display:flex;
     justify-content: flex-end;
     flex-direction: column;
-}
-
-.nom_age_button{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-
-}
-
-.textPresentation{
-    display:flex;
-    justify-content: center;
-    margin:20px;
-}
-
-.textPresentation p{
-    margin: 2%;
+    padding-left: 25%;
+    padding-right: 5%;
 }
 
 .chatadopt{
@@ -353,7 +321,7 @@ td{
 
 h6{
     text-align: center;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     margin: 1%;
 }
 
@@ -366,7 +334,8 @@ h6{
     border-radius: 50px;
     top:0;
 }
-/* HISTOIRE */
+
+/* /////////////////////////////////////////HISTOIRE */
 
 .divPrincipalePageHistoire{
     background-color:var(--secondary-color); 
@@ -381,6 +350,7 @@ h6{
 .histoire p{
     font-size: 15px;
 }
+
 .Dicton{
     display:flex;
     justify-content: center;
@@ -402,8 +372,7 @@ h6{
     display: inline;
 }
 
-input[type="text"], input[type="email"], textarea[type="message"], input[type="password"] {
-
+.contact #name, #email, #message{
     display:table-cell;
     vertical-align:middle;
     width: 100%;
@@ -424,9 +393,25 @@ input[type="text"], input[type="email"], textarea[type="message"], input[type="p
     font-size:15px;
     padding:20px;
     border: none;
+    margin-bottom: 10%;
 }
 
-/* ADMIN PAGE CONNEXION*/
+/* /////////////////////////////////////////ADMIN PAGE CONNEXION*/
+
+input[type="text"], input[type="password"]{
+    display:table-cell;
+    vertical-align:middle;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
 
 #container{
     width:800px;
@@ -440,6 +425,7 @@ input[type="text"], input[type="email"], textarea[type="message"], input[type="p
     flex-direction: column;
     width:100%;
     padding: 30px;
+    border: 1px solid var(--darky);
     border-radius:1rem;
 }
 
@@ -467,12 +453,24 @@ input[type="text"], input[type="email"], textarea[type="message"], input[type="p
     color: var(--lighty);
 }
 
-/* ADMIN PAGE LISTE DES CHATS */
+/* /////////////////////////////////////////ADMIN PAGE LISTE DES CHATS */
 
 #deconnexion{
     display:flex;
     justify-content: flex-end;
+}
+
+#boutonAjouterChat{
+    display: flex; 
+    margin: 0px;
+}
+
+.alignbouton{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
     margin-right: 25px;
+    margin-left: 25px;
     margin-top: 10px;
 }
 
@@ -482,10 +480,10 @@ input[type="text"], input[type="email"], textarea[type="message"], input[type="p
     justify-content: center;
 }
 
-/* .barrederecherche{
+.barrederecherche{
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: row;
     height: 60px;
     margin-top: 50px;
 }
@@ -509,11 +507,6 @@ input[type="text"], input[type="email"], textarea[type="message"], input[type="p
     border: 1px solid var(--darky);
     border-radius:1rem;
     font-size:15px;
-} */
-
-#bouttonAjouterChat{
-    display: flex; 
-    margin: 0px;
 }
 
 .listeDesChats {
@@ -530,13 +523,19 @@ input[type="text"], input[type="email"], textarea[type="message"], input[type="p
     margin-bottom: 30px;
 }
 
-
 .itemHeader{
     margin-top: 40px;
     margin-bottom: 30px;
     width: 100%;
     font-size: 30px;
-    
+    padding: 2%;
+}
+
+.itemPhoto img {
+    border-radius: 1rem;
+    width: 230px;
+    height: 180px;
+    object-fit: cover;
 }
 
 .itemInfo{
@@ -558,18 +557,6 @@ input[type="text"], input[type="email"], textarea[type="message"], input[type="p
     color: var(--darky);
 }
 
-/* .listeDesChats .item .itemInfo,
-.listeDesChats .itemHeader .itemInfo {
-    width: 18%;
-    display: inline-block;
-    text-align: center;
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-left: 25px;
-    margin-top: 50px;
-    width: 100%;
-} */
 .listeDesChats .itemHeader .itemInfo {
     font-weight: bold;
 }
@@ -579,6 +566,16 @@ input[type="text"], input[type="email"], textarea[type="message"], input[type="p
     width: 230px;
     height: 180px;
     object-fit: cover;
+}
+
+.itemNom a:link{
+    text-decoration:none; 
+    color:var(--darky);
+}
+
+.itemNom a:visited{
+    text-decoration:none; 
+    color:var(--darky);
 }
 
 #infoChat{
@@ -602,7 +599,7 @@ input[type="text"], input[type="email"], textarea[type="message"], input[type="p
     
 }
 
-/*ADMIN AJOUT DE CHAT*/
+/* /////////////////////////////////////////ADMIN AJOUT DE CHAT*/
 
 #boutonshaut{
     display:flex;
@@ -666,17 +663,32 @@ label{
     margin-right: 10px;
 }
 
-#bouttonAjouter{
+.boutonAjouter{
     margin-top: 50px;
     height: 60px;
     color: var(--secondary-color);
+    text-align: center;
 }
 
+/* /////////////////////////////////////////PAGE EDITER FICHE CHAT*/
 
-/*PAGE EDITER FICHE CHAT*/
+#containerEditChat{
+    background-color: var(--secondary-color);
+    width:80%;
+    margin:0 auto;
+    margin-top:10%;
+}
 
-#formBouttonAjouter{
+#formboutonEditer{
+    display: flex;
+    justify-content: center;
+}
+
+#boutonEditer{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
+    height: 60px;
+    color: var(--lighty);
 }

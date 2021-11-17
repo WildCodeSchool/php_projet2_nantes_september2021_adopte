@@ -89,7 +89,7 @@ class ChatsController extends AbstractController
 
     public function uploadPhoto(){
 
-        $uploadDir = 'assets/images/Cat/';
+        $uploadDir = '/assets/images/Cat/';
         $extension = strtolower(pathinfo($_FILES['photo']['name'], PATHINFO_EXTENSION));
         $authorizedExtensions = ['jpg', 'jpeg', 'png'];
         $maxFileSize = 2000000;
@@ -136,23 +136,19 @@ class ChatsController extends AbstractController
         return $this->twig->render("Private/chats.html.twig", ['chats' => $chats] );
     }
 
-    public function show(int $id)
-    {
-        $chatManager = new ChatManager();
-        $chat = $chatManager->selectOneById($id);
-        
-        return $this->twig->render("Private/ficheChat.html.twig", ['chat' => $chat] );
-    }
 
     public function edit(int $id): string
     {
         $chatManager = new ChatManager();
         $chat = $chatManager->selectOneById($id);
-
-
+        
+        // if( $chats['vaccin'] == oui  )
+        
+        // var_dump( $chat); die;
+        
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $this->verification();
-            $this->uploadPhoto();
+             $this->verification();
+             $this->uploadPhoto();
             // clean $_POST data
             $chat = array_merge($chat, $this->chat);
 

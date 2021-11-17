@@ -9,21 +9,16 @@
 
         <div class="droitedelapageChat">
             <h6> {{ chat.nom }} </h6>
-                <div class="nom_age_button"></br>
-                <p>{{chat.age}} an(s)<p>
-        </div>
-
-            <section id="textPresentation">
-                <h6>{{chat.presentation}}</h6>
-                    <p>Vaccination : {{chat.vaccin}}
-                    Stérilisation : {{chat.sterilise}}
-                    Compatible autres animaux : {{ chat.compatibilite_autre_animaux}}
-                    Sexe : {{ chat.sexe}}
-                    Race : {{chat.race}}
-                    Couleur : {{chat.couleur}}
-
-                    </p>
-            </section>
+            <p> {{chat.age}} ans </br></br>
+            Petite présentation : {{chat.presentation}}</br></br>
+            Vaccination : {{chat.vaccin}}</br></br>
+            Stérilisation : {{chat.sterilise}}</br></br>
+            Compatible autres animaux : {{ chat.compatibilite_autre_animaux}}</br></br>
+            Sexe : {{ chat.sexe}}</br></br>
+            Race : {{chat.race}}</br></br>  
+            Couleur : {{chat.couleur}}
+            </p>
+                <div class="textbutton"><button><a href="chatformadopt">Je l'adopte !</a></button></div>
         </div>
     </div>
     <div class="formadoption">
@@ -58,11 +53,5 @@
                 </form>
             </div>
     
-    
-    
-
-
-
-
 {% endblock %}
 
