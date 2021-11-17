@@ -222,23 +222,27 @@ h5{
 /* LISTE DES CHATS */
 
 .fichesChat{
-    display:flex;
-	flex-direction: column;
+    
+	
     gap:20px;
     border: none;
 }
 
 /* gap qui gère les espaces sur colonnes */
 .premieresFiches{
-    display:flex;
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-rows: 2fr 2fr;
+    
     gap:50px;
+    
 }
 
 /* gap qui gère les espaces sur lignes des deux 1eres fiches */
-.dernieresFiches{
+/* .dernieresFiches{
     display:flex;
     gap:50px;
-}
+} */
 
 /* gap qui gère les espaces sur lignes des deux dernières fiches */
 .ficheChat{
@@ -254,18 +258,18 @@ h5{
     border-radius: 100%;
 }
 
-.photoTitre{
+/* .photoTitre{
     display:flex;
     align-items: center;
     flex-direction: column;
-}
+} */
 
-.catDesc{
+/* .catDesc{
     display: flex;
     justify-content: flex-end;
     font-size: small;
     padding:10px;
-}
+} */
 
 /* FICHE CHAT */
 
@@ -368,6 +372,10 @@ h6{
 }
 
 input[type="text"], input[type="email"], textarea[type="message"] {
+
+    display:table-cell;
+    vertical-align:middle;
+    width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -376,7 +384,7 @@ input[type="text"], input[type="email"], textarea[type="message"] {
     margin-bottom: 16px;
     margin-right: 0px;
     margin-left: 0px;
-    }
+}
     
 #submit{
     background-color: var(--main-color);
@@ -442,6 +450,8 @@ input[type="text"], input[type="email"], textarea[type="message"] {
 
 #titreNosChats{
     font-size: 40px;
+    display: flex;
+    justify-content: center;
 }
 
 .barrederecherche{
@@ -485,7 +495,7 @@ input[type="text"], input[type="email"], textarea[type="message"] {
 
 .listeDesChats .item .itemInfo,
 .listeDesChats .itemHeader .itemInfo {
-    width: 24%;
+    width: 18%;
     display: inline-block;
     text-align: center;
     /* display: flex;
@@ -506,6 +516,19 @@ input[type="text"], input[type="email"], textarea[type="message"] {
     padding-left: 0px;
     width: 70%;
 }
+
+.itemActions{
+    display: flex;
+    flex-direction: row;
+    width: 10%;
+    background-color: violet;
+}
+
+#boutonDelete{
+    background-color: var(--lighty);
+    color: var(--darky);
+}
+
 
 .icone{
     width: 15%;
@@ -552,6 +575,8 @@ input[type="text"], input[type="email"], textarea[type="message"] {
     margin: 0 auto;
     padding-bottom: 10px;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 #ligne1, #ligne2, #ligne3, #ligne4 {
@@ -586,4 +611,13 @@ label{
     margin-top: 50px;
     height: 60px;
     color: var(--secondary-color);
+}
+
+
+/*PAGE EDITER FICHE CHAT*/
+
+#formBouttonAjouter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
