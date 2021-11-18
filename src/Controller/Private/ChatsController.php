@@ -20,7 +20,7 @@ class ChatsController extends AbstractController
     } 
 
     public function verification(){
-        $this->chat = array_map('trim', $_POST);
+        $this->chat = array_map('trim', $_POST); 
     }
     // {
     //     $errnom = "";
