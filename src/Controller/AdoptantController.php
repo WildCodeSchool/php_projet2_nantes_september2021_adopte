@@ -43,12 +43,12 @@ class AdoptantController extends AbstractController
             return $this->twig->render("");
 
             if ($_SERVER["REQUEST_METHOD"] === 'POST') {
-                $adoptant = array_map("trim", $_POST); //nettoyage espaces vide
+                $adoptant = array_map("trim", $_POST);
                 
-                if($adoptant['prenom'] == ""){
-                    $errors['prenom'] = "Merci d'indiquer un prénom.";
-                    if(preg_match("/^[A-Z][a-zA-Z -]+$/", $_POST["name"]) === 0)
-                    $adoptant = '<p class="errText">Name must be from letters, dashes, spaces and must not start with dash</p>';
+            if($adoptant['prenom'] == ""){
+                $errors['prenom'] = "Merci d'indiquer un prénom.";
+                if(preg_match("/^[A-Z][a-zA-Z -]+$/", $_POST["name"]) === 0)
+                $adoptant = '<p class="errText">Name must be from letters, dashes, spaces and must not start with dash</p>';
             }
 
             if($adoptant['nom'] == ""){
