@@ -24,6 +24,8 @@
         <form class ="formAdoption" action = "addadoptant" name = "adoptform" id="adoptform" method="POST">
             <h6>Formulaire d'adoption</h6>
 
+            <input type="hidden" value= "{{chat.id}}" name="chat_id">
+
             <div class ="infoAdoptant">
             <label for="prenom">Prénom:</label>
             <input type="text" id="prenom" name="prenom" placeholder="Gustave" required>
