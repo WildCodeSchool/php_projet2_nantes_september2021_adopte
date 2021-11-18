@@ -9,16 +9,15 @@
 
         <div class="droitedelapageChat">
             <h6> {{ chat.nom }} </h6>
-            <p> {{chat.age}} ans </br></br>
-            Petite présentation : {{chat.presentation}}</br></br>
-            Vaccination : {{chat.vaccin}}</br></br>
-            Stérilisation : {{chat.sterilise}}</br></br>
-            Compatible autres animaux : {{ chat.compatibilite_autre_animaux}}</br></br>
-            Sexe : {{ chat.sexe}}</br></br>
-            Race : {{chat.race}}</br></br>  
-            Couleur : {{chat.couleur}}
+            <p><b>Age :</b> {{ chat.age}} an{% if chat.age != 1 %}s{% endif %} </br></br>
+            <b>Sexe :</b> {{ chat.sexe}}</br></br>
+            <b>Race :</b> {{chat.race}}</br></br>
+            <b>Couleur :</b> {{chat.couleur}}</br></br>
+            <b>Petite présentation :</b> {{chat.presentation}}</br></br>
+            <b>Vaccination :</b> {{chat.vaccin}}</br></br>
+            <b>Stérilisation :</b> {{chat.sterilise}}</br></br>
+            <b>Compatible autres animaux :</b> {{ chat.compatibilite_autre_animaux}}</br></br>
             </p>
-                <div class="textbutton"><button><a href="chatformadopt">Je l'adopte !</a></button></div>
         </div>
     </div>
     <div class="formadoption">

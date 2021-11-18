@@ -20,10 +20,6 @@ class AdoptantController extends AbstractController
         $this->adoptant = array_map('trim', $_POST);
     }
 
-<<<<<<< HEAD
-    public function addAdoptant(): void
-        {
-=======
 //Formulaire ajout d'adoptant
 
     public function addAdoptant()
@@ -35,9 +31,16 @@ class AdoptantController extends AbstractController
 
                 $adoptantManager = new AdoptantManager();
                 $adoptantManager->addAdoptant($this->adoptant);
-                session_start();
-                $_SESSION['flashmessage']="Merci pour l'adoption.";
-                header('Location:/');
+                // session_start();
+                // $_SESSION['flashmessage']="Merci pour l'adoption.";
+                // header('Location:/');
+                $_SESSION = array();
+                if (isset($_COOKIE[session_name()]))
+                {
+                    setcookie(session_name(),'',time()-4200, '/');
+                }
+    
+                session_destroy();
             }
 
             return $this->twig->render("Home/listechats.html.twig", ["errors" => $this->errors]);
@@ -45,7 +48,6 @@ class AdoptantController extends AbstractController
            }
 
             return $this->twig->render("");
->>>>>>> 7d1e38b4dc2fbd6c4628fe3d983bcaca9505708c
 
             if ($_SERVER["REQUEST_METHOD"] === 'POST') {
                 $adoptant = array_map("trim", $_POST);
