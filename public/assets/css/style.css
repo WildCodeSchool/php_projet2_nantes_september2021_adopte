@@ -250,6 +250,10 @@ td{
     height: 30px;
 }
 
+.name .Age, .Sexe{
+    font-size: 12px;
+}
+
 /* gap qui gère les espaces sur colonnes */
 .premieresFiches{ 
     gap:50px;
