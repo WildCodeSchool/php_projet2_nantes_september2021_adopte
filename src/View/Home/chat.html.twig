@@ -20,37 +20,48 @@
             </p>
         </div>
     </div>
-    <div class="formadoption">
-                <form action = "addadoptant" name = "adoptform" id="adoptform" method="POST">
-                
-                    <br>
-                    <h6>Formulaire d'adoption:</h6>
-                    <br><br>
+    <div class="ContainerFormAdoption">
+        <form class ="formAdoption" action = "addadoptant" name = "adoptform" id="adoptform" method="POST">
+            <h6>Formulaire d'adoption</h6>
 
-                    <label for="prenom">Prénom:</label><br>
-                        <input type="text" id="prenom" name="prenom" placeholder="Gustave" required><br>
-
-                    <label for="nom">Nom:</label><br>
-                        <input type="text" id="nom" name="nom" placeholder="Eiffel" required><br>
-
-                    <label for="adresse">Votre adresse:</label><br>
-                        <input type="text" id="adresse" name="adresse" placeholder="55 rue de la gauloise" required><br>
-
-                    <label for="telephone">Votre numéro de téléphone:</label><br>
-                        <input type="text" id="telephone" name="telephone" placeholder="01234656789" required><br>
-
-                    <label for="Code_postal">Votre code postal:</label><br>
-                        <input type="text" id="Code_postal" name="Code_postal" placeholder="00000" required><br>
-
-                    <label for="ville">Votre ville:</label><br>
-                        <input type="text" id="ville" name="ville" placeholder="Paris" required><br>
-                        
-                    <label for="email">Email:</label><br>
-                        <input type="email" id="email" name="email" placeholder="votreadresse@email.com" required><br>
-                    <br><br>
-                        <input href= "index" type="submit" value="Adopter ce chat !" id="submit">
-                </form>
+            <div class ="infoAdoptant">
+            <label for="prenom">Prénom:</label>
+            <input type="text" id="prenom" name="prenom" placeholder="Gustave" required>
             </div>
+
+            <div class ="infoAdoptant">
+            <label for="nom">Nom:</label><br>
+            <input type="text" id="nom" name="nom" placeholder="Eiffel" required>
+            </div>
+
+            <div class ="infoAdoptant">
+            <label for="adresse">Votre adresse:</label>
+            <input type="text" id="adresse" name="adresse" placeholder="55 rue de la gauloise" required>
+            </div>
+
+            <div class ="infoAdoptant">
+            <label for="telephone">Votre numéro de téléphone:</label>
+            <input type="text" id="telephone" name="telephone" placeholder="01234656789" required>
+            </div>
+
+            <div class ="infoAdoptant">
+            <label for="Code_postal">Votre code postal:</label>
+            <input type="text" id="Code_postal" name="Code_postal" placeholder="00000" required>
+            </div>
+
+            <div class ="infoAdoptant">
+            <label for="ville">Votre ville:</label>
+            <input type="text" id="ville" name="ville" placeholder="Paris" required>
+            </div>
+
+            <div class ="infoAdoptant">  
+            <label for="mail">Email:</label>
+            <input type="email" id="mail" name="email" placeholder="votreadresse@email.com" required>
+            </div>
+
+            <input href= "index" type="submit" value="Adopter ce chat !" id="submit">
+        </form>
+    </div>
     
 {% endblock %}
 
