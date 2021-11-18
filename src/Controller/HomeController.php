@@ -10,6 +10,7 @@ class HomeController extends AbstractController
 //Affichage des pages
     public function index()
     {
+        
         return $this->twig->render('Home/index.html.twig');
     }
 
@@ -32,4 +33,11 @@ class HomeController extends AbstractController
         return $this->twig->render('Home/histoire.html.twig');
     }
 
+    public function selectAllHomePage()
+    {
+        $chatManager = new HomeManager();
+        $chats = $chatManager->selectAllHomePage();
+       
+        return $this->twig->render('Home/index.html.twig', ['chats' => $chats]);
+    }
 }
