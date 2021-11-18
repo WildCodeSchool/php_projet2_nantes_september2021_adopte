@@ -1,26 +1,44 @@
 <?php
 
-/**
- * Created by PhpStorm.
- * User: aurelwcs
- * Date: 08/04/19
- * Time: 18:40
- */
-
 namespace App\Controller;
+
+use App\Model\HomeManager;
+use App\Controller\AbstractController;
 
 class HomeController extends AbstractController
 {
-    /**
-     * Display home page
-     *
-     * @return string
-     * @throws \Twig\Error\LoaderError
-     * @throws \Twig\Error\RuntimeError
-     * @throws \Twig\Error\SyntaxError
-     */
+//Affichage des pages
     public function index()
     {
+        
         return $this->twig->render('Home/index.html.twig');
+    }
+
+    public function ficheChat(int $id)
+    {
+        $chatManager = new HomeManager();
+        $chats = $chatManager->selectOneById($id);
+        return $this->twig->render('Home/chat.html.twig',['chat' => $chats]);
+    }
+
+    public function listeChats()
+    {
+        $chatManager = new HomeManager();
+        $chats = $chatManager->selectAllByAdoptant();
+        // var_dump($chats); die;
+        return $this->twig->render('Home/listechats.html.twig', ['chats' => $chats]);
+    }
+
+    public function histoire()
+    {
+        return $this->twig->render('Home/histoire.html.twig');
+    }
+
+    public function selectAllHomePage()
+    {
+        $chatManager = new HomeManager();
+        $chats = $chatManager->selectAllHomePage();
+       
+        return $this->twig->render('Home/index.html.twig', ['chats' => $chats]);
     }
 }

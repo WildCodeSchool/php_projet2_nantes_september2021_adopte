@@ -1,0 +1,734 @@
+ /* les paramétrages par défaut */
+:root {
+    --main-color:#A15C38;
+    --secondary-color:#e7e7e7;
+    --darky: #000000;
+    --lighty: #faf5e9;
+ }
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;  
+    background-color: var(--lighty);
+    padding:0;
+    margin:0;
+    font-size:16px;
+}
+
+/* /////////////////////////////////////////HEADER */   
+header {
+    padding-bottom : 2%;
+}
+
+header a{ 
+    text-decoration:none; 
+    color:black;
+} 
+
+#logo{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Parisienne';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    font-size:300%;
+    padding:10px;
+    border-bottom: 1px solid var(--darky);
+    color:var(--darky);
+    }
+
+#menu{
+    display:flex;
+    justify-content: center;
+    color:var(--darky);
+    list-style-type:none;
+    gap:80px;
+    font: size 80%;
+}
+
+footer a:link{ 
+    text-decoration:none; 
+    color:var(--lighty);
+} 
+
+footer a:visited{
+    color:var(--lighty); 
+    text-decoration:none; 
+}
+
+.textbutton a:link{
+    color:var(--lighty); 
+    text-decoration:none; 
+}
+
+.textbutton a:visited{
+    color:var(--lighty); 
+    text-decoration:none; 
+}
+
+
+.messagealert{
+    display:flex;
+    justify-content: center;
+}
+
+/* /////////////////////////////////////////FOOTER */
+footer{
+    background-color: var(--main-color);
+}
+
+.RetourHome{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Parisienne';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    font-size:2rem;
+    padding:30px;
+    border-bottom: 1px solid var(--lighty);
+}
+
+.links{
+    display:flex;
+    justify-content: center;
+    gap:30px;
+    padding:15px;
+    list-style-type: none;
+    color:white;
+}
+
+.Copyright{
+    text-align:center;
+    color:var(--lighty);
+    padding:8px;
+    font-size: 12px;
+}
+
+/* /////////////////////////////////////////HOME*/
+.chatHome{
+    display:flex;
+    align-items: center;
+    border-radius: 20px;
+    height:50%;
+    width:50%;
+    margin: auto;
+}
+
+h1 {
+    display: table;
+    white-space: nowrap;
+    text-align: center;
+    font-size:20px;
+    font-weight: 400 ;
+    font-style: italic;
+}
+
+/* -----titres----- */
+/* l'affichage des traits autour des titres est gérée par before, after*/
+h1:before, h1:after {
+    content: "";
+    display: table-cell;
+    width: 50%;
+    background: url(data:image/gif;base64,R0lGODlhAQABAIAAAAUEBAAAACwAAAAAAQABAAACAkQBADs=) repeat-x left center;
+}
+
+ /* les colonnes et lignes des différentes images de chat */
+.leschats{
+    display : grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2,200px);
+    place-items: center;
+}
+
+.chat{
+    border-radius: 1rem;
+    width: 230px;
+    height: 180px;
+    object-fit: cover;
+}
+
+img.chat{
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    display: block;
+}
+
+button{
+    display:flex;
+    align-items: center;
+    background-color: var(--main-color);
+    color:var(--lighty);
+    border-radius:1rem;
+    font-size:15px;
+    padding:20px;
+    border: none;
+    text-align: center;
+}
+
+.Homebasdepage{
+    align-items: flex-start;
+    border-color:1px solid;
+    font-size:10px;
+    border-radius:1rem;
+}
+
+.titre {
+    border-color:1px solid;
+    padding: 2%;
+    font-style: italic;
+}
+
+.texthistoire{
+    background-color: var(--secondary-color);
+    text-align: center;
+    border-radius:1rem;
+    font-size: 16px;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.texthistoire p{
+    font-size:18px;
+    padding: 5%;
+}
+
+.textbutton{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    font-weight: lighter;
+    padding-bottom: 3%;
+}
+
+h5{
+    display: flex;
+    justify-content: left;
+    background-color: var(--main-color);
+    color:var(--secondary-color);
+    border: none;
+    font-size: 25px;
+    padding:15px;
+    margin-right:850px;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    font-weight: lighter;
+}
+
+/* /////////////////////////////////////////LISTE DES CHATS */
+
+.fichesChat{
+    display: grid;
+    grid-template-columns:  2fr 2fr ;
+    grid-template-rows: auto;
+}
+
+th{
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+    font-size: x-large;
+    height: 30px;
+}
+
+td{
+    display: flex;
+    align-items: left;
+    font-size: x-large;
+    height: 30px;
+}
+
+/* gap qui gère les espaces sur colonnes */
+.premieresFiches{ 
+    gap:50px;
+}
+
+/* gap qui gère les espaces sur lignes des deux 1eres fiches */
+/* .dernieresFiches{
+    display:flex;
+    gap:50px;
+} */
+
+/* gap qui gère les espaces sur lignes des deux dernières fiches */
+.ficheChat{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:10px;
+    border-radius: 1rem;
+    background-color: var(--secondary-color);
+    font-size: large;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+}
+
+.chatrond{
+
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+/* /////////////////////////////////////////FICHE CHAT */
+
+.pageChat{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    border-radius: 50px;
+    background-color: var(--secondary-color);
+    padding: 5%;
+    margin: 5%;
+}
+
+.grosChatRond{
+    justify-content: center;
+    align-content: center;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.droitedelapageChat{
+    display:flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding-left: 25%;
+    padding-right: 5%;
+}
+
+.chatadopt{
+    display: flex;
+    align-items: center;
+}
+
+h6{
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.ContainerFormAdoption{
+    display:flex;
+    justify-content: center;
+    background-color: var(--secondary-color);
+    margin: 70px;
+    padding:10px;
+    border-radius: 50px;
+}
+
+.formAdoption {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.infoAdoptant{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.infoAdoptant label {
+    margin-bottom: 5px;
+}
+    
+
+/* /////////////////////////////////////////HISTOIRE */
+
+.divPrincipalePageHistoire{
+    background-color:var(--secondary-color); 
+    border-radius: 1rem;
+    border: none;
+    padding-left:40px;
+    padding-right:40px;
+    margin:40px;
+    text-align: center;
+}
+
+.histoire p{
+    font-size: 15px;
+}
+
+.Dicton{
+    display:flex;
+    justify-content: center;
+    padding-top: 10px;
+    font-style: italic;
+}
+
+.histoire h1 {
+    font-size: 22px;
+}
+
+.contact{
+    display:flex;
+    justify-content: center;
+    margin: 3%;
+}
+
+.label{
+    display: inline;
+}
+
+.contact #name, #email, #message{
+    display:table-cell;
+    vertical-align:middle;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+    
+#submit{
+    background-color: var(--main-color);
+    color:var(--secondary-color);
+    border-radius:1rem;
+    font-size:15px;
+    padding:20px;
+    border: none;
+    margin-bottom: 10%;
+}
+
+/* /////////////////////////////////////////ADMIN PAGE CONNEXION*/
+
+input[type="password"]{
+    display:table-cell;
+    vertical-align:middle;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.inputadminNom{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+
+#container{
+    width:800px;
+    margin:0 auto;
+    margin-top:10%;
+}
+
+#form_admin {
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    padding: 30px;
+    border: 1px solid var(--darky);
+    border-radius:1rem;
+}
+
+#titleConnexion{
+    display: flex;
+    justify-content: center;
+    width: 38%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.button {
+    display:flex;
+    align-items: center;
+    background-color: var(--main-color);
+    border-radius:1rem;
+    font-size:15px;
+    width: 38%;
+    align-self: center;
+    color: var(--lighty);
+}
+
+#boutonConnexion{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 60px;
+    font-size:15px;
+    width: 38%;
+}
+
+/* /////////////////////////////////////////ADMIN PAGE LISTE DES CHATS */
+
+#deconnexion{
+    display:flex;
+    justify-content: flex-end;
+}
+
+#boutonAjouterChat{
+    display: flex; 
+    margin: 0px;
+}
+
+.alignbouton{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+#titreNosChats{
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.barrederecherche{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    margin-top: 50px;
+}
+
+#formBarreDeRecherche{
+    width: 85%;
+}
+
+#inputRecherche {
+    margin-left: 10px;
+    margin-right: 20px;
+    width: 45%;
+    height: 60px;
+}
+
+#rechercheBoutton {
+    width: 125px;
+    height: 60px;
+    color: var(--lighty);
+    background-color: var(--main-color);
+    border: 1px solid var(--darky);
+    border-radius:1rem;
+    font-size:15px;
+}
+
+.listeDesChats {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.itemHeader, .item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--secondary-color);
+    margin-bottom: 30px;
+}
+
+.itemHeader{
+    margin-top: 40px;
+    margin-bottom: 30px;
+    width: 100%;
+    font-size: 30px;
+    padding: 2%;
+}
+
+.itemPhoto img {
+    border-radius: 1rem;
+    width: 230px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.itemInfo{
+    display: flex;
+    justify-content: center;
+    width: 18%;
+    background-color: var(--secondary-color);
+}
+
+.itemActions{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 10%;
+}
+
+#boutonDelete{
+    background-color: var(--secondary-color);
+    color: var(--darky);
+}
+
+.listeDesChats .itemHeader .itemInfo {
+    font-weight: bold;
+}
+
+.itemPhoto img {
+    border-radius: 1rem;
+    width: 230px;
+    height: 180px;
+    object-fit: cover;
+}
+
+.itemNom a:link{
+    text-decoration:none; 
+    color:var(--darky);
+}
+
+.itemNom a:visited{
+    text-decoration:none; 
+    color:var(--darky);
+}
+
+#infoChat{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    padding-left: 0px;
+    width: 70%;
+}
+
+.icone{
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.icone a{
+    padding: 0px;
+    color:var(--darky);
+    font-size: 40px;
+    
+}
+
+/* /////////////////////////////////////////ADMIN AJOUT DE CHAT*/
+
+#boutonshaut{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+#containerAjoutChat{
+    width:80%;
+    margin:0 auto;
+    margin-top:30px;
+}
+
+#formAjout{
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    height:auto;
+    padding: 30px;
+    border-radius:1rem;
+}
+
+#titreNouveauChat{
+    width: 38%;
+    margin: 0 auto;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+#ligne1, #ligne2, #ligne3, #ligne4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 50px;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.element{
+    display: flex;
+    height: 100px;
+    width: 30%;
+    background-color: var(--lighty);
+    border-radius:1rem;
+    justify-content: center;
+    text-align: center;
+    align-items: center; 
+}
+
+.un {
+    height:20px;
+    margin-right: 10px;
+}
+
+#elementPresentation, #elementPhoto{
+    width: 46%;
+}
+
+label{
+    margin-right: 10px;
+}
+
+#boutonAjouter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    height: 60px;
+    color: var(--lighty);
+}
+
+
+/* /////////////////////////////////////////PAGE EDITER FICHE CHAT*/
+
+#containerEditChat{
+    background-color: var(--secondary-color);
+    width:80%;
+    margin:0 auto;
+    margin-top:30px;
+}
+
+#formboutonEditer{
+    display: flex;
+    justify-content: center;
+}
+
+#boutonEditer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    height: 60px;
+    color: var(--lighty);
+}
+
+.un{
+    text-align: center;
+    font-size: 15px;
+}

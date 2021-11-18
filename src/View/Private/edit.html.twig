@@ -1,0 +1,97 @@
+{% extends 'layoutAdmin.html.twig' %}
+
+{% block content %}
+
+<div id="boutonshaut" class="textbutton">
+<button><a href="chats">Retour vers la liste des chats</a></button>
+<button><a href="logout">Déconnexion</a></button>
+</div>
+
+<div id="containerEditChat">
+    <form id="formAjout" action="" method="post" enctype="multipart/form-data">
+        <h2 id="titreNouveauChat">{{chat.nom}}</h2>
+        <div id="ligne1">
+            <div class="element">
+                <label class="un" for="name">Nom:</label>
+                <input class="un" type="text" id="name" name="nom" value ="{{chat.nom}}">
+            </div>
+            <div class="element">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" value ="{{chat.age}}">
+            </div>
+            <div class="element">
+                <label for="race">Race:</label>
+                <select name="race" id="race">
+                        <option selected="actuelle"> {{chat.race}} </option>
+                        <option value="european shorthair">European shorthair</option>
+                        <option value="maine coon">Maine coon</option>
+                        <option value="siamois">Siamois</option>
+                        <option value="ragdoll">Ragdoll</option>
+                        <option value="sphynx">Sphynx</option>
+                        <option value="chat de gouttière">Chat de gouttière</option>
+                </select>
+            </div>
+        </div>
+        <div id="ligne2">
+            <div class="element">
+                <label for="couleur">Couleur:</label>
+                <select name="couleur" id="couleur" value ="{{chat.couleur}}">
+                        <option selected="actuelle"> {{chat.couleur}} </option>
+                        <option value="bleu">Bleu</option>
+                        <option value="roux">Roux</option>
+                        <option value="blanc">Blanc</option>
+                        <option value="noir">Noir</option>
+                        <option value="brun">Brun</option>
+                        <option value="écaille de tortue">Ecaille de tortue</option>
+                        <option value="crème">Crème</option>
+                </select>
+            </div>
+            <div class="element">
+                <label for="sexe">Sexe:</label>
+                <select name="sexe" id="sexe" value ="{{chat.sexe}}">
+                    <option selected="actuelle"> {{chat.sexe}} </option>
+                    <option value="mâle">Mâle</option>
+                    <option value="femelle">Femelle</option>
+                </select>
+            </div>
+            <div class="element">
+                <label for="arrival">Date d'arrivée à l'association: </label>
+                <input type="date" id="arrival" name="date_arrivee" value ="{{chat.date_arrivee}}" min="1995-01-01" max="2025-11-17">
+            </div>
+        </div>
+         <div id="ligne3">
+            <div class="element">
+                <div>
+                    <label class="un" for="vaccin">Vaccin: </label>
+                    <input class="un" type="text" id="vaccin" name="vaccin" value ="{{chat.vaccin}}">
+                </div>
+            </div>
+            <div class="element">
+                <div>
+                    <label class="un" for="sterilise">Stérilisation: </label>
+                    <input class="un" type="text" id="sterilise" name="sterilise" value ="{{chat.sterilise}}">
+                </div>
+            </div>
+            <div class="element">
+                <div>
+                    <label class="un" for="compatibilite_autre_animaux">Compatibilité avec les autres animaux: </label>
+                    <input class="un" type="text" id="compatibilite_autre_animaux" name="compatibilite_autre_animaux" value ="{{chat.compatibilite_autre_animaux}}">
+                </div>
+            </div>
+        </div>
+        <div id="ligne4">
+            <div class="element" id="elementPresentation">
+                <label for="presentation">Texte de présentation:</label>
+                <input type="text" <id="presentation" name="presentation" value ="{{chat.presentation}}">
+            </div>
+            <div class="element" id="elementPhoto">
+                <label for="photo">Ajouter une photo du chat:</label>    
+                <input type="file" name="photo" id="photo" value ="{{chat.photo}}">
+            </div> 
+        </div>
+        <input id="boutonEditer" class="button" type="submit" id='submit' value='Mettre à jour la fiche de {{chat.nom}}' >
+    </form> 
+</div> 
+
+{% endblock %}
+

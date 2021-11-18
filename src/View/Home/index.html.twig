@@ -1,5 +1,36 @@
 {% extends 'layout.html.twig' %}
 
 {% block content %}
-    <h1>Hello Wilder !</h1>
+
+    <img class="chatHome" src="../../../assets/images/Cat/Pilou.jpg" alt="Photo de Pilou"></img>  
+ 
+    <div class= "titre"><h1>Et si c'était lui  ?</h1></div>
+
+    <div class="leschats">
+    {% for chat in chats %}
+       <a href= "/ficheChat?id={{chat.id}}"><img class="chat" src="{{chat.photo}}" ></a>
+    {% endfor %}
+
+    </div>
+
+    <div class="textbutton"><button><a href="listechats">Voir tous les chats prêt à être adopté !</a></button></div>
+
+    <div class="Homebasdepage">
+ 
+        <div class="Homepageleft">
+           <div class= "titre"><h1>Notre association</h1></div>
+                <div class="texthistoire">
+                     <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. 
+                     De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium.
+                     Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. 
+                     De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium.
+                     </p>
+                    <div class="textbutton"><button><a href="histoire">En savoir plus</a></button></div>
+                </div>
+        </div>
+        
+        <br>
+    </div>
+
 {% endblock %}
+

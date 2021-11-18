@@ -1,0 +1,45 @@
+{% extends 'layout.html.twig' %}
+
+{% block content %}
+
+    <div class = "Dicton"> 
+        <p>
+            “Dieu a inventé le chat pour que l'homme ait un tigre à caresser chez lui.” Victor Hugo
+        </p>
+    </div>
+
+    <h5>Nos chats à adopter</h5>
+
+        <div class = "fichesChat">
+            {% for chat in chats %}    
+                <div class = "ficheChat">
+                    <div class="photoTitre">
+                        <a href="ficheChat?id={{chat.id}}" ><img class="chatrond" src="{{ chat.photo}}" alt=""></img></a>
+                    </div>
+
+                    <div class ='desc'>
+                        <table>
+                            <div class= "Name">
+                                    <tr>
+                                        <td> {{ chat.nom}} </td>
+                                    </tr>
+                                </div>
+                                
+                                <div class= "Age">
+                                    <tr>
+                                        <td> <FONT SIZE=4px> {{ chat.age}} an{% if chat.age != 1 %}s{% endif %} </FONT> </td>
+                                    </tr>
+                                </div>
+
+                                <div class= "Sexe">
+                                    <tr>
+                                        <td> <FONT SIZE=4px> {{ chat.sexe}} </FONT> </td>
+                                    </tr>
+                                </div>
+                            </table>
+                    </div>
+
+                </div>    
+            {% endfor %}
+        </div>
+{% endblock %}
