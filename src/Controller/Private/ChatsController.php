@@ -17,6 +17,7 @@ class ChatsController extends AbstractController
         if(!isset($_SESSION['login'])){
             header ('location: /private/connexion');
         }
+
     } 
 
     public function verification(){
