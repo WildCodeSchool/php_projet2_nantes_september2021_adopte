@@ -21,7 +21,6 @@ class AdoptantController extends AbstractController
     }
 
 //Formulaire ajout d'adoptant
-
     public function addAdoptant()
         {   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             
