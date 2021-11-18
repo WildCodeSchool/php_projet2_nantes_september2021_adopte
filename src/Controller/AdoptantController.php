@@ -16,19 +16,24 @@ class AdoptantController extends AbstractController
 
 //Formulaire ajout d'adoptant
     public function addAdoptant()
-        {   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        // {   if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             
-            $this->verification();
+        //     $this->verification();
 
-            if (empty($this->errors)){
-
+        //     if (empty($this->errors)){
+            { 
                 $adoptantManager = new AdoptantManager();
                 $adoptantManager->addAdoptant($this->adoptant);
+      
+                return $this->twig->render("Home/listechats.html.twig");
                 // session_start();
                 // $_SESSION['flashmessage']="Merci pour l'adoption.";
                 // header('Location:/');
             }
 
-            return $this->twig->render("Home/listechats.html.twig", ["errors" => $this->errors]);
+
            }
-        }}
+    
+        
+}
+

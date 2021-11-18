@@ -28,6 +28,7 @@ class ConnexionController extends AbstractController
                     session_start();
                     $_SESSION ["login"] = $_POST['nom'];
                     header ('location: /private/chats');
+                    session_destroy();
                 }else {
                     $error = "Identifiants incorrects";
                 } 
