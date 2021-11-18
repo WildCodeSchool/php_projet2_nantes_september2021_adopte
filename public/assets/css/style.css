@@ -250,10 +250,6 @@ td{
     height: 30px;
 }
 
-.desc{
-
-}
-
 /* gap qui gère les espaces sur colonnes */
 .premieresFiches{ 
     gap:50px;

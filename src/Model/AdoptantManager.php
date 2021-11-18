@@ -19,8 +19,6 @@ class AdoptantManager extends AbstractManager
         $statement->bindValue(':ville', $adoptant['ville'], \PDO::PARAM_STR);
         $statement->bindValue(':email', $adoptant['email'], \PDO::PARAM_STR);
         $statement->execute();
-
     }
-    
 
 }
