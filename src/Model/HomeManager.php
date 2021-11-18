@@ -4,7 +4,7 @@ namespace App\Model;
 class HomeManager extends AbstractManager 
 {
     public const TABLE = 'chats';
-
+  
     // public function updateadoptant_id()
     // {
     //     $query = lier table chats et table adoptant
@@ -17,5 +17,13 @@ class HomeManager extends AbstractManager
 
         return $this->pdo->query($query)->fetchAll();
     }
-    
+
+    public function selectAllHomePage(): array
+    {
+        $query="SELECT * FROM " . self::TABLE . " ORDER BY RAND() LIMIT 6";
+
+        return $this->pdo->query($query)->fetchAll();
+    }
+
+
 }

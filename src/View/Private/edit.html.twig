@@ -61,51 +61,35 @@
         </div>
          <div id="ligne3">
             <div class="element">
-                <p>Vaccin:</p>
                 <div>
-                    <input type="radio" id="oui" name="vaccin" value="oui" <?php if({{chat.vaccin}}=='oui') { echo ' checked="checked"'; } ?>>
-                    <label for="oui">Oui</label>
-                </div>
-                <div>
-                    <input type="radio" id="non" name="vaccin" value="non">
-                    <label for="non">Non</label>
+                    <label class="un" for="vaccin">Vaccin: </label>
+                    <input class="un" type="text" id="vaccin" name="vaccin" value ="{{chat.vaccin}}">
                 </div>
             </div>
             <div class="element">
-
-                <p>Stérilisation:</p>
                 <div>
-                    <input type="radio" id="oui" name="sterilise" value="oui" checked>
-                    <label for="oui">Oui</label>
-                </div>
-                <div>
-                    <input type="radio" id="non" name="sterilise" value="non">
-                    <label for="non">Non</label>
+                    <label class="un" for="sterilise">Stérilisation: </label>
+                    <input class="un" type="text" id="sterilise" name="sterilise" value ="{{chat.sterilise}}">
                 </div>
             </div>
             <div class="element">
-                <p>Compatibilité avec les autres animaux:</p>
                 <div>
-                    <input type="radio" id="oui" name="compatibilite_autre_animaux" value="oui" checked>
-                    <label for="oui">Oui</label>
-                </div>
-                <div>
-                    <input type="radio" id="non" name="compatibilite_autre_animaux" value="non">
-                    <label for="non">Non</label>
+                    <label class="un" for="compatibilite_autre_animaux">Compatibilité avec les autres animaux: </label>
+                    <input class="un" type="text" id="compatibilite_autre_animaux" name="compatibilite_autre_animaux" value ="{{chat.compatibilite_autre_animaux}}">
                 </div>
             </div>
         </div>
         <div id="ligne4">
             <div class="element" id="elementPresentation">
                 <label for="presentation">Texte de présentation:</label>
-                <textarea type="text" id="presentation" name="presentation" value ="{{chat.presentation}}"></textarea>
+                <input type="text" <id="presentation" name="presentation" value ="{{chat.presentation}}">
             </div>
             <div class="element" id="elementPhoto">
                 <label for="photo">Ajouter une photo du chat:</label>    
                 <input type="file" name="photo" id="photo" value ="{{chat.photo}}">
             </div> 
         </div>
-        <input id="bouttonAjouter" class="button" type="submit" id='submit' value='Mettre à jour la fiche de ce chat' >
+        <input id="boutonEditer" class="button" type="submit" id='submit' value='Mettre à jour la fiche de {{chat.nom}}' >
     </form> 
 </div> 
 

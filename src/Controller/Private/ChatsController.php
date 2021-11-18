@@ -13,12 +13,10 @@ class ChatsController extends AbstractController
     public function __construct()
     {
         parent::__construct();
-        
         session_start();
         if(!isset($_SESSION['login'])){
             header ('location: /private/connexion');
         }
-        session_destroy();
     } 
 
     public function verification(){
