@@ -18,7 +18,6 @@ class ChatsController extends AbstractController
             header ('location: /private/connexion');
         }
 
-
     } 
 
     public function verification(){
