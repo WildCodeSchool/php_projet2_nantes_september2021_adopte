@@ -40,6 +40,8 @@ class AdoptantController extends AbstractController
                 }
     
                 session_destroy();
+                header('Location: /private/connexion');
+
             }
 
             return $this->twig->render("Home/listechats.html.twig", ["errors" => $this->errors]);
