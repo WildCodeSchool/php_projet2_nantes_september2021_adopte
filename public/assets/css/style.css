@@ -731,3 +731,8 @@ label{
     height: 60px;
     color: var(--lighty);
 }
+
+.un{
+    text-align: center;
+    font-size: 15px;
+}
