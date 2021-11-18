@@ -10,12 +10,6 @@ class AdoptantController extends AbstractController
     public $adoptant;
     public $errors = [];
     
-    // public function __construct()
-    //     {
-    //         parent::__construct();
-            
-    //     } 
-
     public function verification(){
         $this->adoptant = array_map('trim', $_POST);
     }
