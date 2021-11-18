@@ -2,7 +2,7 @@
 
 {% block content %}
 
-<div id="boutonshaut">
+<div id="boutonshaut" class="textbutton">
 <button><a href="/private/chats">Retour vers la liste des chats</a></button>
 <button><a href="/private/logout">Déconnexion</a></button>
 </div>
@@ -12,7 +12,7 @@
         <h2 id="titreNouveauChat">Nouveau chat</h2>
         <div id="ligne1">
             <div class="element">
-                <label class="un" for="nom">Nom:</label>
+                <label for="nom">Nom:</label>
                 <input class="un" type="text" id="nom" name="nom" required>
             </div>
             <div class="element">
@@ -107,7 +107,7 @@
                 <input type="file" name="photo" id="photo"/>
             </div> 
         </div>
-        <input id="bouttonAjouter" class="button" type="submit" id='submit' value='Valider' >
+            <input id="boutonAjouter" class="button" type="submit" id='submit' value='Valider' >
     </form>
 </div> 
 

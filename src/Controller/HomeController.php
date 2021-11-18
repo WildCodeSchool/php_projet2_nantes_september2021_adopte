@@ -32,16 +32,4 @@ class HomeController extends AbstractController
         return $this->twig->render('Home/histoire.html.twig');
     }
 
-    public function chatadoptOK()
-    {
-        return $this->twig->render('Home/chatadoptOK.html.twig');
-    }
-
-    public function chatformadopt(int $id)
-    {
-        $chatManager = new HomeManager();
-        $chats = $chatManager->selectOneById($id=1) ;
-        return $this->twig->render('Home/chatformadopt.html.twig',['chats' => $chats]);
-    }
-
 }

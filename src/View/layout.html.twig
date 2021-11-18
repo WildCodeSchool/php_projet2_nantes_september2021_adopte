@@ -22,14 +22,15 @@
 <header>
     <nav>
         <div id="logo"><a href="/">AdopteUnChat.com</a></div>
-            <ul id = "menu">
-                <li><a href="/">Accueil</a></li>
-                <li><a href="listechats">Nos chats</a></li>
-                <li><a href="histoire">Notre histoire</a></li>
-                <li><a href="histoire#contact">Contact</a></li>
-            </ul>
+        <ul id = "menu">
+            <li><a href="/">Accueil</a></li>
+            <li><a href="listechats">Nos chats</a></li>
+            <li><a href="histoire">Notre histoire</a></li>
+            <li><a href="histoire#contact">Contact</a></li>
+        </ul>
     </nav>
 </header>
+    {# <div class = "messagealert">{{session.flashmessage}}</div> #}
     {% block content %} {% endblock %}
 
         {% block footer %} {% include '/Home/component/_footer.html.twig' %}{% endblock %}

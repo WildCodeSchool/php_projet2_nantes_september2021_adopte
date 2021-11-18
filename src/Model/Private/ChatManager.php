@@ -19,9 +19,9 @@ class ChatManager extends AbstractManager
                 $statement->bindValue(':sexe', $chat['sexe'], \PDO::PARAM_STR);
                 $statement->bindValue(':photo', $chat['photo'], \PDO::PARAM_STR);
                 $statement->bindValue(':date_arrivee', $chat['arrival'], \PDO::PARAM_STR);
-                $statement->bindValue(':vaccin', $chat['vaccin'], \PDO::PARAM_BOOL);
-                $statement->bindValue(':sterilise', $chat['sterilisation'], \PDO::PARAM_BOOL);
-                $statement->bindValue(':compatibilite_autre_animaux', $chat['compatibilite'], \PDO::PARAM_BOOL);
+                $statement->bindValue(':vaccin', $chat['vaccin'], \PDO::PARAM_STR);
+                $statement->bindValue(':sterilise', $chat['sterilisation'], \PDO::PARAM_STR);
+                $statement->bindValue(':compatibilite_autre_animaux', $chat['compatibilite'], \PDO::PARAM_STR);
                 $statement->bindValue(':presentation', $chat['presentation'], \PDO::PARAM_STR);
                 
                 $statement->execute();
@@ -42,9 +42,9 @@ class ChatManager extends AbstractManager
         $statement->bindValue(':sexe', $chat['sexe'], \PDO::PARAM_STR);
         $statement->bindValue(':photo', $chat['photo'], \PDO::PARAM_STR);
         $statement->bindValue(':date_arrivee', $chat['date_arrivee'], \PDO::PARAM_STR);
-        $statement->bindValue(':vaccin', $chat['vaccin'], \PDO::PARAM_BOOL);
-        $statement->bindValue(':sterilise', $chat['sterilise'], \PDO::PARAM_BOOL);
-        $statement->bindValue(':compatibilite_autre_animaux', $chat['compatibilite_autre_animaux'], \PDO::PARAM_BOOL);
+        $statement->bindValue(':vaccin', $chat['vaccin'], \PDO::PARAM_STR);
+        $statement->bindValue(':sterilise', $chat['sterilise'], \PDO::PARAM_STR);
+        $statement->bindValue(':compatibilite_autre_animaux', $chat['compatibilite_autre_animaux'], \PDO::PARAM_STR);
         $statement->bindValue(':presentation', $chat['presentation'], \PDO::PARAM_STR);
         $statement->bindValue(':id', $chat['id'], \PDO::PARAM_INT);
 

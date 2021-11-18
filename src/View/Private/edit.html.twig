@@ -2,26 +2,26 @@
 
 {% block content %}
 
-<div id="boutonshaut">
+<div id="boutonshaut" class="textbutton">
 <button><a href="chats">Retour vers la liste des chats</a></button>
 <button><a href="logout">Déconnexion</a></button>
 </div>
 
-<div id="containerAjoutChat">
+<div id="containerEditChat">
     <form id="formAjout" action="" method="post" enctype="multipart/form-data">
         <h2 id="titreNouveauChat">{{chat.nom}}</h2>
         <div id="ligne1">
             <div class="element">
                 <label class="un" for="name">Nom:</label>
-                <input class="un" type="text" id="name" name="nom" value ="{{chat.nom}}" required>
+                <input class="un" type="text" id="name" name="nom" value ="{{chat.nom}}">
             </div>
             <div class="element">
                 <label for="age">Age:</label>
-                <input type="number" id="age" name="age" value ="{{chat.age}}" required>
+                <input type="number" id="age" name="age" value ="{{chat.age}}">
             </div>
             <div class="element">
                 <label for="race">Race:</label>
-                <select name="race" id="race" required>
+                <select name="race" id="race">
                         <option selected="actuelle"> {{chat.race}} </option>
                         <option value="european shorthair">European shorthair</option>
                         <option value="maine coon">Maine coon</option>
@@ -35,7 +35,7 @@
         <div id="ligne2">
             <div class="element">
                 <label for="couleur">Couleur:</label>
-                <select name="couleur" id="couleur" value ="{{chat.couleur}}"  required>
+                <select name="couleur" id="couleur" value ="{{chat.couleur}}">
                         <option selected="actuelle"> {{chat.couleur}} </option>
                         <option value="bleu">Bleu</option>
                         <option value="roux">Roux</option>
@@ -63,7 +63,7 @@
             <div class="element">
                 <p>Vaccin:</p>
                 <div>
-                    <input type="radio" id="oui" name="vaccin" value="oui">
+                    <input type="radio" id="oui" name="vaccin" value="oui" <?php if({{chat.vaccin}}=='oui') { echo ' checked="checked"'; } ?>>
                     <label for="oui">Oui</label>
                 </div>
                 <div>
@@ -105,17 +105,9 @@
                 <input type="file" name="photo" id="photo" value ="{{chat.photo}}">
             </div> 
         </div>
-
-        <input id="bouttonAjouter" class="button" type="submit" id='submit' value='Mettre à jour' >
-    </form>
-        <input id="bouttonAjouter" class="button" type="submit" id='submit' value='METTRE A JOUR' >
-    </form>      
-
+        <input id="boutonEditer" class="button" type="submit" id='submit' value='Mettre à jour la fiche de {{chat.nom}}' >
+    </form> 
 </div> 
 
-            {# <form action="edit" method="POST" onsubmit="return confirm('Voulez-vous vraiment editer {{chat.nom}}');">
-                <input name="id" type="hidden" value="METTRE A JOUR">
-                <button type="submit" id="bouttonAjouter" class="button"></button>
-                </form> #}
-
 {% endblock %}
+

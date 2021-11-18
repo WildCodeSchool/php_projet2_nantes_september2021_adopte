@@ -13,11 +13,19 @@ class ChatsController extends AbstractController
     public function __construct()
     {
         parent::__construct();
-        
         session_start();
         if(!isset($_SESSION['login'])){
             header ('location: /private/connexion');
         }
+
+        $_SESSION = array();
+        if (isset($_COOKIE[session_name()]))
+        {
+            setcookie(session_name(),'',time()-4200, '/');
+        }
+
+        session_destroy();
+
     } 
 
     public function verification(){
@@ -136,23 +144,19 @@ class ChatsController extends AbstractController
         return $this->twig->render("Private/chats.html.twig", ['chats' => $chats] );
     }
 
-    public function show(int $id)
-    {
-        $chatManager = new ChatManager();
-        $chat = $chatManager->selectOneById($id);
-        
-        return $this->twig->render("Private/ficheChat.html.twig", ['chat' => $chat] );
-    }
 
     public function edit(int $id): string
     {
         $chatManager = new ChatManager();
         $chat = $chatManager->selectOneById($id);
-
-
+        
+        // if( $chats['vaccin'] == oui  )
+        
+        // var_dump( $chat); die;
+        
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $this->verification();
-            $this->uploadPhoto();
+             $this->verification();
+             $this->uploadPhoto();
             // clean $_POST data
             $chat = array_merge($chat, $this->chat);
 
