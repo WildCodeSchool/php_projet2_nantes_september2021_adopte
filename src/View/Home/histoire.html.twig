@@ -43,7 +43,7 @@
 
             <h2 id="contact">Une information? Une suggestion? Une adoption? Contactez-nous ici ! :)</h2>
                 <div class="contact">
-                    <form name = "contactform" id="contactform" method="POST">
+                    <form name = "contactform" id="contactform" method="POST" onsubmit="clicked(event)">
                         <label for="name">Nom et prénom :</label><br>
                             <input type="text" id="name" name="name" placeholder="Dupond Martine" required><br>
                         <label for="email">Email:</label><br>
@@ -51,7 +51,7 @@
                         <label for="message">Message:</label><br>
                              <textarea type="text" id="message" name="message" placeholder="Ecrivez-nous un message !" required></textarea>
                     <br><br>
-                            <input type="submit" value="Envoyer !" id="submit" onclick="clicked(event)">
+                            <input type="submit" value="Envoyer !" id="submit">
                     </form>
                 </div>
         </div>

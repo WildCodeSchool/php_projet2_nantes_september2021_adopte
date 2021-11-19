@@ -30,10 +30,6 @@ class AdoptantController extends AbstractController
                 // $_SESSION['flashmessage']="Merci pour l'adoption.";
                 // header('Location:/');
             }
-
-
-           }
-    
-        }
+       }
     }
 
