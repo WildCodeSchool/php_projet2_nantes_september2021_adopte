@@ -35,5 +35,3 @@ class AdoptantController extends AbstractController
            }
     
         
-}
-
