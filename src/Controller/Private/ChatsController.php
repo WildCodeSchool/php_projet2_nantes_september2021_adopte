@@ -18,76 +18,12 @@ class ChatsController extends AbstractController
             header ('location: /private/connexion');
         }
 
-
     } 
 
     public function verification(){
         $this->chat = array_map('trim', $_POST);
+
     }
-    // {
-    //     $errnom = "";
-    //     $errage = "";
-    //     $errrace = "";
-    //     $errcouleur = "";
-    //     $errsexe = "";
-    //     $errphoto = "";
-    //     $errdate = "";
-    //     $errvaccin = "";
-    //     $errsterilise = "";
-    //     $errcompatibilite = "";
-    //     $errpresentation = "";
-
-    //     if ($_SERVER["REQUEST_METHOD"] === 'POST') {
-    //         // 
-            
-    //         if(preg_match("/^[A-Z][a-zA-Z -]+$/", $_POST["nom"]) === 0)
-    //             $errName ="Merci d'indiquer un prénom.";
-
-    //         if(preg_match("/^[A-Z][a-zA-Z -]+$/", $_POST["age"]) === 0)
-    //             $errage = "Merci d'indiquer un age.";
-        
-    //         if(preg_match("/^[A-Z][a-zA-Z -]+$/", $_POST["race"]) === 0)
-    //             $errrace= "Merci d'indiquer une race.";
-    //         }
-
-    //         if(preg_match("/^[A-Z][a-zA-Z -]+$/", $_POST["couleur"]) === 0)
-    //             $errcouleur = "Merci d'indiquer une couleur.";
-    //         }
-
-    //         if(preg_match("/^[A-Z][a-zA-Z -]+$/", $_POST["sexe"]) === 0)
-    //             $errsexe = "Merci d'indiquer un sexe.";
-    //         }
-
-    //         if(preg_match("/^[A-Z][a-zA-Z -]+$/", $_POST["photo"]) === 0)
-    //         $errphoto = "Merci d'ajouter une photo.";
-    //     }
-
-    //         if(preg_match("/^[A-Z][a-zA-Z -]+$/", $_POST["arrival"]) === 0)
-    //             $errdate = "Merci d'indiquer une date d'arrivée.";
-    //         }
-
-    //         if(preg_match("/^[A-Z][a-zA-Z -]+$/", $_POST["vaccin"]) === 0)
-    //             $ervaccin = "Merci d'indiquer si le chat est à jour dans ses vaccins.";
-    //         }
-
-    //         if(preg_match("/^[A-Z][a-zA-Z -]+$/", $_POST["sterilisation"]) === 0)
-    //             $ersterilise = "Merci d'indiquer si le chat est stérilisé.";
-    //         }
-
-    //         if(preg_match("/^[A-Z][a-zA-Z -]+$/", $_POST["compatibilite"]) === 0)
-    //             $errcompatibilite = "Merci d'indiquer si le chat accepte la présence d'autres animaux.";
-    //         }
-
-    //         if(preg_match("/^[A-Z][a-zA-Z -]+$/", $_POST["presentation"]) === 0)
-    //             $errpresentation = "Merci d'écrire une petite présentation du chat.";
-    //         }
-        
-    //         if (empty($errors)) {
-    //             $this->model->add($chat);
-    //         }
-    //     }
-    // }
-
     public function uploadPhoto(){
 
         $uploadDir = '/assets/images/Cat/';

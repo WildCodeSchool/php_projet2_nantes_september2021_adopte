@@ -19,8 +19,14 @@ class AdoptantManager extends AbstractManager
         $statement->bindValue(':ville', $adoptant['ville'], \PDO::PARAM_STR);
         $statement->bindValue(':email', $adoptant['email'], \PDO::PARAM_STR);
         $statement->execute();
-
+        return $this->pdo->lastInsertId();
     }
-    
 
+    public function linkadoptant(int $adoptant_id, int $chat_id)
+    {
+        $statement = $this->pdo->prepare("UPDATE chats SET adoptant_id=:adoptant_id WHERE id = :chat_id"); 
+        $statement->bindValue(':adoptant_id', $adoptant_id, \PDO::PARAM_INT);
+        $statement->bindValue(':chat_id', $chat_id, \PDO::PARAM_INT);
+        $statement->execute();
+    }
 }

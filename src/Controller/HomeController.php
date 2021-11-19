@@ -24,7 +24,8 @@ class HomeController extends AbstractController
     public function listeChats()
     {
         $chatManager = new HomeManager();
-        $chats = $chatManager->selectAll();
+        $chats = $chatManager->selectAllByAdoptant();
+        // var_dump($chats); die;
         return $this->twig->render('Home/listechats.html.twig', ['chats' => $chats]);
     }
 
