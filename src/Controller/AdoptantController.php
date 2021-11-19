@@ -25,15 +25,10 @@ class AdoptantController extends AbstractController
                 $adoptantManager = new AdoptantManager();
                 $idadoptant = $adoptantManager->addAdoptant($this->adoptant);
                 $idadoptant = $adoptantManager->linkadoptant($idadoptant,$_POST['chat_id']);
+                header ('location: /');
                 return $this->twig->render("Home/listechats.html.twig");
-                // session_start();
-                // $_SESSION['flashmessage']="Merci pour l'adoption.";
-                // header('Location:/');
             }
-
-
-           }
-    
-        }
+        }    
     }
+}
 
