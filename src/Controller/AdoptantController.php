@@ -10,14 +10,16 @@ class AdoptantController extends AbstractController
     public $adoptant;
     public $errors = [];
     
-    public function verification(){
+    public function verification()
+    {
         $this->adoptant = array_map('trim', $_POST);
     }
 
 //Formulaire ajout d'adoptant
     public function addAdoptant()
     {   
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') 
+        {
             $this->verification();
 
             if (empty($this->errors))
@@ -28,7 +30,7 @@ class AdoptantController extends AbstractController
                 header ('location: /');
                 return $this->twig->render("Home/listechats.html.twig");
             }
-        }    
-    }
+          }
+      }
 }
 
