@@ -2,7 +2,7 @@
 
 return [
 
-// partie admin 
+// partie admin
     'private/connexion' => ['Private\\ConnexionController', 'connexion'],
     'private/logout' => ['Private\\ConnexionController', 'logout'],
     'private/chats' => ['Private\\ChatsController', 'index'],
@@ -11,10 +11,10 @@ return [
     'private/delete' => ['Private\\ChatsController', 'delete', ['id']],
 
 //partie public
-    '' => ['HomeController', 'index',],
+    '' => ['HomeController', 'index'],
     'histoire' => ['HomeController', 'histoire'],
     'listechats' => ['HomeController', 'listeChats'],
-    'ficheChat' => ['HomeController', 'ficheChat', ['id']], 
+    'ficheChat' => ['HomeController', 'ficheChat', ['id']],
     'addadoptant' => ['AdoptantController','addadoptant'],
     '' => ['HomeController', 'selectAllHomePage'],
 ];
